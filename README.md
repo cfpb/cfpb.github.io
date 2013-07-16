@@ -47,13 +47,13 @@ Static, ftw.
 
 (This assumes you are working on a Mac and have Homebrew installed in user-land.)
 
-1. Install Ruby:
+### 1. Install Ruby:
 
 ```
 $ brew install ruby
 ```
 
-2. Add homebrew Ruby to your path:
+### 2. Add homebrew Ruby to your path:
 
 Edit your `~/.bash_profile`
 
@@ -67,7 +67,7 @@ $HOME/homebrew/share/npm/bin:$HOME/homebrew/share/python:
 $HOME/homebrew/opt/ruby/bin:$PATH
 ```
 
-3. Install Jekyll
+### 3. Install Jekyll
 
 ```
 $ gem install jekyll
@@ -75,7 +75,7 @@ $ gem install jekyll
 
 [Jekyll docs](http://jekyllrb.com/docs/home/)
 
-4. Configure Jekyll
+### 4. Configure Jekyll
 
 Use the config in this repo as a guide:
 
@@ -83,18 +83,18 @@ Use the config in this repo as a guide:
 
 `_config_local.yml` is for local Jekyll
 
-5. Sites directory
+### 5. Sites directory
 
 Create a directory inside your repo that is names `_sites`
 Edit your `.gitnore` and add `/_sites/*` as an excluded path
 
-5. Run Jekyll:
+### 6. Run Jekyll:
 
 ```
 $ cd  ~/repo_path/
 $ jekyll serve --watch --config _config_local.yml
 ```
-6. Browse:
+### 7. Browse:
 
 Open up your browesr to http://localhost:4000 to view your site
 
