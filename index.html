@@ -1,0 +1,12 @@
+---
+layout: default
+title: Home
+---
+
+{% for post in site.posts %}
+	<article class="entry">
+		<h1 class="entry-title"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+		<p class="entry-date">{{ post.date | date_to_string }}</p>
+		{{ post.content }}
+	</article>
+{% endfor %}
