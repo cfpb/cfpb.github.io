@@ -1,2 +1,3 @@
+baseurl: ''
 source: .
 destination: ./_site
