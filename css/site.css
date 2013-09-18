@@ -236,7 +236,7 @@ a.call-to-action {
 }
 
 /* Entry title links */
-h1 a, h1 a:hover, h1 a:focus, h1 a:active,
+/*h1 a, h1 a:hover, h1 a:focus, h1 a:active,
 h2 a,
 h3 a,
 h4 a,
@@ -251,7 +251,7 @@ h4 a:hover,
 h5 a:hover,
 h6 a:hover {
     border-bottom: none;
-}
+}*/
 
 /* MEDIA */
 figure {
