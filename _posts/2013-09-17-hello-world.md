@@ -38,7 +38,7 @@ with a topic like finance, which comes with a great number of barriers to entry 
 
 --
 
-We are the CFPB’s Office Technology and Innovation. We build world-class software products for the American people,
-CFPB staff, and for each other. Our culture grows from ideas firmly rooted in creativity, innovation, excellence,
-public service, respect, and openness. Each product we build expresses these virtues, and we look forward to
-sharing our work with you.
+We are the CFPB's Office of Technology and Innovation. We build world-class software products for the American
+people, CFPB staff, and for each other. Our culture grows from ideas firmly rooted in creativity, innovation,
+excellence, public service, respect, and openness. Each product we build expresses these virtues, and we look
+forward to sharing our work with you.
