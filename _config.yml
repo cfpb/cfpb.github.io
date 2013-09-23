@@ -1,2 +1,2 @@
-baseurl:     /pages/davidakennedy/cfpb-jekyll-it
+baseurl:     /pages/cfpb/cfpb.github.io
 exclude:     [README.md, Gemfile, Gemfile.lock, vendor, _site]
