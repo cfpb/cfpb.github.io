@@ -44,33 +44,33 @@ p,  blockquote,  q,  pre,  address,  hr,  code,  samp,  dl,  ol,  ul,  form,  ta
 h1 {
     margin: 0;
     margin-bottom: 0.5em;
-    font: 400 34px/1 "Avenir Next", Arial, sans-serif;
+    font: 400 34px/1.125 "Avenir Next", Arial, sans-serif;
 }
 h2 {
     margin: 0;
     margin-bottom: 0.5em;
-    font: 400 26px/1 "Avenir Next", Arial, sans-serif;
+    font: 400 26px/1.125 "Avenir Next", Arial, sans-serif;
 }
 h3 {
     margin: 0;
     margin-bottom: 0.5em;
-    font: 400 22px/1 "Avenir Next", Arial, sans-serif;
+    font: 400 22px/1.125 "Avenir Next", Arial, sans-serif;
 } 
 h4 {
     margin: 0;
     margin-bottom: 1em;
-    font: 700 18px/1 "Avenir Next Demi", Arial, sans-serif;
+    font: 700 18px/1.125 "Avenir Next Demi", Arial, sans-serif;
 }
 h5 {
     margin: 0;
     margin-bottom: 1em;
-    font: 600 16px/1 "Avenir Next Demi", Arial, sans-serif;
+    font: 600 16px/1.125 "Avenir Next Demi", Arial, sans-serif;
     text-transform: uppercase;
 }
 h6 {
     margin: 0;
     margin-bottom: 1em;
-    font: 600 14px/1 "Avenir Next Demi", Arial, sans-serif;
+    font: 600 14px/1.125 "Avenir Next Demi", Arial, sans-serif;
     text-transform: uppercase;
 }
 p,  ul,  blockquote,  pre,  td,  th,  label {
@@ -464,12 +464,14 @@ sub {
 }
 .footer section {
     display: inline-block;
-    width: 32%;
     margin-right: 2%;
     vertical-align: top;
 }
 .footer .footer-links {
     width: 16%;
+}
+.footer-links ul {
+    list-style: none;
 }
 .footer .footer-oss {
     width: 30%;
@@ -573,7 +575,7 @@ sub {
 }
 
 .entry {
-    width: 34em;
+    width: 30em;
 }
 
 /* media Queries

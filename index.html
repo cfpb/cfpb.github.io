@@ -8,9 +8,10 @@ title: Home
                     <section class="intro">
                         <h1>Welcome!</h1>
                         <p>The CFPB is the new federal agency devoted to making financial markets and products work
-                            for America’s consumers. We are the designers and developers who support the CFPB by
-                            building external resources for the American public and internal tools to help the
-                            Bureau run more efficiently.</p>
+                            for America’s consumers. To support this mission, technologists at the CFPB build
+                            external resources for the American public and internal tools to help the Bureau run
+                            more efficiently. We'd like to share our work with you.</p>
+                        <a class="call-to-action" href="#header-writing">Learn more <i class="icon-right"></i></a>
                     </section>
 
                     <section class="featured">
@@ -58,15 +59,19 @@ title: Home
                 </section>
             </div></section>
 
-            <section class="content-header">
+            <section class="content-header" id="header-writing">
                 <h2 class="wrap">Writing about our work</h2>
             </section>
 
             <section class="content-body wrap">
-                {% for post in site.posts %}
+                {% for post in site.posts limit:1 %}
                 <article class="entry">
-                    <h1 class="entry-title"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
-                    <!--<p class="entry-date">{{ post.date | date_to_string }}</p>-->
+                    <h1 class="entry-title">
+                        {% comment %}<a href="{{ site.baseurl }}{{ post.url }}">{% endcomment %}
+                        {{ post.title }}
+                        {% comment %}</a>{% endcomment %}
+                    </h1>
+                    {% comment %}<p class="entry-date">{{ post.date | date_to_string }}</p>{% endcomment %}
                     {{ post.content }}
                 </article>
                 {% endfor %}
