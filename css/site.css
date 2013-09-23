@@ -1,16 +1,26 @@
+@import 'normalize.css';
+@import 'fonts.css';
+
+
+/* Paul Irish's Universal border-box -- http://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
+*, *:before, *:after {
+  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+}
+
 /* BASE */
-html  {
-    height:  100%;
-    font-size:  100%;
-    overflow-y:  scroll;
-    -webkit-text-size-adjust:  100%;
+html {
+    height: 100%;
+    font-size: 100%;
+    overflow-y: scroll;
+    -webkit-text-size-adjust: 100%;
     -ms-word-wrap: break-word;
     word-wrap: break-word;
  }
-body  {
-    background-color: #e7e7e6;
-    margin:  0;
-    min-height:  100%;
+body {
+    background-color: #FFF;
+    padding: 0;
+    margin: 0;
+    color: #101820;
     /* Improve default text rendering,  handling of kerning pairs and ligatures */
     -webkit-font-smoothing: antialiased;
     font-smoothing: antialiased;
@@ -20,83 +30,66 @@ body  {
 /* DEFAULT FONT SETTINGS */
 /* 16px base font size with 150% (24px) friendly,  unitless line height and margin for vertical rhythm */
 /* Font-size percentage is based on 16px browser default size */
-body,  button,  input,  select,  textarea  { 
-    font:  100%/1.5 Georgia, "Times New Roman", serif;
-    *font-size:  1em;
-    color:  #101820;
+body,  button,  input,  select,  textarea { 
+    font: 100%/1.5 Georgia, "Times New Roman", serif;
+    *font-size: 1em;
 }
  /* IE7 and older can't resize px based text */
-p,  blockquote,  q,  pre,  address,  hr,  code,  samp,  dl,  ol,  ul,  form,  table,  fieldset,  menu,  img  {
-    margin:  0 0 1.5em;
-    padding:  0;
+p,  blockquote,  q,  pre,  address,  hr,  code,  samp,  dl,  ol,  ul,  form,  table,  fieldset,  menu,  img {
+    margin: 0 0 1.5em;
+    padding: 0;
 }
 
 /* TYPOGRAPHY */
-/* Composed to a scale of 12px,  14px,  16px,  18px,  21px,  24px,  36px,  48px,  60px and 72px */
-h1,  h2,  h3,  h4,  h5,  h6  {
-    color: #101820;
-    font-family: "Avenir Next", Verdana, sans-serif;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, .10);
-}
 h1 {
     margin: 0;
-    font-size: 3.75em; /* 60px / 72px */
-    font-weight: bold;
-    line-height: 1.2;
-    margin-bottom: 0.4em;
+    margin-bottom: 0.5em;
+    font: 400 34px/1.125 "Avenir Next", Arial, sans-serif;
 }
 h2 {
     margin: 0;
-    font-size: 3em; /* 48px / 48px */
-    font-weight: bold;
-    line-height: 1;
     margin-bottom: 0.5em;
+    font: 400 26px/1.125 "Avenir Next", Arial, sans-serif;
 }
 h3 {
     margin: 0;
-    font-size: 2.25em; /* 36px / 48px */
-    font-weight: 600;
-    line-height: 1.3333333333333333333333333333333;
-    margin-bottom: 0.6667em;
+    margin-bottom: 0.5em;
+    font: 400 22px/1.125 "Avenir Next", Arial, sans-serif;
 } 
 h4 {
     margin: 0;
-    font-size: 1.5em; /* 24px / 24px */
-    line-height: 1;
     margin-bottom: 1em;
-    text-transform: uppercase;
+    font: 700 18px/1.125 "Avenir Next Demi", Arial, sans-serif;
 }
 h5 {
     margin: 0;
-    font-size: 1.3125em; /* 21px / 24px */
-    line-height: 1.1428571428571428571428571428571;
-    margin-bottom: 1.1428571428571428571428571428571em;
+    margin-bottom: 1em;
+    font: 600 16px/1.125 "Avenir Next Demi", Arial, sans-serif;
     text-transform: uppercase;
 }
 h6 {
     margin: 0;
-    font-size: 1.125em; /* 18px / 24px */
-    font-style: italic;
-    line-height: 1.3333333333333333333333333333333;
-    margin-bottom: 1.3333333333333333333333333333333em;
+    margin-bottom: 1em;
+    font: 600 14px/1.125 "Avenir Next Demi", Arial, sans-serif;
+    text-transform: uppercase;
 }
-p,  ul,  blockquote,  pre,  td,  th,  label  {
-    margin:  0;
+p,  ul,  blockquote,  pre,  td,  th,  label {
+    margin: 0;
     /* 16px / 24px */
-    font-size:  1em;
-    line-height:  1.5;
-    margin-bottom:  1.5em;
+    font-size: 1em;
+    line-height: 1.5;
+    margin-bottom: 1.5em;
 }
-small,  p.small  {
-    margin:  0;
+small,  p.small {
+    margin: 0;
+    margin-bottom: 1.7142857142857142857142857142857em;
     /* 14px / 24px */
-    font-size:  0.875em;
-    line-height:  1.7142857142857142857142857142857;
-    margin-bottom:  1.7142857142857142857142857142857em;
+    font-size: 0.875em;
+    line-height: 1.7142857142857142857142857142857;
 }
 
 /* CODE */
-pre  {
+pre {
     /* Allow line wrapping of 'pre' */
     background-color: #d7d2cb;
     border: 1px solid #d0d0ce;
@@ -105,240 +98,250 @@ pre  {
     margin-top: 1.25em;
     overflow-x: auto;
     padding: 0.625em 1.25em;
-    white-space:  pre;
-    white-space:  pre-wrap;
-    word-wrap:  break-word;
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
 }
-pre,  code,  kbd,  samp  {
-    font-size:  1em;
-    line-height:  1.5;
-    margin-bottom:  1.5em;
+pre,  code,  kbd,  samp {
+    font-size: 1em;
+    line-height: 1.5;
+    margin-bottom: 1.5em;
     font-family: Source Code Pro, Consolas, Monaco, 'Andale Mono', monospace, serif;
 }
 
 /* TABLES */
-table  {
-    border-collapse:  collapse;
-    border-spacing:  0;
-    margin-bottom:  1.5em;
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin-bottom: 1.5em;
 }
-th  {
-    text-align:  left;
+th {
+    text-align: left;
 }
-tr,  th,  td  {
-    padding-right:  1.5em;
-    border-bottom:  0 solid #333;
+tr,  th,  td {
+    padding-right: 1.5em;
+    border-bottom: 0 solid #333;
 }
 
 /* FORMS */
-form  {
-    margin:  0;
+form {
+    margin: 0;
 }
-fieldset  {
-    border:  0;
-    padding:  0;
+fieldset {
+    border: 0;
+    padding: 0;
 }
-textarea  {
-    overflow:  auto;
-    vertical-align:  top;
+textarea {
+    overflow: auto;
+    vertical-align: top;
 }
-legend  {
-    *margin-left:  -.75em;
+legend {
+    *margin-left: -.75em;
 }
-button,  input,  select,  textarea  {
-    vertical-align:  baseline;
+button,  input,  select,  textarea {
+    vertical-align: baseline;
     /* IE7 and older */
-    *vertical-align:  middle;
+    *vertical-align: middle;
 }
-button,  input  {
-    line-height:  normal;
-    *overflow:  visible;
+button,  input {
+    line-height: normal;
+    *overflow: visible;
 }
-button,  input[type="button"],  input[type="reset"],  input[type="submit"]  {
-    cursor:  pointer;
-    -webkit-appearance:  button;
+button,  input[type="button"],  input[type="reset"],  input[type="submit"] {
+    cursor: pointer;
+    -webkit-appearance: button;
 }
-input[type="checkbox"],  input[type="radio"]  {
-    box-sizing:  border-box;
+input[type="checkbox"],  input[type="radio"] {
+    box-sizing: border-box;
 }
-input[type="search"]  {
-    -webkit-appearance:  textfield;
-    -moz-box-sizing:  content-box;
-    -webkit-box-sizing:  content-box;
-    box-sizing:  content-box;
+input[type="search"] {
+    -webkit-appearance: textfield;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
 }
-input[type="search"]::-webkit-search-decoration  {
-    -webkit-appearance:  none;
+input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
 }
-button::-moz-focus-inner,  input::-moz-focus-inner  {
-    border:  0;
-    padding:  0;
+button::-moz-focus-inner,  input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
 }
 
 /* QUOTES */
-blockquote,  q  {
-    quotes:  none;
+blockquote,  q {
+    quotes: none;
 }
-blockquote:before,  blockquote:after,  q:before,  q:after  {
-    content:  '';
-    content:  none;
+blockquote:before,  blockquote:after,  q:before,  q:after {
+    content: '';
+    content: none;
 }
-blockquote,  q,  cite  {
-    font-style:  italic;
+blockquote,  q,  cite {
+    font-style: italic;
 }
-blockquote  {
+blockquote {
     border-left: 5px solid #babbbd;
     color: #796e65;
     padding-left: 1.5em;
 }
-blockquote > p  {
-    padding:  0;
+blockquote > p {
+    padding: 0;
 }
 
 /* LISTS */
-ul,  ol  {
-    list-style-position:  inside;
+ul,  ol {
+    list-style-position: inside;
     padding: 0;
 }
-li ul,  li ol  {
+li ul,  li ol {
     margin: 0 1.5em;
 }
-dl dd  {
+dl dd {
     margin-left: 1.5em;
 }
-dt  {
+dt {
     font-weight: bold;
 }
 
 /* HYPERLINKS */
-a  {
-    text-decoration:  underline;
-    color: #0072ce;
+a {
+    border-bottom: 1px dotted #0072CE;
+    color: #0072CE;
+    text-decoration: none;
 }
-a:hover  {
-    color: #d12124;
-    text-decoration:  none;
+main p a:visited {
+    border-bottom: 1px solid #005E5D;
+    color: #005E5D;
+    text-decoration: none;
 }
-.content p a:visited  {
-    color: #002d72;
+a:hover {
+    border-bottom: 1px solid #7EB8DD;
+    color: #7EB8DD;
+    text-decoration: none;
 }
-a:focus  {
-    outline:  thin dotted;
-    text-decoration:  none;
+a:focus {
+    border-bottom: 1px solid #0072CE;
+    outline: thin dotted;
+    color: #0072CE;
+    text-decoration: none;
 }
-/* Better CSS Outline Suppression */
-a:hover,  a:active  {
-    outline:  none;
+a:active {
+    border-bottom: 1px solid #002D72;
+    color: #002D72;
+    text-decoration: none;
 }
+
+a.call-to-action {
+    font-family: "Avenir Next", Arial, sans-serif;
+}
+
 /* Entry title links */
-h1 a,
+/*h1 a, h1 a:hover, h1 a:focus, h1 a:active,
 h2 a,
 h3 a,
 h4 a,
 h5 a,
-h6 a  {
-    text-decoration:  none;
-    color: #0072ce;
+h6 a {
+    border-bottom: none;
 }
 h1 a:hover,
 h2 a:hover,
 h3 a:hover,
 h4 a:hover,
 h5 a:hover,
-h6 a:hover  {
-    color: #d12124;
-    text-decoration:  underline;
-}
+h6 a:hover {
+    border-bottom: none;
+}*/
 
 /* MEDIA */
-figure  {
-    margin:  0;
+figure {
+    margin: 0;
 }
 img,  object,  embed,  video {
     /* Fluid images */
-    max-width:  100%;
-    _width:  100%;
+    max-width: 100%;
+    _width: 100%;
 }
-img  {
-    border:  0;
+img {
+    border: 0;
     /* Improve IE's resizing of images */
-    -ms-interpolation-mode:  bicubic;
+    -ms-interpolation-mode: bicubic;
 }
-svg:not(:root)  {
+svg:not(:root) {
     /* Correct IE9 overflow */
-    overflow:  hidden;
+    overflow: hidden;
 }
 
 /* ABBREVIATION */
-abbr[title],  dfn[title]  {
-    border-bottom:  1px dotted #333;
-     cursor:  help;
+abbr[title],  dfn[title] {
+    border-bottom: 1px dotted #333;
+     cursor: help;
 }
 
 /* MARKED/INSERTED/DELETED AND SELECTED TEXT */
-ins,  mark  {
-    text-decoration:  none;
+ins,  mark {
+    text-decoration: none;
 }
-mark  {
-    background:  #c47529;
+mark {
+    background: #c47529;
 }
-ins  {
-    background:  #d49855;
+ins {
+    background: #d49855;
 }
-del  {
-    text-decoration:  line-through;
+del {
+    text-decoration: line-through;
 }
 
 /* Selected text */
-::-moz-selection  {
-    background:  #0072ce;
-    color:  #fff;
-    text-shadow:  none;
+::-moz-selection {
+    background: #0072ce;
+    color: #fff;
+    text-shadow: none;
 }
 
  /* Selected text */
-::selection  {
-    background:  #0072ce;
-     color:  #fff;
-     text-shadow:  none;
+::selection {
+    background: #0072ce;
+     color: #fff;
+     text-shadow: none;
 }
 
 /* OTHERS */
-strong,  b,  dt  {
-     font-weight:  bold;
+strong,  b,  dt {
+     font-weight: bold;
 }
-dfn  {
-    font-style:  italic;
+dfn {
+    font-style: italic;
 }
-var,  address  {
-    font-style:  normal;
+var,  address {
+    font-style: normal;
 }
-sub,  sup  {
-    font-size:  75%;
-     line-height:  0;
+sub,  sup {
+    font-size: 75%;
+     line-height: 0;
      /* Position 'sub' and 'sup' without affecting line-height */
-     position:  relative;
-     vertical-align:  baseline;
+     position: relative;
+     vertical-align: baseline;
 }
-sup  {
-    top:  -0.5em;
+sup {
+    top: -0.5em;
 }
  /* Move superscripted text up */
-sub  {
+sub {
     /* Move subscripted text down */
-    bottom:  -0.25em;
+    bottom: -0.25em;
 }
 
 /* MICRO CLEARFIX HACK */
-.cf:before,  .cf:after  {
+.cf:before,  .cf:after {
     content: "";
     display: table;
 }
  /* For modern browsers */
-.cf:after  {
+.cf:after {
     clear: both;
 }
-.cf  {
+.cf {
     /* For IE 6/7 (trigger hasLayout) */
     zoom: 1;
 }
@@ -425,26 +428,71 @@ sub  {
 }
 
 /* DEFAULT MOBILE STYLE */
-#page { background-color: #fff; border-top: 2px solid #2cb34a; border-bottom: 4px solid #101820; border-left: 1px solid #d0d0ce; border-right: 1px solid #d0d0ce; width: 92%; max-width: 90em; margin: 2em auto; padding: 0 0.5em; } /* Center page */
+
 /* column grid */
-.g1,.g2,.g3 { display:block; position: relative; margin-left: 1%; margin-right: 1%; }
+.g1,.g2,.g3 { display: block; position: relative; margin-left: 1%; margin-right: 1%; }
 /* 1 column grid */
-.g1,.g2,.g3 { width:98.0%; }
+.g1,.g2,.g3 { width: 98.0%; }
+
+.wrap {
+    width: 90%;
+    margin: 0 auto;
+}
 
 .header {
-    margin-top: 3em;
-    margin-bottom: 0.75em;
+    border-bottom: 5px solid #2CB34A;
+    overflow: auto;
 }
-.wrap {
-    margin-top: 0.75em;
-    margin-bottom: 0.75em;
+.header h1 {
+    padding: 2em 0;
+    margin: 0;
+    float: left;
+    font: bold 1em/1 "Avenir Next Demi", Arial, sans-serif;
+    text-transform: uppercase;
+}
+.header .logo {
+    padding: 1.25em 0;
+    margin: 0;
+    float: right;
 }
 .footer {
-    margin-top: 0.75em;
-    margin-bottom: 1.5em;
+    padding: 2em 0;
+    border-top: 2px solid #BABBBD;
+    margin-top: 2em;
+    background: #F1F2F2;
+    font-family: "Avenir Next", Arial, sans-serif;
 }
+.footer section {
+    display: inline-block;
+    margin-right: 2%;
+    vertical-align: top;
+}
+.footer .footer-links {
+    width: 16%;
+}
+.footer-links ul {
+    list-style: none;
+}
+.footer .footer-oss {
+    width: 30%;
+}
+.footer .footer-about {
+    width: 49%;
+    margin-right: 0;
+}
+.footer h4 {
+    font-size: 16px;
+    line-height: 1.5;
+    text-transform: uppercase;
+}
+.footer p {
+    font-size: 0.875em;
+    line-height: 1.42857142857143;
+}
+
+/*
 .main-nav {
-    font-family: "Avenir Next", Verdana, sans-serif;
+    font-family: "Avenir Next", Arial, sans-serif;
     font-size: 0.875em;
     margin: 0 0 1.5em;
     text-align: left;
@@ -462,20 +510,72 @@ sub  {
             background-color: #2cb34a;
             color: #fff;
         }
-.site-title-group > h1 {
-    margin: 0;
-    font-size: 1.5em; /* 24px / 24px */
-    line-height: 1;
-    margin-bottom: 1em;
-} 
+*/
+/*
 .content {
     margin: 3em auto 1.5em;
     max-width: 48em;
     width: 100%;
 }
+*/
+.hero {
+    background: #DBEDD4;
+    font-family: "Avenir Next", Arial, sans-serif;
+}
+.hero section {
+    display: inline-block;
+    width: 40%;
+    margin: 3em -0.26em 3em 0;
+    vertical-align: top;
+}
+.hero .featured {
+    width: 50%;
+    padding: 1em;
+    margin-top: 105px;
+    margin-left: 10%;
+    background: #ADDC91;
+}
+.hero p {
+    font-size: 1.125em;
+    line-height: 1.5;
+}
+
+.hero a {
+    color: #002D72;
+    border-bottom-color: #002D72;
+}
+.hero a:hover {
+    color: #0072CE;
+    border-bottom-color: #0072CE;
+}
+
+.content-header {
+    border-bottom: 2px solid #2CB34A;
+    margin-bottom: 3em;
+    background: #ADDC91;
+}
+.content-header h2 {
+    font: bold 1em/2 "Avenir Next Demi", Arial, sans-serif;
+    text-transform: uppercase;
+}
+
+.repos {
+    margin: 0 -1em 2em;
+}
+.repo {
+    display: inline-block;
+    width: 33.333333333%;
+    padding: 0 1em;
+    margin: 0 -0.26em 0 0;
+    vertical-align: top;
+}
+.repo p {
+    margin-bottom: 1.7142857142857142857142857142857em;
+    font: 0.875em/1.7142857142857142857142857142857 "Avenir Next", Arial, sans-serif;
+}
+
 .entry {
-    border-bottom: 1px solid #d0d0ce;
-    margin: 1.5em 0;
+    width: 30em;
 }
 
 /* media Queries
@@ -541,15 +641,18 @@ Change widths as necessary; Adjust content as necessary.
 
 @media only screen and (min-width: 80em) { 
 /* DESKTOP */
-        body {
+    body {
 
+    }
+    .wrap {
+        max-width: 1200px;
     }
 }
 
 /* WIDESCREEN */
 /* Increased body size for legibility */
 @media only screen and (min-width: 87.5em) { 
-    body { font-size: 1.125em; }
+    /*body { font-size: 1.125em; }*/
 }
     
 /* PRINT */
