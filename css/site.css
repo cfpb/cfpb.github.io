@@ -443,17 +443,14 @@ sub {
     border-bottom: 5px solid #2CB34A;
     overflow: auto;
 }
+.header .logo {
+    display: block;
+    margin: 1em 0;
+}
 .header h1 {
-    padding: 2em 0;
-    margin: 0;
-    float: left;
+    margin-top: 1em;
     font: bold 1em/1 "Avenir Next Demi", Arial, sans-serif;
     text-transform: uppercase;
-}
-.header .logo {
-    padding: 1.25em 0;
-    margin: 0;
-    float: right;
 }
 .footer {
     padding: 2em 0;
@@ -462,23 +459,11 @@ sub {
     background: #F1F2F2;
     font-family: "Avenir Next", Arial, sans-serif;
 }
-.footer section {
-    display: inline-block;
-    margin-right: 2%;
-    vertical-align: top;
-}
-.footer .footer-links {
-    width: 16%;
+.footer .footer-oss {
+    max-width: 30em;
 }
 .footer-links ul {
     list-style: none;
-}
-.footer .footer-oss {
-    width: 30%;
-}
-.footer .footer-about {
-    width: 49%;
-    margin-right: 0;
 }
 .footer h4 {
     font-size: 16px;
@@ -519,20 +504,17 @@ sub {
 }
 */
 .hero {
+    padding: 1.5em 0;
+    margin-bottom: 1.5em;
     background: #DBEDD4;
     font-family: "Avenir Next", Arial, sans-serif;
 }
 .hero section {
-    display: inline-block;
-    width: 40%;
-    margin: 3em -0.26em 3em 0;
-    vertical-align: top;
+    
 }
 .hero .featured {
-    width: 50%;
     padding: 1em;
-    margin-top: 105px;
-    margin-left: 10%;
+    margin-top: 1.5em;
     background: #ADDC91;
 }
 .hero p {
@@ -550,32 +532,26 @@ sub {
 }
 
 .content-header {
+    padding-top: 3px;
     border-bottom: 2px solid #2CB34A;
-    margin-bottom: 3em;
+    margin-bottom: 1.5em;
     background: #ADDC91;
 }
 .content-header h2 {
     font: bold 1em/2 "Avenir Next Demi", Arial, sans-serif;
     text-transform: uppercase;
 }
-
 .repos {
-    margin: 0 -1em 2em;
-}
-.repo {
-    display: inline-block;
-    width: 33.333333333%;
-    padding: 0 1em;
-    margin: 0 -0.26em 0 0;
-    vertical-align: top;
+        margin-bottom: 2em;
 }
 .repo p {
+    max-width: 30em;
     margin-bottom: 1.7142857142857142857142857142857em;
     font: 0.875em/1.7142857142857142857142857142857 "Avenir Next", Arial, sans-serif;
 }
 
 .entry {
-    width: 30em;
+    max-width: 30em;
 }
 
 /* media Queries
@@ -599,6 +575,14 @@ Change widths as necessary; Adjust content as necessary.
     body {
 
     }
+    .header .logo {
+        margin: 1.25em 0;
+        float: right;
+    }
+    .header h1 {
+        margin-top: 2.25em;
+        float: left;
+    }
 }
 
 /* SMALL TABLET */
@@ -606,24 +590,51 @@ Change widths as necessary; Adjust content as necessary.
     body {
 
     }
+    .hero section {
+        margin: 1.5em 0;
+    }
+    .footer section {
+        display: inline-block;
+        margin-right: 2%;
+        vertical-align: top;
+    }
+    .footer .footer-links {
+        width: 25%;
+    }
+    .footer .footer-oss {
+        width: 73%;
+        margin-right: 0;
+    }
+    /*.footer .footer-about {
+        width: 45%;
+        margin-right: 0;
+    }*/
 }
+
 
 /* TABLET/NETBOOK */
 @media only screen and (min-width: 48em) { 
     body {
 
     }
-
-    /* COLUMN GRID */
-    .g1,.g2,.g3 { display:inline; float: left; }
-
-    /* 2 COLUMN GRID */
-    .g1 { width:48.0%; }
-    .g2 {width:48.0%; }
-    .g3 { width:98.0%; }
-
     .main-nav {
         text-align: right;
+    }
+    .hero {
+        margin-bottom: 0;
+    }
+    .content-header {
+        margin-bottom: 3em;
+    }
+    .repos {
+        margin: 0 -1em 2em;
+    }
+    .repo {
+        display: inline-block;
+        width: 50%;
+        padding: 0 1em;
+        margin: 0 -0.26em 0 0;
+        vertical-align: top;
     }
 }
 
@@ -632,11 +643,20 @@ Change widths as necessary; Adjust content as necessary.
     body {
 
     }
-
-    /* 3 COLUMN GRID */
-    .g1 { width:31.333%; }
-    .g2 { width:64.667%;}
-    .g3 { width:98.0%; }
+    .wrap {
+        max-width: 960px;
+    }
+    .hero section {
+        display: inline-block;
+        width: 42%;
+        margin-right: -0.26em;
+        vertical-align: top;
+    }
+    .hero .featured {
+        width: 50%;
+        margin-top: 79px;
+        margin-left: 8%;
+    }
 }
 
 @media only screen and (min-width: 80em) { 
@@ -644,8 +664,8 @@ Change widths as necessary; Adjust content as necessary.
     body {
 
     }
-    .wrap {
-        max-width: 1200px;
+    .repo {
+        width: 33.333333333%;
     }
 }
 
