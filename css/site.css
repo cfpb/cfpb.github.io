@@ -504,18 +504,17 @@ sub {
 }
 */
 .hero {
-    padding: 1.5em 0;
     margin-bottom: 1.5em;
     background: #DBEDD4;
     font-family: "Avenir Next", Arial, sans-serif;
 }
 .hero section {
-    
+    padding: 1.5em 0;
 }
 .hero .featured {
-    padding: 1em;
-    margin-top: 1.5em;
-    background: #ADDC91;
+    padding: 1.5em 5.555555555%;
+    margin: 0 -5.555555555%;
+    background: #FFF;
 }
 .hero p {
     font-size: 1.125em;
@@ -550,9 +549,10 @@ sub {
     font: 0.875em/1.7142857142857142857142857142857 "Avenir Next", Arial, sans-serif;
 }
 
-.entry {
+/*.entry {
     max-width: 30em;
-}
+}*/
+
 
 /* media Queries
 
@@ -589,9 +589,6 @@ Change widths as necessary; Adjust content as necessary.
 @media only screen and (min-width: 37.5em) {
     body {
 
-    }
-    .hero section {
-        margin: 1.5em 0;
     }
     .footer section {
         display: inline-block;
@@ -636,6 +633,15 @@ Change widths as necessary; Adjust content as necessary.
         margin: 0 -0.26em 0 0;
         vertical-align: top;
     }
+    .entry {
+        width: 66.666666666%;
+    }
+    .entry h1 {
+        margin-bottom: 1em;
+    }
+    .entry p {
+        line-height: 1.625;
+    }
 }
 
 /* LANDSCAPE TABLET/NETBOOK/LAPTOP */
@@ -646,16 +652,33 @@ Change widths as necessary; Adjust content as necessary.
     .wrap {
         max-width: 960px;
     }
+    .hero {
+        position: relative;
+    }
+    .hero:after {
+        content: "";
+        display: block;
+        width: 50%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 1;
+        background: #FFF;
+    }
     .hero section {
         display: inline-block;
         width: 42%;
+        padding: 3em 0;
         margin-right: -0.26em;
         vertical-align: top;
     }
     .hero .featured {
         width: 50%;
-        margin-top: 79px;
-        margin-left: 8%;
+        padding: 3em 1.5em;
+        margin: 0 0 0 8%;
+        position: relative;
+        z-index: 2;
     }
 }
 
