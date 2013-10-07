@@ -459,13 +459,11 @@ sub {
     background: #F1F2F2;
     font-family: "Avenir Next", Arial, sans-serif;
 }
-.footer .footer-oss {
-    max-width: 30em;
-}
 .footer-links ul {
     list-style: none;
 }
 .footer h4 {
+    margin-bottom: 0.75em;
     font-size: 16px;
     line-height: 1.5;
     text-transform: uppercase;
@@ -504,7 +502,7 @@ sub {
 }
 */
 .hero {
-    margin-bottom: 1.5em;
+    /*margin-bottom: 1.5em;*/
     background: #DBEDD4;
     font-family: "Avenir Next", Arial, sans-serif;
 }
@@ -512,20 +510,32 @@ sub {
     padding: 1.5em 0;
 }
 .hero .featured {
-    padding: 1.5em 5.555555555%;
-    margin: 0 -5.555555555%;
+    padding: 1.5em 5.55555555555556%;
+    margin: 0 -5.55555555555556%;
     background: #FFF;
+    overflow: hidden;
+}
+.feature-img {
+    width: 111.149825783972%;
+    max-width: none;
+    height: 8em;
+    margin: -1.5em -5.55555555555556% 1.5em -5.55555555555556%;
+    background-repeat: no-repeat;
+}
+.feature-img.pdp {
+    background-image: url('../img/feature_pdp_1280x392.png');
+    background-position: left center;
 }
 .hero p {
     font-size: 1.125em;
     line-height: 1.5;
 }
 
-.hero a {
+.intro a {
     color: #002D72;
     border-bottom-color: #002D72;
 }
-.hero a:hover {
+.intro a:hover {
     color: #0072CE;
     border-bottom-color: #0072CE;
 }
@@ -590,39 +600,6 @@ Change widths as necessary; Adjust content as necessary.
     body {
 
     }
-    .footer section {
-        display: inline-block;
-        margin-right: 2%;
-        vertical-align: top;
-    }
-    .footer .footer-links {
-        width: 25%;
-    }
-    .footer .footer-oss {
-        width: 73%;
-        margin-right: 0;
-    }
-    /*.footer .footer-about {
-        width: 45%;
-        margin-right: 0;
-    }*/
-}
-
-
-/* TABLET/NETBOOK */
-@media only screen and (min-width: 48em) { 
-    body {
-
-    }
-    .main-nav {
-        text-align: right;
-    }
-    .hero {
-        margin-bottom: 0;
-    }
-    .content-header {
-        margin-bottom: 3em;
-    }
     .repos {
         margin: 0 -1em 2em;
     }
@@ -632,6 +609,64 @@ Change widths as necessary; Adjust content as necessary.
         padding: 0 1em;
         margin: 0 -0.26em 0 0;
         vertical-align: top;
+    }
+    .footer section {
+        display: inline-block;
+        margin-right: -0.26em;
+        margin-left: 2%;
+        vertical-align: top;
+    }
+    .footer .footer-links {
+        width: 32%;
+        margin-left: 0;
+    }
+    .footer .footer-oss {
+        width: 66%;
+    }
+    /*.footer .footer-about {
+        width: 45%;
+        margin-right: 0;
+    }*/
+}
+
+@media only screen and (min-width: 40em) {
+    .feature-img {
+        width: 25%;
+        max-width: none;
+        height: 14em;
+        margin: -1.5em 1.5em -1.5em -5.55555555555556%;
+        float: left;
+        background-repeat: no-repeat;
+    }
+    .feature-img.pdp {
+        background-position: 32% 60%;
+    }
+}
+
+/* TABLET/NETBOOK */
+@media only screen and (min-width: 46.5em) { 
+    body {
+
+    }
+    .main-nav {
+        text-align: right;
+    }
+    /*.hero {
+        margin-bottom: 0;
+    }*/
+    .feature-img {
+        width: 36%;
+        max-width: none;
+        height: 15.5em;
+        margin: -1.5em 1.5em -1.5em -5.55555555555556%;
+        float: left;
+        background-repeat: no-repeat;
+    }
+    .feature-img.pdp {
+        background-position: 32% 60%;
+    }
+    .content-header {
+        margin-bottom: 3em;
     }
     .entry {
         width: 66.666666666%;
@@ -644,10 +679,13 @@ Change widths as necessary; Adjust content as necessary.
     }
 }
 
-/* LANDSCAPE TABLET/NETBOOK/LAPTOP */
+/* LANDSCAPE TABLET/NETBOOK/LAPTOP (1024px) */
 @media only screen and (min-width: 64em) { 
     body {
 
+    }
+    .content {
+        overflow: hidden;
     }
     .wrap {
         max-width: 960px;
@@ -675,10 +713,27 @@ Change widths as necessary; Adjust content as necessary.
     }
     .hero .featured {
         width: 50%;
-        padding: 3em 1.5em;
+        padding: 1.5em;
         margin: 0 0 0 8%;
         position: relative;
         z-index: 2;
+        overflow: visible;
+    }
+    .feature-img {
+        width: 200%;
+        max-width: none;
+        height: 16em;
+        margin: -3em 0 1.5em -1.5em;
+        background-repeat: no-repeat;
+    }
+    .feature-img.pdp {
+        background-position: left center;
+    }
+    .featured p {
+        font-size: inherit;
+    }
+    .repo {
+        width: 33.333333333%;
     }
 }
 
@@ -686,9 +741,6 @@ Change widths as necessary; Adjust content as necessary.
 /* DESKTOP */
     body {
 
-    }
-    .repo {
-        width: 33.333333333%;
     }
 }
 
