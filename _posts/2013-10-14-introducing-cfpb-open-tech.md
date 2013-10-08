@@ -4,35 +4,32 @@ title: Introducing CFPB Open Tech
 author: 
 ---
 
-Welcome to **CFPB Open Tech**, the new home on the web for the Consumer Financial Protection Bureau to display and
-discuss the work it is doing with technology to improve the financial lives of the American public.
+Welcome to **CFPB Open Tech**, the new home on the web for the Consumer Financial Protection Bureau to share and
+discuss the work we do with technology to improve the financial lives of the American public.
 
 At the CFPB, we value [openness and transparency](http://www.consumerfinance.gov/open/). Another of our core values
 is innovation – "Our organization embraces new ideas and technology. We are focused on continuously improving,
-learning, and pushing ourselves to be great." A natural result of valuing these two things is that we are strong
-proponents of open source software, both the use of it in our organization and the releasing of our own.
+learning, and pushing ourselves to be great." A natural result is that we are strong
+proponents of open source software, both using it in our organization and releasing software we build. You can see more
+details about our philosophy on using and releasing open source software by reading our [Source Code Policy](http://www.consumerfinance.gov/developers/sourcecodepolicy/).
 
-Our hope is that, by releasing as much of our code as possible [here on GitHub](http://github.com/cfpb), we can
-encourage other federal agencies to also engage in internal development and the sharing of their work with the
-world. We also hope to foster collaboration with individuals across the country (or even the world), in the true
-spirit of the open source software community. We've even already accepted
-[a pull request from a member of the public](http://www.wired.com/wiredenterprise/2013/01/hack-the-government).
-
-You can see more details about our philosophy on using and releasing open source software by reading our
-[Source Code Policy](http://www.consumerfinance.gov/developers/sourcecodepolicy/).
-
-Besides software development, this website will also feature the work of CFPB's Design Team, which comprises close
+Along with software development, this website will also feature the CFPB's design work, which is led by a team of close
 to two dozen graphic and user experience designers. We'll talk about our design process and the value of design in
-providing financial assistance to our fellow Americans. (Hint: good design is incredibly important when dealing
-with a topic like finance, which comes with a great number of barriers to entry for the average consumer.)
+helping American consumers to understand the risks and benefits of their financial choices. Too often, financial products, services, contracts,
+and other terms are unfamiliar and confusing. Good design can help consumers make the right choices for themselves and their families.
 
 The CFPB is one of the first federal agencies to build internal design and development teams. The mission of the
 CFPB is to make markets for consumer financial products and services work for Americans, and we rely on intense
-collaboration between the technology team and our expert staff to accomplish that mission. Financial products are
+collaboration between the technology team and our expert policy staff to accomplish that mission. Financial products are
 increasingly technology-based, and having an in-house team of designers and developers enables us to keep pace with
-today's market and develop new products of our own that help our fellow Americans succeed in their financial lives.
+today's market and develop new products that help our fellow Americans succeed in their financial lives.
 
-We are the Consumer Financial Protection Bureau, and we build world-class technology products for the American
-people and ourselves. Our culture grows from ideas firmly rooted in creativity, innovation, excellence, public
-service, respect, and openness. Each product we build expresses these virtues, and we look forward to sharing our
-work with you.
+Our hope is that, by releasing as much of our code as possible [here on GitHub](http://github.com/cfpb), we can
+encourage other federal agencies to lead more of their own design and development efforts and to share their work with the
+world. We also hope to learn from and share with individuals across the country (or even the world), in the true
+spirit of the open source software community. We've already accepted [a pull request from a member of the public](http://www.wired.com/wiredenterprise/2013/01/hack-the-government).
+
+From time to time, we'll also discuss this work on [consumerfinance.gov](http://www.consumerfinance.gov), 
+but here you'll find more detail about choices, processes, and techniques. Our culture emphasizes creativity, innovation, 
+excellence, public service, respect, and openness. We are the Consumer Financial Protection Bureau, and we build 
+world-class technology products for the American people. We look forward to sharing our work with you.
