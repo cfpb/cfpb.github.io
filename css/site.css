@@ -543,11 +543,13 @@ sub {
     line-height: 1.5;
 }
 
-.intro a {
+.intro a,
+.content-header a {
     color: #002D72;
     border-bottom-color: #002D72;
 }
-.intro a:hover {
+.intro a:hover,
+.content-header a:hover {
     color: #0072CE;
     border-bottom-color: #0072CE;
 }
@@ -561,6 +563,11 @@ sub {
 .content-header h2 {
     font: bold 1em/2 "Avenir Next Demi", Arial, sans-serif;
     text-transform: uppercase;
+}
+.view-all-repos {
+    border: none;
+    margin-left: 1em;
+    text-transform: none;
 }
 .repos {
         margin-bottom: 2em;
@@ -619,7 +626,7 @@ Change widths as necessary; Adjust content as necessary.
         display: inline-block;
         width: 50%;
         padding: 0 1em;
-        margin: 0 -0.26em 0 0;
+        margin: 0 -0.26em 1em 0;
         vertical-align: top;
     }
     .footer section {
@@ -757,6 +764,7 @@ Change widths as necessary; Adjust content as necessary.
     }
     .repo {
         width: 33.333333333%;
+        /*width: 25%;*/
     }
 }
 
