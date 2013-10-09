@@ -37,8 +37,27 @@
     </footer>
 
     <!-- Don't need this yet -->
-    <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script> -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
     <!-- <script src="js/site.js"></script> -->
+    <script>
+      $(document).ready(function() {
+        // Select a random feature to display.
+        var features = $('.feature');
+        var numFeatures = features.length;
+        var showFeature = Math.floor(Math.random()*numFeatures);
+        features.removeClass('is-showing');
+        var i = 0;
+        features.each(function(index) {
+          if (showFeature == index) {
+            $(this).addClass('is-showing');
+          }
+        });
+      });
+
+      // REWRITE TO ADD/REMOVE CLASSES INSIDE THE MEDIA QUERIES
+
+    </script>
+
 </body>
 
 </html>
