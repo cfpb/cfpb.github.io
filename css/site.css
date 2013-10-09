@@ -750,6 +750,7 @@ Change widths as necessary; Adjust content as necessary.
     }
     .feature-img.eregs {
         border-width: 0 0 1px;
+        background-position: left top;
     }
     .feature p {
         font-size: inherit;
