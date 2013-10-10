@@ -440,7 +440,7 @@ sub {
 }
 
 .header {
-    border-bottom: 5px solid #2CB34A;
+    border-bottom: 4px solid #2CB34A;
     overflow: auto;
 }
 .header .logo {
@@ -448,9 +448,14 @@ sub {
     margin: 1em 0;
 }
 .header h1 {
-    margin-top: 1em;
-    font: bold 1em/1 "Avenir Next Demi", Arial, sans-serif;
-    text-transform: uppercase;
+    margin-top: 0.54545454545455em;
+    color: #75787B;
+    font-size: 1.375em;
+    line-height: 1;
+}
+.header h1 span {
+    font-family: "Avenir Next Demi", Arial, sans-serif;
+    font-weight: bold;
 }
 .footer {
     padding: 2em 0;
@@ -564,13 +569,9 @@ sub {
     font: bold 1em/2 "Avenir Next Demi", Arial, sans-serif;
     text-transform: uppercase;
 }
-.view-all-repos {
-    border: none;
-    margin-left: 1em;
-    text-transform: none;
-}
+
 .repos {
-        margin-bottom: 2em;
+    margin-bottom: 2em;
 }
 .repo p {
     max-width: 30em;
@@ -601,24 +602,18 @@ Change widths as necessary; Adjust content as necessary.
 
 /* MOBILE LANDSCAPE */
 @media only screen and (min-width: 30em) {
-    body {
-
-    }
     .header .logo {
         margin: 1.25em 0;
         float: right;
     }
     .header h1 {
-        margin-top: 2.25em;
+        margin-top: 1.5em;
         float: left;
     }
 }
 
 /* SMALL TABLET */
 @media only screen and (min-width: 37.5em) {
-    body {
-
-    }
     .repos {
         margin: 0 -1em 2em;
     }
@@ -628,6 +623,9 @@ Change widths as necessary; Adjust content as necessary.
         padding: 0 1em;
         margin: 0 -0.26em 1em 0;
         vertical-align: top;
+    }
+    .view-all-repos {
+        margin-left: 1em;
     }
     .footer section {
         display: inline-block;
@@ -668,9 +666,6 @@ Change widths as necessary; Adjust content as necessary.
 
 /* TABLET/NETBOOK */
 @media only screen and (min-width: 46.5em) { 
-    body {
-
-    }
     .main-nav {
         text-align: right;
     }
@@ -704,9 +699,6 @@ Change widths as necessary; Adjust content as necessary.
 
 /* LANDSCAPE TABLET/NETBOOK/LAPTOP (1024px) */
 @media only screen and (min-width: 64em) { 
-    body {
-
-    }
     .content {
         overflow: hidden;
     }
