@@ -1,105 +1,59 @@
-# CFPB Jekyll-It
+_This project is the internal development repository for the site that will soon live on the public GitHub at
+<https://github.com/cfpb/cfpb.github.io> and publish to <http://cfpb.github.io/>._
 
-Static sites are all the rage these days. This starter kit gives all you need to get one going on the Consumer Financial Protection Bureau's Github install using a ```gh-pages``` branch.
 
-## To start
+# [cfpb.github.io](https://cfpb.github.io/)
 
-1. You can [learn more about Jekyll](http://jekyllrb.com/).
-2. Read up on [how Github Pages work](http://pages.github.com/).
-3. You can try to run Jekyll locally, but you don't have to. To install it, follow the [instructions in the Developer Handbook](https://github.cfpb.gov/pages/cfpb/handbook/edit-me.html). Otherwise, you can simply push your site to your ```gh-pages``` branch, and bam – instant site.
+A site for the CFPB to share and discuss its technology work with the world.
 
-## Next
 
-Let's do this. Via the Terminal:
 
-    mkdir my-new-blog; cd my-new-blog
-    git clone git://github.cfpb.gov/davidakennedy/cfpb-jekyll-it.git
+## Contributing
 
-## What This Does 
+This site is published with [Jekyll](http://jekyllrb.com/) via [GitHub Pages](http://pages.github.com/). 
+If you would like to contribute, follow the directions below.
 
-All this kit does is set you up with the typical Jekyll directory structure, a sample index.html file, a sample post, a shared header and footer, and a set of default configurations. That's it -- no fanciness.
 
-To create a new post, just:
+### Quick start
 
-    touch _posts/yyyy-mm-dd-url-friendly-title.md
+1. [Fork this project here on GitHub](https://github.cfpb.gov/CFPB/cfpb.github.io/fork)
+1. Clone your fork to your machine.
+1. Make your edits.
+1. Commit the edits and push them to the `gh-pages` branch of _your_ repository.
+1. Preview your changes by going to `https://github.cfpb.gov/pages/[yourname]/cfpb.github.io/`
+1. When satisfied, make a pull request from your repo back to the main CFPB repo.
 
-... where yyyy-mm-dd is a date (e.g., 2012-08-31) and url-friendly-title is, well, a URL-friendly title.  Then inside that post, be sure to add at least the minimal [YAML front matter](http://jekyllrb.com/docs/frontmatter/) (see the _posts folder for an example):
+You can try to run Jekyll locally in order to preview the site without having to commit to Git, but it's not
+strictly necessary. If you want to try it, follow the
+[setup instructions in the Developer Handbook](https://github.cfpb.gov/pages/cfpb/handbook/edit-me.html).
+Otherwise, you can simply push your site to your `gh-pages` branch, and bam – instant site.
 
-    ---
-    layout: post
-    title: A test post
-    ---
 
-    This is a test.
+### More details
 
-## Important Notes
+#### Start writing a new post
 
-* Includes a sample about page and test post for you to get started with.
-* The main menu and site title can be changed by editing the ```header.html``` file in the ```_includes``` directory.
-* Comes with a basic one-column layout/design based on [Staticly](https://github.cfpb.gov/davidakennedy/staticly).
-* Has a basic ```_config.yml``` file to control your site settings. Be sure to change your ```baseurl``` setting to the URL of your Github pages branch.
+To create a new post, just make a new file in the `_posts/` directory with a filename in the following format:
+`yyyy-mm-dd-url-friendly-title.md`, where `yyyy-mm-dd` is the desired publication date (e.g., 2013-10-11) and
+`url-friendly-title` is, well, a URL-friendly title (typically just the title of the post, all lowercase, with
+dashes in place of spaces).
 
-CFPB Jekyll-It is great for internal blogs, a note-taking repo or project documentation.
-
-Static, ftw.
-
-## Running Jekyll Locally
-
-(This assumes you are working on a Mac and have Homebrew installed in user-land.)
-
-### 1. Install Ruby:
+Then, inside that post, be sure to add at least the minimum
+[YAML front matter](http://jekyllrb.com/docs/frontmatter/) (see anything in the _posts folder for an example):
 
 ```
-$ brew install ruby
+---
+layout: post
+title: The title of your post
+author: Your name, or the group for whom you're writing
+---
 ```
 
-### 2. Add homebrew Ruby to your path:
+Leave a blank line below that, and begin writing your content in
+[Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) format.
 
-Edit your `~/.bash_profile`
+#### More on previewing locally
 
-Prepend: $HOME/homebrew/opt/ruby/bin
-
-Path example:
-
-```
-export PATH=$HOME/homebrew/bin:$HOME/homebrew/sbin:
-$HOME/homebrew/share/npm/bin:$HOME/homebrew/share/python:
-$HOME/homebrew/opt/ruby/bin:$PATH
-```
-
-### 3. Install Jekyll
-
-```
-$ gem install jekyll
-```
-
-[Jekyll docs](http://jekyllrb.com/docs/home/)
-
-### 4. Configure Jekyll
-
-Use the config in this repo as a guide:
-
-`_config.yml` is for `gh_pages`
-
-`_config_local.yml` is for local Jekyll
-
-### 5. Sites directory
-
-Create a directory inside your repo that is names `_sites`
-Edit your `.gitnore` and add `/_sites/*` as an excluded path
-
-### 6. Run Jekyll:
-
-```
-$ cd  ~/repo_path/
-$ jekyll serve --watch --config _config_local.yml
-```
-### 7. Browse:
-
-Open up your browesr to http://localhost:4000 to view your site
-
-### Changelog
-
-* **July 9, 2013**: Initial release; V 0.1
-* **July 15, 2013**: Release; V 0.1.1
-  - Adds some extra styles to articles and puts main menu in Avenir.
+To preview locally, you'll need to rename the `_config.yml` file to a temporary name like `_config_gh.yml`, and
+rename `_config_local.yml` file to just `_config.yml` before you try to run Jekyll. _**Don't commit the modified
+config files!**_
