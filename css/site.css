@@ -530,6 +530,8 @@ sub {
     width: 111.149825783972%;
     max-width: none;
     height: 8em;
+    border: 1px solid #E3E4E5;
+    border-width: 1px 0;
     margin: -1.5em -5.55555555555556% 1.5em -5.55555555555556%;
     background-repeat: no-repeat;
 }
@@ -538,10 +540,7 @@ sub {
     background-position: left center;
 }
 .feature-img.eregs {
-    border: 1px solid #E3E4E5;
-    border-width: 1px 0;
     background-image: url('../img/feature_eregs_1280.png');
-    background-position: 0 4%;
 }
 .hero p {
     font-size: 1.125em;
@@ -651,16 +650,13 @@ Change widths as necessary; Adjust content as necessary.
         width: 25%;
         max-width: none;
         height: 14em;
+        border-width: 1px 1px 1px 0;
         margin: -1.5em 1.5em -1.5em -5.55555555555556%;
         float: left;
         background-repeat: no-repeat;
     }
     .feature-img.pdp {
         background-position: 32% 60%;
-    }
-    .feature-img.eregs {
-        border-width: 0 1px 0 0;
-        background-position: 10% 0;
     }
 }
 
@@ -740,16 +736,13 @@ Change widths as necessary; Adjust content as necessary.
     .feature-img {
         width: 300%;
         max-width: none;
-        height: 14.25em;
+        height: 14.5em;
+        border-width: 0 0 1px;
         margin: -1.5em 0 1.5em -1.5em;
         background-repeat: no-repeat;
     }
     .feature-img.pdp {
         background-position: left center;
-    }
-    .feature-img.eregs {
-        border-width: 0 0 1px;
-        background-position: left top;
     }
     .feature p {
         font-size: inherit;
