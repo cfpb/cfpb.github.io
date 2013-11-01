@@ -1,2 +1,2 @@
-baseurl:     /pages/cfpb/cfpb.github.io
+baseurl:     ''
 exclude:     [README.md, Gemfile, Gemfile.lock, vendor, _site]
