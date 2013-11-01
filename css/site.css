@@ -45,7 +45,13 @@ form,
 table,
 fieldset,
 menu,
-img {
+img,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     margin-top: 0;
     margin-bottom: 1.375em;
 }
@@ -517,13 +523,36 @@ sub {
 }
 
 .hero {
-    /*margin-bottom: 1.5em;*/
     background: #DBEDD4;
     font-family: "Avenir Next", Arial, sans-serif;
 }
 .hero section {
     padding: 1.5em 0;
 }
+.hero p {
+    margin-bottom: 1.5em;
+    font-size: 1.125em;
+    line-height: 1.5;
+}
+
+.intro h1 {
+    margin-bottom: 0.79411764705882em; /* 27/34 */
+}
+.intro a,
+.content-header a {
+    color: #002D72;
+    border-bottom-color: #002D72;
+}
+.intro a:hover,
+.content-header a:hover {
+    color: #0072CE;
+    border-bottom-color: #0072CE;
+}
+.intro .learn-more {
+    margin: 0; padding: 0;
+    list-style: none;
+}
+
 .hero .feature {
     padding: 1.5em 5.55555555555556%;
     margin: 0 -5.55555555555556%;
@@ -540,7 +569,7 @@ sub {
     width: 111.149825783972%;
     max-width: none;
     height: 8em;
-    border: 1px solid #E3E4E5;
+    border: 1px solid #BABBBD;
     border-width: 1px 0;
     margin: -1.5em -5.55555555555556% 1.5em -5.55555555555556%;
     background-repeat: no-repeat;
@@ -552,21 +581,10 @@ sub {
 .feature-img.eregs {
     background-image: url('../img/feature_eregs_1280.png');
 }
-.hero p {
-    font-size: 1.125em;
-    line-height: 1.5;
+.feature h2 {
+    margin-bottom: 0.92307692307692em; /* 24/26 */
 }
 
-.intro a,
-.content-header a {
-    color: #002D72;
-    border-bottom-color: #002D72;
-}
-.intro a:hover,
-.content-header a:hover {
-    color: #0072CE;
-    border-bottom-color: #0072CE;
-}
 
 .content-header {
     padding-top: 3px;
@@ -581,6 +599,9 @@ sub {
 
 .repos {
     margin-bottom: 2em;
+}
+.repo h3 {
+    line-height: 1;
 }
 .repo p {
     max-width: 30em;
@@ -672,7 +693,7 @@ sub {
     .feature-img {
        width: 25%;
        max-width: none;
-       height: 14em;
+       height: 15em;
        border-width: 1px 1px 1px 0;
        margin: -1.5em 1.5em -1.5em -5.55555555555556%;
        float: left;
