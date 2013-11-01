@@ -1,7 +1,8 @@
 ---
 layout: post
 title: Introducing CFPB Open Tech
-author: 
+author: null
+published: true
 ---
 
 Welcome to **CFPB Open Tech**, the new home on the web for the Consumer Financial Protection Bureau to share and
@@ -29,7 +30,7 @@ lives.
 
 Our hope is that by releasing as much of our code as possible [here on GitHub](http://github.com/cfpb), we can
 learn from and share with other agencies and individuals across the country (or even the world), in the spirit of
-open source software development. We've already accepted 
+open source software development and open government. We've already accepted 
 [a pull request from a member of the public](http://www.wired.com/wiredenterprise/2013/01/hack-the-government).
 
 From time to time, we'll also discuss this work on [consumerfinance.gov](http://www.consumerfinance.gov), but here
