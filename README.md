@@ -1,4 +1,3 @@
-cfpb.github.io
-==============
+# [cfpb.github.io](https://cfpb.github.io/)
 
-Tech Hub
+A site for the CFPB to share and discuss its technology work with the world.
