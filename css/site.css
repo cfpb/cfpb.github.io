@@ -1,0 +1,826 @@
+@import "normalize.css";
+@import "fonts.css";
+
+
+/* Paul Irish's Universal border-box -- http://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
+*, *:before, *:after {
+  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+}
+
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+
+/* BASE TYPOGRAPHY */
+
+body { 
+    color: #101820; /* CFPB Black */
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 1.375;
+    background-color: #FFF;
+
+    /* Improve default text rendering, handling of kerning pairs and ligatures */
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    word-wrap: break-word;
+    overflow-wrap: break-word; /* New CSS3 syntax supported by Chrome */
+}
+
+p,
+blockquote,
+q,
+pre,
+address,
+hr,
+code,
+samp,
+dl,
+ol,
+ul,
+form,
+table,
+fieldset,
+menu,
+img,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 0;
+    margin-bottom: 1.375em;
+}
+
+h1,
+h2,
+h3 {
+    font-family: "Avenir Next", Arial, sans-serif;
+    font-weight: normal;
+}
+
+h1 {
+    font-size: 2.125em;
+    line-height: 1.23529411764706;
+}
+h2 {
+    font-size: 1.625em;
+    line-height: 1.23076923076923;
+}
+h3 {
+    font-size: 1.375em;
+    line-height: 1.27272727272727;
+}
+
+h4 {
+    font-family: "Avenir Next Medium", Arial, sans-serif;
+    font-size: 1.125em;
+    line-height: 1.22222222222222;
+    font-weight: 500;
+}
+
+h5,
+h6 {
+    font-family: "Avenir Next Demi", Arial, sans-serif;
+    // font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+h5 {
+    font-size: 0.875em;
+    line-height: 1.57142857142857;
+}
+h6 {
+    font-size: 0.75em;
+    line-height: 1.83333333333333;
+}
+
+
+/* CODE */
+
+pre {
+    padding: 0.625em 1.25em;
+    border: 1px solid #BABBBD; /* Gray/50 */
+    border-radius: 0.625em;
+    margin-top: 1.375em;
+    background-color: #E3E4E5; /* Gray/20 */
+    color: #101820; /* CFPB Black */
+    /* Allow line wrapping of 'pre' */
+    overflow-x: auto;
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+pre,
+code,
+kbd,
+samp {
+    margin-bottom: 1.375em;
+    font-size: 1em;
+    line-height: 1.375;
+    font-family: Source Code Pro, Consolas, Monaco, 'Andale Mono', monospace, serif;
+}
+
+
+/* TABLES */
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin-bottom: 1.375em;
+}
+
+th {
+    text-align: left;
+}
+
+tr,
+th,
+td {
+    padding-right: 1.375em;
+    border-bottom: 0 solid #333;
+}
+
+
+/* FORMS */
+
+form {
+    margin: 0;
+}
+
+fieldset {
+    padding: 0;
+    border: 0;
+}
+
+textarea {
+    overflow: auto;
+    vertical-align: top;
+}
+
+legend {
+    *margin-left: -0.75em;
+}
+
+button,
+input,
+select,
+textarea {
+    vertical-align: baseline;
+    /* IE7 and older */
+    *vertical-align: middle;
+}
+
+button,
+input {
+    line-height: normal;
+    *overflow: visible;
+}
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    cursor: pointer;
+    -webkit-appearance: button;
+}
+
+input[type="search"] {
+    -webkit-appearance: textfield;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+}
+
+input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+
+/* QUOTES */
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+blockquote,
+q,
+cite {
+    font-style: italic;
+}
+
+blockquote {
+    padding-left: 1.5em;
+    border-left: 5px solid #BABBBD;
+    color: #796E65;
+}
+
+blockquote > p {
+    padding: 0;
+}
+
+
+/* LISTS */
+
+ul,
+ol {
+    padding: 0;
+    list-style-position: inside;
+}
+
+li ul,
+li ol {
+    margin: 0 1.375em;
+}
+
+dl dd {
+    margin-left: 1.375em;
+}
+
+dt {
+    font-weight: bold;
+}
+
+
+/* HYPERLINKS */
+
+a {
+    border-bottom: 1px dotted #0072CE;
+    color: #0072CE;
+    text-decoration: none;
+}
+
+main p a:visited {
+    border-bottom: 1px solid #005E5D;
+    color: #005E5D;
+    text-decoration: none;
+}
+
+a:hover {
+    border-bottom: 1px solid #7EB8DD;
+    color: #7EB8DD;
+    text-decoration: none;
+}
+
+a:focus {
+    border-bottom: 1px solid #0072CE;
+    outline: thin dotted;
+    color: #0072CE;
+    text-decoration: none;
+}
+
+a:active {
+    border-bottom: 1px solid #002D72;
+    color: #002D72;
+    text-decoration: none;
+}
+
+a.call-to-action {
+    font-family: "Avenir Next", Arial, sans-serif;
+}
+
+
+/* MEDIA */
+
+figure {
+    margin: 0;
+}
+
+img,
+object,
+embed,
+video {
+    /* Fluid images */
+    max-width: 100%;
+    _width: 100%;
+}
+
+img {
+    border: 0;
+    /* Improve IE's resizing of images */
+    -ms-interpolation-mode: bicubic;
+}
+
+svg:not(:root) {
+    /* Correct IE9 overflow */
+    overflow: hidden;
+}
+
+
+/* ABBREVIATION */
+
+abbr[title],
+dfn[title] {
+    border-bottom: 1px dotted #333;
+    cursor: help;
+}
+
+
+/* MARKED/INSERTED/DELETED AND SELECTED TEXT */
+
+ins,
+mark {
+    text-decoration: none;
+}
+
+mark {
+    background: #c47529;
+}
+
+ins {
+    background: #d49855;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+
+/* SELECTED TEXT */
+
+::-moz-selection,
+::selection {
+    background: #0072CE;
+    color: #FFF;
+    text-shadow: none;
+}
+
+
+/* OTHERS */
+
+strong,
+b,
+dt {
+    font-weight: bold;
+}
+
+dfn {
+    font-style: italic;
+}
+
+var,
+address {
+    font-style: normal;
+}
+
+sub,
+sup {
+    /* Position 'sub' and 'sup' without affecting line-height */
+    position: relative;
+    font-size: 75%;
+    line-height: 0;
+    vertical-align: baseline;
+}
+
+sup {
+    top: -0.5em;
+}
+
+/* Move superscripted text up */
+sub {
+    /* Move subscripted text down */
+    bottom: -0.25em;
+}
+
+
+/* MICRO CLEARFIX HACK */
+
+.cf:before,
+.cf:after {
+    content: "";
+    display: table;
+}
+
+/* For modern browsers */
+.cf:after {
+    clear: both;
+}
+
+.cf {
+    /* For IE 6/7 (trigger hasLayout) */
+    zoom: 1;
+}
+
+
+/* BAIC NAV */
+
+.nav {
+    padding-left: 0;
+    margin-left: 0;
+    list-style: none;
+}
+
+.nav > li,
+.nav > li > a {
+      display: inline-block;
+     *display: inline;
+      zoom: 1;
+}
+
+
+/* IMAGE REPLACEMENT */
+
+.ir {
+    border: 0;
+    background-color: transparent;
+    /* IE 6/7 fallback */
+    *text-indent: -9999px;
+    overflow: hidden;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+
+/* Hide from both screenreaders and browsers: h5bp.com/u */
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/* Hide only visually, but have it available for screenreaders: h5bp.com/v */
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/* Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p */
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/* Hide visually and from screenreaders, but maintain layout */
+.invisible {
+    visibility: hidden;
+}
+
+
+/* DEFAULT MOBILE STYLE */
+
+.wrap {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.header {
+    border-bottom: 4px solid #2CB34A;
+    overflow: auto;
+}
+
+.header .logo {
+    display: block;
+    margin: 1em 0;
+}
+
+.header h1 {
+    margin-top: 0.54545454545455em;
+    color: #75787B;
+    font-size: 1.375em;
+    line-height: 1;
+}
+
+.header h1 span {
+    font-family: "Avenir Next Demi", Arial, sans-serif;
+    font-weight: bold;
+}
+
+.hero {
+    background: #DBEDD4;
+    font-family: "Avenir Next", Arial, sans-serif;
+}
+.hero section {
+    padding: 1.5em 0;
+}
+.hero p {
+    margin-bottom: 1.5em;
+    font-size: 1.125em;
+    line-height: 1.5;
+}
+
+.intro h1 {
+    margin-bottom: 0.79411764705882em; /* 27/34 */
+}
+.intro a,
+.content-header a {
+    color: #002D72;
+    border-bottom-color: #002D72;
+}
+.intro a:hover,
+.content-header a:hover {
+    color: #0072CE;
+    border-bottom-color: #0072CE;
+}
+.intro .learn-more {
+    margin: 0; padding: 0;
+    list-style: none;
+}
+
+.hero .feature {
+    padding: 1.5em 5.55555555555556%;
+    margin: 0 -5.55555555555556%;
+    background: #FFF;
+    overflow: hidden;
+
+    /* hide all by default */
+    display: none;
+}
+.feature.is-showing {
+    display: block;
+}
+.feature-img {
+    width: 111.149825783972%;
+    max-width: none;
+    height: 8em;
+    border: 1px solid #BABBBD;
+    border-width: 1px 0;
+    margin: -1.5em -5.55555555555556% 1.5em -5.55555555555556%;
+    background-repeat: no-repeat;
+}
+.feature-img.pdp {
+    background-image: url('../img/feature_pdp_1280x392.png');
+    background-position: left center;
+}
+.feature-img.eregs {
+    background-image: url('../img/feature_eregs_1280.png');
+}
+.feature h2 {
+    margin-bottom: 0.92307692307692em; /* 24/26 */
+}
+
+
+.content-header {
+    padding-top: 3px;
+    border-bottom: 2px solid #2CB34A;
+    margin-bottom: 1.5em;
+    background: #ADDC91;
+}
+.content-header h2 {
+    font: bold 1em/2 "Avenir Next Demi", Arial, sans-serif;
+    text-transform: uppercase;
+}
+
+.repos {
+    margin-bottom: 2em;
+}
+.repo h3 {
+    line-height: 1;
+}
+.repo p {
+    max-width: 30em;
+    margin-bottom: 1.7142857142857142857142857142857em;
+    font: 0.875em/1.7142857142857142857142857142857 "Avenir Next", Arial, sans-serif;
+}
+
+.footer {
+    padding: 2em 0;
+    border-top: 2px solid #BABBBD;
+    margin-top: 2em;
+    background: #F1F2F2;
+    font-family: "Avenir Next", Arial, sans-serif;
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer h4 {
+    margin-bottom: 0.75em;
+    font-size: 16px;
+    line-height: 1.5;
+    text-transform: uppercase;
+}
+
+.footer p {
+    font-size: 0.875em;
+    line-height: 1.42857142857143;
+}
+
+
+/* MEDIA QUERIES */
+
+/* MOBILE PORTRAIT */
+@media only screen and (min-width: 20em) {
+    body {
+
+    }
+}
+
+/* MOBILE LANDSCAPE */
+@media only screen and (min-width: 30em) {
+    .header .logo {
+       margin: 1.25em 0;
+       float: right;
+    }
+    .header h1 {
+       margin-top: 1.5em;
+       float: left;
+    }
+}
+
+/* SMALL TABLET */
+@media only screen and (min-width: 37.5em) {
+    .repos {
+       margin: 0 -1em 2em;
+    }
+    .repo {
+       display: inline-block;
+       width: 50%;
+       padding: 0 1em;
+       margin: 0 -0.26em 1em 0;
+       vertical-align: top;
+    }
+    .view-all-repos {
+       margin-left: 1em;
+    }
+    .footer section {
+       display: inline-block;
+       margin-right: -0.26em;
+       margin-left: 2%;
+       vertical-align: top;
+    }
+    .footer .footer-links {
+       width: 32%;
+       margin-left: 0;
+    }
+    .footer .footer-oss {
+       width: 66%;
+    }
+    /*.footer .footer-about {
+       width: 45%;
+       margin-right: 0;
+    }*/
+}
+
+@media only screen and (min-width: 40em) {
+    .feature-img {
+       width: 25%;
+       max-width: none;
+       height: 15em;
+       border-width: 1px 1px 1px 0;
+       margin: -1.5em 1.5em -1.5em -5.55555555555556%;
+       float: left;
+       background-repeat: no-repeat;
+    }
+    .feature-img.pdp {
+       background-position: 32% 60%;
+    }
+}
+
+/* TABLET/NETBOOK */
+@media only screen and (min-width: 46.5em) { 
+    .main-nav {
+       text-align: right;
+    }
+    /*.hero {
+       margin-bottom: 0;
+    }*/
+    .feature-img {
+       width: 36%;
+       max-width: none;
+       height: 15.5em;
+       margin: -1.5em 1.5em -1.5em -5.55555555555556%;
+       float: left;
+       background-repeat: no-repeat;
+    }
+    .feature-img.pdp {
+       background-position: 32% 60%;
+    }
+    .content-header {
+       margin-bottom: 3em;
+    }
+    .entry {
+       width: 66.666666666%;
+    }
+    .entry h1 {
+       margin-bottom: 1em;
+    }
+    .entry p {
+       line-height: 1.625;
+    }
+}
+
+/* LANDSCAPE TABLET/NETBOOK/LAPTOP (1024px) */
+@media only screen and (min-width: 64em) { 
+    .content {
+       overflow: hidden;
+    }
+    .wrap {
+       max-width: 960px;
+    }
+    .hero {
+       position: relative;
+    }
+    .hero:after {
+       content: "";
+       display: block;
+       width: 50%;
+       height: 100%;
+       position: absolute;
+       top: 0;
+       right: 0;
+       z-index: 1;
+       background: #FFF;
+    }
+    .hero section {
+       display: inline-block;
+       width: 42%;
+       padding: 3em 0;
+       margin-right: -0.26em;
+       vertical-align: top;
+    }
+    .feature.is-showing {
+       display: inline-block;
+    }
+    .hero .feature {
+       width: 50%;
+       padding: 1.5em 0 1.5em 1.5em;
+       margin: 0 0 0 8%;
+       position: relative;
+       z-index: 2;
+       overflow: visible;
+    }
+    .feature-img {
+       width: 300%;
+       max-width: none;
+       height: 14.5em;
+       border-width: 0 0 1px;
+       margin: -1.5em 0 1.5em -1.5em;
+       background-repeat: no-repeat;
+    }
+    .feature-img.pdp {
+       background-position: left center;
+    }
+    .feature p {
+       font-size: inherit;
+    }
+    .repo {
+       width: 33.333333333%;
+       /*width: 25%;*/
+    }
+}
+
+/* DESKTOP */
+@media only screen and (min-width: 80em) { 
+    body {
+
+    }
+}
+
+/* WIDESCREEN */
+@media only screen and (min-width: 87.5em) { 
+    /*body { font-size: 1.125em; }*/
+}
+    
+/* PRINT */
+@media print {
+  * {background: transparent !important; color: black !important; text-shadow: none !important; filter:none !important; -ms-filter: none !important} /* Black prints faster */
+  a, a:visited {color: #444 !important; text-decoration: underline}
+  a[href]:after {content: " (" attr(href) ")"}
+  abbr[title]:after {content: " (" attr(title) ")"}
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after {content: ""}  /* Don't print links for images, javascript or internal links */
+  pre, blockquote {border: 1px solid #999; page-break-inside: avoid; }
+  thead {display: table-header-group; } /* Repeat header row at top of each printed page */
+  tr, img {page-break-inside: avoid; }
+  img {max-width: 100% !important; }
+  @page {margin: 0.5cm}
+  p, h2, h3 {orphans: 3; widows: 3}
+  h2, h3{page-break-after: avoid}
+}
