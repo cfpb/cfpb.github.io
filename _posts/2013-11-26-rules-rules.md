@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 layout: post
 author: CM Lubinski
 title: Rules about Rules
