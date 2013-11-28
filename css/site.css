@@ -751,7 +751,7 @@ sub {
     .hero:after {
        content: "";
        display: block;
-       width: 50%;
+       width: 49%;
        height: 100%;
        position: absolute;
        top: 0;
@@ -770,7 +770,7 @@ sub {
        display: inline-block;
     }
     .hero .feature {
-       width: 50%;
+       width: 49%;
        padding: 1.5em 0 1.5em 1.5em;
        margin: 0 0 0 8%;
        position: relative;
