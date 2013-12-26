@@ -2,10 +2,12 @@
 published: true
 layout: post
 author: CM Lubinski
-title: Rules about Rules
+title: "Rules about Rules: Tools of the Trade"
 ---
 
 The implementation details and other minutia of laws passed by congress are often left to regulatory bodies to codify. One of the core contributions found in the recently released [eregs](http://eregs.github.io/eregulations) project is a plain-text parser for these regulations, a.k.a. "rules." This parser pulls structure from the documents such that each paragraph can be properly indexed; it discovers citations between the paragraphs and to external works; it determines definitions; it even calculates differences between versions of the regulation. Due to the nature of the enterprise, we cannot leave room for probabilistic methods employed via machine learning. Instead we retrieve all of the information through parsing, a rule-based approach to natural language processing.
+
+In this article, we'll touch on a few of the tools we used when parsing regulations.
 
 ## XML: So Much Structure, So Little Meaning
 
@@ -17,11 +19,11 @@ In our efforts towards a minimum-viable-product, we chose to skip both the poten
 
 Regular expressions are one of the building blocks of almost any text parser. While we won't discuss them in great detail (there are many, better resources available,) I will note that learning how to write simple regexes doesn't take much time at all. As you progress and want to match more and more, Google around; due to their wide spread use, it's basically guaranteed that someone's had the same problem.
 
-Regular expressions allow you to describe the "shape" of text you would like to match. For example, if a sentence has the phrase "the term", followed by some text, followed by "means" we might assume that that sentence is defining a word or phrase. Regexes give us many tools to narrow down the shape of text, including special characters to indicate whitespace, the beginning and end of a line, and "word boundaries" like commas, spaces, etc.
+Regular expressions allow you to describe the "shape" of text you would like to match. For example, if a sentence has the phrase "the term", followed by some text, followed by "means" we might assume that that sentence is defining a word or phrase. Regexes give us many tools to narrow down the shape of acceptable text, including special characters to indicate whitespace, the beginning and end of a line, and "word boundaries" like commas, spaces, etc.
 
 ```
 "the term .* means"    # likely indicates a defined term
-"\ba\b"                # only matches the word "a"; doesn't match "a" inside another word
+"\ba\b"                # only matches the word "a"; doesn't match "a" inside another word such as "bad"
 ```
 
 Regexes also let us *retrieve* matching text. In our example above, we could determine not only that a defined term was likely present but also what that term or phrase would be. Expressions may include multiple segments of retrieved text (known as "capture groups"), and advanced tools will provide deeper inspection such as segmenting out repeated expressions.
@@ -43,9 +45,7 @@ There's also a pesky matter of ambiguity. Many of the roman numerals look a heck
 
 ## Parser Combinators: Not As Scary As They Sound
 
-Regular expressions certainly require additional mental overhead by future developers, as they must generally "run" expressions in their mind to see what they do. Well-named expressions help a bit, but the syntax for naming capture groups in generally quite ugly. Further, combining expressions is error-prone and leads to even more indecipherable code.
-
-So-called "parser combinators" (i.e. parsers that can be combined) resolve or at least alleviate both of these issues. Combinators allow expressions to be named and easily combined to build larger expressions. Below, examples demonstrate these features using `pyparsing`, a parser combinator library for Python.
+Regular expressions certainly require additional mental overhead by future developers, who will generally "run" expressions in their mind to see what they do. Well-named expressions help a bit, but the syntax for naming capture groups in generally quite ugly. Further, combining expressions is error-prone and leads to even more indecipherable code. So-called "parser combinators" (i.e. parsers that can be combined) resolve or at least alleviate both of these issues. Combinators allow expressions to be named and easily combined to build larger expressions. Below, examples demonstrate these features using `pyparsing`, a parser combinator library for Python.
 
 ```
 part = Word(digits).setResultsName("part")
