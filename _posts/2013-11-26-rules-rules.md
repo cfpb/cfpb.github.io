@@ -73,9 +73,9 @@ for cit in [citations.head] + citations.tail:
 
 ## What About Meaning?
 
-Thus far, we have matched text, searched for markers, and retrieved sophisticated values out of the regulation. I can understand why this might feel like a bit of a let down - the parse isn't doing any magic. It doesn't know what sentences mean; it simply knows how to find and retrieve specific *kinds* of substrings. While I might argue that this is a foundation of understanding, let's do something fun instead.
+Thus far, we have matched text, searched for markers, and retrieved sophisticated values out of the regulation. I can understand why this might feel like a bit of a let down - the parser isn't doing any magic. It doesn't know what sentences mean; it simply knows how to find and retrieve specific *kinds* of substrings. While we could argue that this is a foundation of understanding, let's do something fun instead.
 
-The problem we face is to determine what has changed when a regulation is modified via a notice. Unfortunately, the pin-point accuracy that we need appears only in English phrases like 
+The problem we face is that we must determine what has changed when a regulation is modified. Modifications don't result in new versions of the regulaton from the Government Printing Office (which only publishes entire regulations once a year.) Instead, we must look at the "notice" that modifies the regulation (effectively a diff). Unfortunately, the pin-point accuracy that we need appears only in English phrases like 
 ```
 4. Section 1005.32 is amended by revising paragraphs (b)(2)(ii) and (c)(3), adding paragraph (b)(3), revising paragraph (c)(4) and removing paragraph (c)(5) to read as follows
 ```
@@ -83,10 +83,16 @@ We can certainly parse out some of the citations, but we won't understand what's
 ```
 [Citation, Verb, Citation, Citation, Verb, Citation, Verb, Citation, Verb, Citation]
 ```
-with each Citation keeping track of its (partial) citation information and each Verb knowing which action is being performed, as well as the active/passive voice ("revising" vs. "revised").
+Each Citation token will know its (partial) citation (e.g. paragraph (b)(3) with no section), while each Verb will know what action is being performed as well as the active/passive voice ("revising" vs. "revised").
 
 We next convert all passive verbs into their corresponding active form by changing the order of the tokens. For example, "paragraph (b) is revised" gets converted into "revising paragraph (b)" in token form. Next, we can carry citation information from left to right. In this sentence, "Section 1005.32" carries context to each of the other paragraphs, filling in their partial citation information. 
 
-Finally, we can step through our list of tokens, keeping track of which modification mode we are in. We'd see "Section 1005.32" first, but since we start with no mode set, we will ignore it. We then see "revising" and set our modification mode correspondingly. We can therefore mark each of the next two citations as "modified". We then hit an "adding" verb, so we switch modes and mark the following citation as "added". We continue this way, switching modes and marking citations until the whole sentence is parsed.
+Finally, we can step through our list of tokens, keeping track of which modification mode we are in. We'd see "Section 1005.32" first, but since we start with no verb/mode set, we will ignore it. We then see "revising" and set our modification mode correspondingly. We can therefore mark each of the next two citations as "modified". We then hit an "adding" verb, so we switch modes and mark the following citation as "added". We continue this way, switching modes and marking citations until the whole sentence is parsed.
 
-With combinations of these tools, we can parse the structure of regulations, their citations, their definitions, changes between regulations, and much more. Of course, machine learning techniques are more scalable, but for this use case, rules about rules have worked well.
+```
+[Citation[No Verb], Verb == revise, Citation[Revise], Citation[Revise], Verb == add, Citation[Add], Verb == revise ...
+```
+
+## Rules and Anarchy
+
+With combinations of just these tools, we can parse a great deal of content out of plain text regulations, including their structure, citations, definitions, diffs, and much more. What we've created has a great many limitations, however. The rule-based approach requires our developers think up "laws" for the English language, an approach which has proven itself ineffective in larger projects. Unfortunately, natural language isn't strict. The rule-based tools described above are effective for our use case because we only have a limited set of examples (a subset of our own regulations,) but they would run into all sorts of difficulties pulling meaning from free-form text. Machine learning and statistical techniques shine when finding reason in such anarchy.
