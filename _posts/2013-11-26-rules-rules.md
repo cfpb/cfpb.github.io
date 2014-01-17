@@ -2,20 +2,20 @@
 published: true
 layout: post
 author: CM Lubinski
-title: "Rules about Rules: Tools of the Trade"
+title: "Rules about rules: Tools of the trade"
 ---
 
 The implementation details and other minutia of laws passed by Congress are often left to regulatory bodies to codify. One of the core contributions found in the recently released [eRegulations](http://eregs.github.io/eregulations) project is a plain-text parser for these regulations, a.k.a. "rules." This parser pulls structure from the documents such that each paragraph can be properly indexed; it discovers citations between the paragraphs and to external works; it determines definitions; it even calculates differences between versions of the regulation. Due to the sensitive (and authoritative) nature of regulations, we cannot leave room for probabilistic methods employed via machine learning. Instead we retrieve all of the information through parsing, a rule-based approach to natural language processing.
 
 In this article, we'll touch on a few of the tools we used when parsing regulations.
 
-## XML: So Much Structure, So Little Meaning
+## XML: So much structure, so little meaning
 
 The Government Printing Office publishes regulations in the [Code of Federal Regulations](http://www.gpo.gov/fdsys/browse/collectionCfr.action?collectionCode=CFR) (CFR) as XML bulk [downloads](http://www.gpo.gov/fdsys/bulkdata/CFR). Surely, with a structured language such as XML defining a regulation, we don't have much to do, right? Unfortunately, as Cornell [discovered](http://www.hklii.hk/conference/paper/2B3.pdf), not all XML documents are created equal, and the CFR's data isn't exactly clean. The Cornell analysis cites major issues with both inconsistent markup and, more insidiously, structure-without-meaning. Referring to the documents as a "bag of tags" conveys the problem well; just because a document has formatting does not mean it follows a logical structure. The XML provided in these bulk downloads was designed for conveying format, rather than structure, meaning header tags might be used to center text and italic paragraphs might imply headings. 
 
 In our efforts towards a minimum-viable-product, we chose to skip both the potential hints and pitfalls of XML parsing in favor of plain-text versions of the regulations. Our current development relies more heavily on XML, yet we continue to use plain text in many of our features, as it's easier to reason about. For the sake of simplicity, this writeup will proceed with the assumption that the regulation is provided as a plain-text document.
 
-## Regular Expressions: Regexi?
+## Regular expressions: Regexi?
 
 Regular expressions are one of the building blocks of almost any text parser. While we won't discuss them in great detail (there are many, better resources available,) I will note that learning how to write simple regexes doesn't take much time at all. As you progress and want to match more and more, Google around; due to their wide spread use, it's basically guaranteed that someone's had the same problem.
 
@@ -43,7 +43,7 @@ It's not a simple matter of starting a new paragraph whenever a marker is found,
 
 There's also a pesky matter of ambiguity. Many of the roman numerals are identical (in appearance) to members of the lower-case alphabet. Further, when using plain text as a source, all italics are lost, so the deepest layers of the paragraph tree are indistinguishable from their parents. Luckily, we can both keep track of what we have seen before (i.e. what *could* the next marker be) as well as peek forward to see which marker follows. If a (i)-marker is followed by a (ii) or a (j), we can deduce exactly to which level in the tree the (i) corresponds.
 
-## Parser Combinators: Not As Scary As They Sound
+## Parser combinators: Not as scary as they sound
 
 Regular expressions certainly require additional mental overhead by future developers, who will generally "run" expressions in their mind to see what they do. Well-named expressions help a bit, but the syntax for naming capture groups in generally quite ugly. Further, combining expressions is error-prone and leads to even more indecipherable code. So-called "parser combinators" (i.e. parsers that can be combined) resolve or at least alleviate both of these issues. Combinators allow expressions to be named and easily combined to build larger expressions. Below, examples demonstrate these features using `pyparsing`, a parser combinator library for Python.
 
@@ -71,7 +71,7 @@ for cit in [citations.head] + citations.tail:
     handleCitation(cit)
 {% endhighlight %}
 
-## What About Meaning?
+## What about meaning?
 
 Thus far, we have matched text, searched for markers, and retrieved sophisticated values out of the regulation. I can understand why this might feel like a bit of a let down - the parser isn't doing any magic. It doesn't know what sentences mean; it simply knows how to find and retrieve specific *kinds* of substrings. While we could argue that this is a foundation of understanding, let's do something fun instead.
 
@@ -91,7 +91,7 @@ Finally, we can step through our list of tokens, keeping track of which modifica
 
     [Citation[No Verb], Verb == revise, Citation[Revise], Citation[Revise], Verb == add, Citation[Add], Verb == revise ...
 
-## Rules and Anarchy
+## Rules and anarchy
 
 With combinations of just these tools, we can parse a great deal of content out of plain text regulations, including their structure, citations, definitions, diffs, and much more. What we've created has a great many limitations, however. The rule-based approach requires our developers think up "laws" for the English language, an approach which has proven itself ineffective in larger projects. Natural language is, in many ways, chaos, where machine learning and statistical techniques shine. In that realm, there is an expectation of inaccuracy simply because the problem is *so big*.
 
