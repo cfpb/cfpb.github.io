@@ -3,6 +3,7 @@ published: true
 layout: post
 author: CM Lubinski
 title: "Rules about rules: Tools of the trade"
+tagline: "How we find structured data in regulation text"
 ---
 
 Congress writes the laws and then regulatory bodies like the CFPB take them from a general vision to a specific implementation. Those regulations are usually long, monolithic, difficult-to-read documents buried deep within Federal agency websites. With the recently released eRegulations project ([use](http://www.consumerfinance.gov/eregulations), [code](http://eregs.github.io/eregulations)), we aimed to make regulations more approachable by presenting them with structure and layers of relevant material. One of the core contributions of the project is a plain-text parser for these regulations, a.k.a. "rules." This parser pulls structure from the documents such that each paragraph can be properly indexed; it discovers citations between the paragraphs and to external works; it determines definitions; it even calculates differences between versions of the regulation. Due to the sensitive (and authoritative) nature of regulations, we cannot leave room for probabilistic methods employed via machine learning. Instead we retrieve all of the information through parsing, a rule-based approach to natural language processing.
