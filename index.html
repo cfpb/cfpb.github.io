@@ -109,7 +109,7 @@ title: Home
                     <article class="entry">
                         <h1 class="entry-title">
                             <a href="{{ post.url | remove_first:'/'}}/">
-                            {{ post.title }}
+                                {{ post.title }}
                             </a>
                         </h1>
                         {% if post.date %}
@@ -126,7 +126,7 @@ title: Home
                         {% if post.description %}
                         <p class="entry-description">{{ post.description }}</p>
                         <p class="entry-description-link">
-                            <a href="{{ site.baseurl }}{{ post.url }}">
+                            <a href="{{ post.url | remove_first:'/'}}/">
                                 Read more of &ldquo;{{ post.title }}&rdquo;
                                 <i class="icon-right"></i>
                             </a>

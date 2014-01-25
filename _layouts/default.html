@@ -12,12 +12,12 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="css/site.css">
+    <link rel="stylesheet" href="{% if page.assetpath %}{{ page.assetpath }}{% endif %}css/site.css">
 
 <!--[if lt IE 9]>
     <link rel="stylesheet" href="{% if page.assetpath %}{{ page.assetpath }}{% endif %}css/ie8.css">
-    <script src="js/html5shiv-printshiv.js" media="all"></script>
-    <script src="js/respond.min.js" media="all"></script>
+    <script src="{% if page.assetpath %}{{ page.assetpath }}{% endif %}js/html5shiv-printshiv.js" media="all"></script>
+    <script src="{% if page.assetpath %}{{ page.assetpath }}{% endif %}js/respond.min.js" media="all"></script>
 <![endif]-->
 
 </head>
@@ -58,7 +58,7 @@
         });
       });
     </script>
-    <!-- <script src="js/site.js"></script> -->
+    <!-- <script src="{% if page.assetpath %}{{ page.assetpath }}{% endif %}js/site.js"></script> -->
 
 </body>
 
