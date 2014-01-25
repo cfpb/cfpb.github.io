@@ -1,5 +1,6 @@
 @import "normalize.css";
 @import "fonts.css";
+@import "syntax.css";
 
 
 /* Paul Irish's Universal border-box -- http://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
@@ -86,7 +87,6 @@ h4 {
 h5,
 h6 {
     font-family: "Avenir Next Demi", Arial, sans-serif;
-    // font-weight: 600;
     letter-spacing: 1px;
     text-transform: uppercase;
 }
@@ -104,7 +104,7 @@ h6 {
 /* CODE */
 
 pre {
-    padding: 0.625em 1.25em;
+    padding: 0.625em 1em;
     border: 1px solid #BABBBD; /* Gray/50 */
     border-radius: 0.625em;
     margin-top: 1.375em;
