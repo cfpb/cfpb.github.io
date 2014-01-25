@@ -2,8 +2,10 @@
 layout: default
 ---
 
-<article class="entry">
-	<h1 class="entry-title"><a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a></h1>
-	<p class="entry-date">{{ page.date | date_to_string }}</p>
-	{{ content }}
-</article>
+<div class="content-body wrap">
+    <article class="entry">
+        <h1 class="entry-title"><a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a></h1>
+        <p class="entry-date">{{ page.date | date_to_string }}</p>
+        {{ content }}
+    </article>
+</div>

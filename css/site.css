@@ -262,6 +262,13 @@ dt {
     font-weight: bold;
 }
 
+/* Unstyled nav lists */
+.nav-list {
+    padding-left: 0;
+    margin-left: 0;
+    list-style: none;
+}
+
 
 /* HYPERLINKS */
 
@@ -294,6 +301,15 @@ a:active {
     border-bottom: 1px solid #002D72;
     color: #002D72;
     text-decoration: none;
+}
+
+a.home {
+    color: #43484E;
+    border: 0;
+}
+a.home:hover,
+a.home:focus {
+    color: #101820;
 }
 
 a.call-to-action {
@@ -423,22 +439,6 @@ sub {
 }
 
 
-/* BAIC NAV */
-
-.nav {
-    padding-left: 0;
-    margin-left: 0;
-    list-style: none;
-}
-
-.nav > li,
-.nav > li > a {
-      display: inline-block;
-     *display: inline;
-      zoom: 1;
-}
-
-
 /* IMAGE REPLACEMENT */
 
 .ir {
@@ -490,6 +490,15 @@ sub {
 /* Hide visually and from screenreaders, but maintain layout */
 .invisible {
     visibility: hidden;
+}
+
+/* Skip link */
+.skip > a {
+    padding: 0.5em;
+    background-color: #0072CE;
+    color: #FFF;
+    font-family: "Avenir Next Demi", Arial, sans-serif;
+    font-weight: bold;
 }
 
 
@@ -585,7 +594,6 @@ sub {
     margin-bottom: 0.92307692307692em; /* 24/26 */
 }
 
-
 .content-header {
     padding-top: 3px;
     border-bottom: 2px solid #2CB34A;
@@ -616,21 +624,35 @@ sub {
     background: #F1F2F2;
     font-family: "Avenir Next", Arial, sans-serif;
 }
-
 .footer-links ul {
     list-style: none;
 }
-
 .footer h4 {
     margin-bottom: 0.75em;
     font-size: 16px;
     line-height: 1.5;
     text-transform: uppercase;
 }
-
 .footer p {
     font-size: 0.875em;
     line-height: 1.42857142857143;
+}
+
+
+/* SINGLE ENTRY POSTS */
+
+.single {
+    margin-top: 2em;
+}
+
+.entry-meta {
+    margin-top: -1.5em;
+    font-family: "Avenir Next", Arial, sans-serif;
+}
+
+.author {
+    font-family: "Avenir Next Demi", Arial, sans-serif;
+    font-weight: bold;
 }
 
 
@@ -726,14 +748,38 @@ sub {
     .content-header {
        margin-bottom: 3em;
     }
+    .entries {
+        margin: 0 -1em;
+    }
+    .entry,
+    .more-entries {
+        display: inline-block;
+        padding: 0 1em;
+        margin: 0 -0.26em 1em 0;
+        vertical-align: top;
+    }
     .entry {
-       width: 66.666666666%;
+        width: 66.6666666667%;
+    }
+    .entry.single {
+      padding: 0;
+      margin: 2em 0 1em;
+    }
+    .more-entries {
+        width: 33.3333333333%;
+    }
+    .entry-list {
+        border-top: 1px solid #BABBBD;
+    }
+    .entry-list li {
+        border-bottom: 1px solid #BABBBD; /* Gray/50 */
+        padding-top: 1.375em;
     }
     .entry h1 {
-       margin-bottom: 1em;
+        margin-bottom: 1em;
     }
     .entry p {
-       line-height: 1.625;
+        line-height: 1.625;
     }
 }
 

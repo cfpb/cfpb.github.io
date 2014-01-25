@@ -1,8 +1,9 @@
 ---
 layout: post
-title: Introducing CFPB Open Tech
-author: null
 published: true
+title: Introducing CFPB Open Tech
+author: 
+description: Welcome to CFPB Open Tech, the new home on the web for the Consumer Financial Protection Bureau to share and discuss the work we do with technology to improve the financial lives of consumers throughout the country.
 ---
 
 Welcome to **CFPB Open Tech**, the new home on the web for the Consumer Financial Protection Bureau to share and
