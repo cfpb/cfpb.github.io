@@ -4,7 +4,7 @@
 
 /* Paul Irish's Universal border-box -- http://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
 *, *:before, *:after {
-  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+    -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
 }
 
 
@@ -16,7 +16,7 @@ body {
 
 /* BASE TYPOGRAPHY */
 
-body { 
+body {
     color: #101820; /* CFPB Black */
     font-family: Georgia, "Times New Roman", serif;
     line-height: 1.375;
