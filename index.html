@@ -104,15 +104,63 @@ title: Home
             </section>
 
             <section class="content-body wrap">
+                <div class="entries">
                 {% for post in site.posts limit:1 %}
-                <article class="entry">
-                    <h1 class="entry-title">
-                        {% comment %}<a href="{{ site.baseurl }}{{ post.url }}">{% endcomment %}
-                        {{ post.title }}
-                        {% comment %}</a>{% endcomment %}
-                    </h1>
-                    {% comment %}<p class="entry-date">{{ post.date | date_to_string }}</p>{% endcomment %}
-                    {{ post.content }}
-                </article>
+                    <article class="entry">
+                        <h1 class="entry-title">
+                            <a href="{{ post.url | remove_first:'/'}}/">
+                                {{ post.title }}
+                            </a>
+                        </h1>
+                        {% if post.date %}
+                        <p class="entry-meta">
+                            <small>
+                                Posted on 
+                                <time datetime="{{ post.date | date: '%B %d, %Y' }}">
+                                    {{ post.date | date: '%B %d, %Y' }}
+                                </time>
+                                {% if post.author %} by <span class="author">{{ post.author }}</span>{% endif %}
+                            </small>
+                        </p>
+                        {% endif %}
+                        {% if post.description %}
+                        <p class="entry-description">{{ post.description }}</p>
+                        <p class="entry-description-link">
+                            <a href="{{ post.url | remove_first:'/'}}/">
+                                Read more of &ldquo;{{ post.title }}&rdquo;
+                                <i class="icon-right"></i>
+                            </a>
+                        </p>
+                        {% endif %}
+                    </article>
                 {% endfor %}
+                    <!--
+                    <section class="more-entries">
+                        <h2>More posts</h2>
+                        <ul class="entry-list no-list">
+                        {% for post in site.posts limit:9 offset:1 %}
+                            <li>
+                                <h3 class="entry-title">
+                                    <a href="{{ post.url | remove_first:'/'}}/">
+                                        {{ post.title }}
+                                    </a>
+                                </h3>
+                                {% if post.date %}
+                                <p class="entry-meta">
+                                    <small>
+                                        <time datetime="{{ post.date | date: '%B %d, %Y' }}">
+                                            {{ post.date | date: '%B %d, %Y' }}
+                                        </time>
+                                        {% if post.author %}
+                                            &ndash; <span class="author">{{ post.author }}</span>
+                                        {% endif %}
+                                    </small>
+                                </p>
+                                {% endif %}
+                            </li>
+                        {% endfor %}
+                        </ul>
+                    </section>
+                    -->
+                </div>
             </section>

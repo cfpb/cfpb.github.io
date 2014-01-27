@@ -1,10 +1,11 @@
 @import "normalize.css";
 @import "fonts.css";
+@import "syntax.css";
 
 
 /* Paul Irish's Universal border-box -- http://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
 *, *:before, *:after {
-  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+    -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
 }
 
 
@@ -16,7 +17,7 @@ body {
 
 /* BASE TYPOGRAPHY */
 
-body { 
+body {
     color: #101820; /* CFPB Black */
     font-family: Georgia, "Times New Roman", serif;
     line-height: 1.375;
@@ -86,7 +87,6 @@ h4 {
 h5,
 h6 {
     font-family: "Avenir Next Demi", Arial, sans-serif;
-    // font-weight: 600;
     letter-spacing: 1px;
     text-transform: uppercase;
 }
@@ -104,7 +104,7 @@ h6 {
 /* CODE */
 
 pre {
-    padding: 0.625em 1.25em;
+    padding: 0.625em 1em;
     border: 1px solid #BABBBD; /* Gray/50 */
     border-radius: 0.625em;
     margin-top: 1.375em;
@@ -262,6 +262,13 @@ dt {
     font-weight: bold;
 }
 
+/* Unstyled nav lists */
+.nav-list {
+    padding-left: 0;
+    margin-left: 0;
+    list-style: none;
+}
+
 
 /* HYPERLINKS */
 
@@ -294,6 +301,15 @@ a:active {
     border-bottom: 1px solid #002D72;
     color: #002D72;
     text-decoration: none;
+}
+
+a.home {
+    color: #43484E;
+    border: 0;
+}
+a.home:hover,
+a.home:focus {
+    color: #101820;
 }
 
 a.call-to-action {
@@ -423,22 +439,6 @@ sub {
 }
 
 
-/* BAIC NAV */
-
-.nav {
-    padding-left: 0;
-    margin-left: 0;
-    list-style: none;
-}
-
-.nav > li,
-.nav > li > a {
-      display: inline-block;
-     *display: inline;
-      zoom: 1;
-}
-
-
 /* IMAGE REPLACEMENT */
 
 .ir {
@@ -490,6 +490,15 @@ sub {
 /* Hide visually and from screenreaders, but maintain layout */
 .invisible {
     visibility: hidden;
+}
+
+/* Skip link */
+.skip > a {
+    padding: 0.5em;
+    background-color: #0072CE;
+    color: #FFF;
+    font-family: "Avenir Next Demi", Arial, sans-serif;
+    font-weight: bold;
 }
 
 
@@ -585,7 +594,6 @@ sub {
     margin-bottom: 0.92307692307692em; /* 24/26 */
 }
 
-
 .content-header {
     padding-top: 3px;
     border-bottom: 2px solid #2CB34A;
@@ -616,21 +624,35 @@ sub {
     background: #F1F2F2;
     font-family: "Avenir Next", Arial, sans-serif;
 }
-
 .footer-links ul {
     list-style: none;
 }
-
 .footer h4 {
     margin-bottom: 0.75em;
     font-size: 16px;
     line-height: 1.5;
     text-transform: uppercase;
 }
-
 .footer p {
     font-size: 0.875em;
     line-height: 1.42857142857143;
+}
+
+
+/* SINGLE ENTRY POSTS */
+
+.single {
+    margin-top: 2em;
+}
+
+.entry-meta {
+    margin-top: -1.5em;
+    font-family: "Avenir Next", Arial, sans-serif;
+}
+
+.author {
+    font-family: "Avenir Next Demi", Arial, sans-serif;
+    font-weight: bold;
 }
 
 
@@ -646,154 +668,178 @@ sub {
 /* MOBILE LANDSCAPE */
 @media only screen and (min-width: 30em) {
     .header .logo {
-       margin: 1.25em 0;
-       float: right;
+        margin: 1.25em 0;
+        float: right;
     }
     .header h1 {
-       margin-top: 1.5em;
-       float: left;
+        margin-top: 1.5em;
+        float: left;
     }
 }
 
 /* SMALL TABLET */
 @media only screen and (min-width: 37.5em) {
     .repos {
-       margin: 0 -1em 2em;
+        margin: 0 -1em 2em;
     }
     .repo {
-       display: inline-block;
-       width: 50%;
-       padding: 0 1em;
-       margin: 0 -0.26em 1em 0;
-       vertical-align: top;
+        display: inline-block;
+        width: 50%;
+        padding: 0 1em;
+        margin: 0 -0.26em 1em 0;
+        vertical-align: top;
     }
     .view-all-repos {
-       margin-left: 1em;
+        margin-left: 1em;
     }
     .footer section {
-       display: inline-block;
-       margin-right: -0.26em;
-       margin-left: 2%;
-       vertical-align: top;
+        display: inline-block;
+        margin-right: -0.26em;
+        margin-left: 2%;
+        vertical-align: top;
     }
     .footer .footer-links {
-       width: 32%;
-       margin-left: 0;
+        width: 32%;
+        margin-left: 0;
     }
     .footer .footer-oss {
-       width: 66%;
+        width: 66%;
     }
     /*.footer .footer-about {
-       width: 45%;
-       margin-right: 0;
+        width: 45%;
+        margin-right: 0;
     }*/
 }
 
 @media only screen and (min-width: 40em) {
     .feature-img {
-       width: 25%;
-       max-width: none;
-       height: 15em;
-       border-width: 1px 1px 1px 0;
-       margin: -1.5em 1.5em -1.5em -5.55555555555556%;
-       float: left;
-       background-repeat: no-repeat;
+        width: 25%;
+        max-width: none;
+        height: 15em;
+        border-width: 1px 1px 1px 0;
+        margin: -1.5em 1.5em -1.5em -5.55555555555556%;
+        float: left;
+        background-repeat: no-repeat;
     }
     .feature-img.pdp {
-       background-position: 32% 60%;
+        background-position: 32% 60%;
     }
 }
 
 /* TABLET/NETBOOK */
 @media only screen and (min-width: 46.5em) { 
     .main-nav {
-       text-align: right;
+        text-align: right;
     }
     /*.hero {
-       margin-bottom: 0;
+        margin-bottom: 0;
     }*/
     .feature-img {
-       width: 36%;
-       max-width: none;
-       height: 15.5em;
-       margin: -1.5em 1.5em -1.5em -5.55555555555556%;
-       float: left;
-       background-repeat: no-repeat;
+        width: 36%;
+        max-width: none;
+        height: 15.5em;
+        margin: -1.5em 1.5em -1.5em -5.55555555555556%;
+        float: left;
+        background-repeat: no-repeat;
     }
     .feature-img.pdp {
-       background-position: 32% 60%;
+        background-position: 32% 60%;
     }
     .content-header {
-       margin-bottom: 3em;
+        margin-bottom: 3em;
+    }
+    .entries {
+        margin: 0 -1em;
+    }
+    .entry,
+    .more-entries {
+        display: inline-block;
+        padding: 0 1em;
+        margin: 0 -0.26em 1em 0;
+        vertical-align: top;
     }
     .entry {
-       width: 66.666666666%;
+        width: 66.6666666667%;
+    }
+    .entry.single {
+        padding: 0;
+        margin: 2em 0 1em;
+    }
+    .more-entries {
+        width: 33.3333333333%;
+    }
+    .entry-list {
+        border-top: 1px solid #BABBBD;
+    }
+    .entry-list li {
+        border-bottom: 1px solid #BABBBD; /* Gray/50 */
+        padding-top: 1.375em;
     }
     .entry h1 {
-       margin-bottom: 1em;
+        margin-bottom: 1em;
     }
     .entry p {
-       line-height: 1.625;
+        line-height: 1.625;
     }
 }
 
 /* LANDSCAPE TABLET/NETBOOK/LAPTOP (1024px) */
 @media only screen and (min-width: 64em) { 
     .content {
-       overflow: hidden;
+        overflow: hidden;
     }
     .wrap {
-       max-width: 960px;
+        max-width: 960px;
     }
     .hero {
-       position: relative;
+        position: relative;
     }
     .hero:after {
-       content: "";
-       display: block;
-       width: 50%;
-       height: 100%;
-       position: absolute;
-       top: 0;
-       right: 0;
-       z-index: 1;
-       background: #FFF;
+        content: "";
+        display: block;
+        width: 50%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 1;
+        background: #FFF;
     }
     .hero section {
-       display: inline-block;
-       width: 42%;
-       padding: 3em 0;
-       margin-right: -0.26em;
-       vertical-align: top;
+        display: inline-block;
+        width: 42%;
+        padding: 3em 0;
+        margin-right: -0.26em;
+        vertical-align: top;
     }
     .feature.is-showing {
-       display: inline-block;
+        display: inline-block;
     }
     .hero .feature {
-       width: 50%;
-       padding: 1.5em 0 1.5em 1.5em;
-       margin: 0 0 0 8%;
-       position: relative;
-       z-index: 2;
-       overflow: visible;
+        width: 50%;
+        padding: 1.5em 0 1.5em 1.5em;
+        margin: 0 0 0 8%;
+        position: relative;
+        z-index: 2;
+        overflow: visible;
     }
     .feature-img {
-       width: 300%;
-       max-width: none;
-       height: 14.5em;
-       border-width: 0 0 1px;
-       margin: -1.5em 0 1.5em -1.5em;
-       background-repeat: no-repeat;
+        width: 300%;
+        max-width: none;
+        height: 14.5em;
+        border-width: 0 0 1px;
+        margin: -1.5em 0 1.5em -1.5em;
+        background-repeat: no-repeat;
     }
     .feature-img.pdp {
-       background-position: left center;
+        background-position: left center;
     }
     .feature p {
-       font-size: inherit;
+        font-size: inherit;
     }
     .repo {
-       width: 33.333333333%;
-       /*width: 25%;*/
+        width: 33.333333333%;
+        /*width: 25%;*/
     }
 }
 
