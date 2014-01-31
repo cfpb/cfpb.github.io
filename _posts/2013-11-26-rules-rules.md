@@ -19,7 +19,7 @@ In our efforts towards a minimum-viable-product, we chose to skip both the poten
 
 ## Regular expressions: Regexi?
 
-Regular expressions are one of the building blocks of almost any text parser. While we won't discuss them in great detail (there are many, better resources available), I will note that learning how to write simple regexes doesn't take much time at all. As you progress and want to match more and more, Google around: due to their wide spread use, it's basically guaranteed that someone's had the same problem.
+Regular expressions are one of the building blocks of almost any text parser. While we won't discuss them in great detail (there are many, better resources available), I will note that learning how to write simple regexes doesn't take much time at all. As you progress and want to match more and more, Google around: due to their widespread use, it's basically guaranteed that someone's had the same problem.
 
 Regular expressions allow you to describe the "shape" of text you would like to match. For example, if a sentence has the phrase "the term", followed by some text, followed by "means" we might assume that that sentence is defining a word or phrase. Regexes give us many tools to narrow down the shape of acceptable text, including special characters to indicate whitespace, the beginning and end of a line, and "word boundaries" like commas, spaces, etc.
 
@@ -75,7 +75,7 @@ for cit in [citations.head] + citations.tail:
 
 ## What about meaning?
 
-Thus far, we have matched text, searched for markers, and retrieved sophisticated values out of the regulation. I can understand why this might feel like a bit of a let down — the parser isn't doing any magic. It doesn't know what sentences mean; it simply knows how to find and retrieve specific *kinds* of substrings. While we could argue that this is a foundation of understanding, let's do something fun instead.
+Thus far, we have matched text, searched for markers, and retrieved sophisticated values out of the regulation. I can understand why this might feel like a bit of a letdown — the parser isn't doing any magic. It doesn't know what sentences mean; it simply knows how to find and retrieve specific *kinds* of substrings. While we could argue that this is a foundation of understanding, let's do something fun instead.
 
 The problem we face is that we must determine what has changed when a regulation is modified. Modifications don't result in new versions of the regulaton from the Government Printing Office (which only publishes entire regulations once a year). Instead, we must look at the "notice" that modifies the regulation (effectively a diff). Unfortunately, the pin-point accuracy that we need appears only in English phrases like: 
 
