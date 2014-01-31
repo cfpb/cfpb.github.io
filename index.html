@@ -123,8 +123,8 @@ title: Home
                             </small>
                         </p>
                         {% endif %}
-                        {% if post.description %}
-                        <p class="entry-description">{{ post.description }}</p>
+                        {% if post.excerpt %}
+                        <p class="entry-description">{{ post.excerpt | markdownify }}</p>
                         <p class="entry-description-link">
                             <a href="{{ post.url | remove_first:'/'}}/">
                                 Read more of &ldquo;{{ post.title }}&rdquo;
