@@ -40,3 +40,10 @@ author or the affirmer.
 
 [policy]: http://github.com/cfpb/source-code-policy/
 [CC0]: http://creativecommons.org/publicdomain/zero/1.0/legalcode
+
+
+## This project makes use of:
+
+- [Respond.js](https://github.com/scottjehl/Respond) by Scott Jehl, licensed under the MIT license.
+- [The HTML5 Shiv](https://github.com/aFarkas/html5shiv), dual licensed under the MIT or GPL Version 2 licenses.
+- [A Fonte Garde](https://github.com/filamentgroup/a-font-garde) by Filament Group,licensed under the MIT license.

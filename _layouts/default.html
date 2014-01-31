@@ -16,10 +16,10 @@
 
 <!--[if lt IE 9]>
     <link rel="stylesheet" href="{% if page.assetpath %}{{ page.assetpath }}{% endif %}css/ie8.css">
-    <script src="{% if page.assetpath %}{{ page.assetpath }}{% endif %}js/html5shiv-printshiv.js" media="all"></script>
     <script src="{% if page.assetpath %}{{ page.assetpath }}{% endif %}js/respond.min.js" media="all"></script>
 <![endif]-->
 
+    <script src="{% if page.assetpath %}{{ page.assetpath }}{% endif %}js/modernizr-afontgarde.min.js" media="all"></script>
 </head>
 
 <body>
@@ -43,20 +43,9 @@
     </footer>
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script src="{% if page.assetpath %}{{ page.assetpath }}{% endif %}js/afontgarde.js"></script>
     <script>
-      $(document).ready(function() {
-        // Select a random feature to display.
-        var features = $('.feature');
-        var numFeatures = features.length;
-        var showFeature = Math.floor(Math.random()*numFeatures);
-        features.removeClass('is-showing');
-        var i = 0;
-        features.each(function(index) {
-          if (showFeature == index) {
-            $(this).addClass('is-showing');
-          }
-        });
-      });
+        AFontGarde( 'CFPB_Icons', '\uE600\uE601\uE602\uE605' );
     </script>
     <!-- <script src="{% if page.assetpath %}{{ page.assetpath }}{% endif %}js/site.js"></script> -->
 
