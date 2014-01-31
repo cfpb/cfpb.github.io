@@ -45,5 +45,5 @@ author or the affirmer.
 ## This project makes use of:
 
 - [Respond.js](https://github.com/scottjehl/Respond) by Scott Jehl, licensed under the MIT license.
-- [The HTML5 Shiv](https://github.com/aFarkas/html5shiv), dual licensed under the MIT or GPL Version 2 licenses.
-- [A Fonte Garde](https://github.com/filamentgroup/a-font-garde) by Filament Group,licensed under the MIT license.
+- A custom build of [Modernizr](https://github.com/Modernizr/Modernizr), licensed under the MIT license.
+- [A Fonte Garde](https://github.com/filamentgroup/a-font-garde) by Filament Group, licensed under the MIT license.
