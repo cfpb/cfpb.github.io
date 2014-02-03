@@ -124,19 +124,21 @@ title: Home
                                 {{ post.date | date: '%b %d, %Y' }}
                             </time>
                             {% endif %}
-
-                            {% if post.tags %}
-                            <div class="tags cf">
-                                <h4 class="tags_head">Tags:</h4>
-                                <ul class="tag-list">
-                                    {% for tag in post.tags %}
-                                    <li class="tag">
-                                        <a class="tag_link">{{ tag }}</a>
-                                    </li>
-                                    {% endfor %}
-                                </ul>
-                            </div>
-                            {% endif %}
+                            
+                            {% comment %}
+                                {% if post.tags %}
+                                <div class="tags cf">
+                                    <h4 class="tags_head">Tags:</h4>
+                                    <ul class="tag-list">
+                                        {% for tag in post.tags %}
+                                        <li class="tag">
+                                            <a class="tag_link">{{ tag }}</a>
+                                        </li>
+                                        {% endfor %}
+                                    </ul>
+                                </div>
+                                {% endif %}
+                            {% endcomment %}
                         </div>
                         
                         {% if post.excerpt %}
