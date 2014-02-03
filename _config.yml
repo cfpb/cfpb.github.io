@@ -1,4 +1,4 @@
 baseurl:     ''
 exclude:     [README.md, Gemfile, Gemfile.lock, vendor, _site]
-permalink:   /posts/:title
+permalink:   /articles/:title
 pygments:    true

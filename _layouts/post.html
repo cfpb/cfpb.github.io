@@ -44,11 +44,12 @@ assetpath: ../../
     <section class="sidebar more-articles sidebar__single">
         <div class="sidebar__single_wrap">
             <h2 class="sidebar_head">More articles</h2>
+
             <ul class="sidebar_list nav-list">
             {% for post in site.posts limit:5 %}
                 <li class="sidebar_list_item">
                     <h3 class="sidebar_list_item_head">
-                        <a href="{{ post.url | remove_first:'/'}}/">
+                        <a href="../../{{ post.url | remove_first:'/'}}/">
                             {{ post.title }}
                         </a>
                     </h3>
@@ -67,10 +68,12 @@ assetpath: ../../
                 </li>
             {% endfor %}
             </ul>
-            <a class="more-articles_read-more-link call-to-action__icon"
-               href="articles/">
+
+            <!-- Hide until we have published at least 4 articles -->
+            <!-- <a class="more-articles_read-more-link call-to-action__icon"
+               href="../../articles/">
                Read more articles <i class="icon-right"></i>
-            </a>
+            </a> -->
         </div>
     </section>
 </div>
