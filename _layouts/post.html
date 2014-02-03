@@ -4,9 +4,76 @@ assetpath: ../../
 ---
 
 <div class="content-body wrap">
-    <article class="single entry">
-        <h1 class="entry-title">{{ page.title }}</h1>
-        <p class="entry-date">{{ page.date | date_to_string }}</p>
-        {{ content }}
+    <article class="entry entry__single">
+        <div class="entry__single_wrap">
+            <h1 class="entry_title">{{ page.title }}</h1>
+            
+            {% if page.tagline %}
+            <p class="entry_tagline">{{ page.tagline }}</p>
+            {% endif %}
+            
+            <div class="entry_meta">
+                {% if page.author %}
+                By <span class="author">{{ page.author }}</span> &ndash;
+                {% endif %}
+
+                {% if page.date %}
+                <time datetime="{{ page.date | date: '%b %d, %Y' }}">
+                    {{ page.date | date: '%b %d, %Y' }}
+                </time>
+                {% endif %}
+
+                {% if page.tags %}
+                <div class="tags cf">
+                    <h4 class="tags_head">Tags:</h4>
+                    <ul class="tag-list">
+                        {% for tag in page.tags %}
+                        <li class="tag">
+                            <a class="tag_link">{{ tag }}</a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                {% endif %}
+            </div>
+
+            {{ content }}
+        </div>
     </article>
+
+    <section class="sidebar more-articles sidebar__single">
+        <div class="sidebar__single_wrap">
+            <h2 class="sidebar_head">More articles</h2>
+
+            <ul class="sidebar_list nav-list">
+            {% for post in site.posts limit:5 %}
+                <li class="sidebar_list_item">
+                    <h3 class="sidebar_list_item_head">
+                        <a href="../../{{ post.url | remove_first:'/'}}/">
+                            {{ post.title }}
+                        </a>
+                    </h3>
+
+                    <div class="sidebar_list_item_meta entry_meta">
+                        {% if post.author %}
+                        By <span class="author">{{ post.author }}</span> &ndash;
+                        {% endif %}
+
+                        {% if post.date %}
+                        <time datetime="{{ post.date | date: '%b %d, %Y' }}">
+                            {{ post.date | date: '%b %d, %Y' }}
+                        </time>
+                        {% endif %}
+                    </div>
+                </li>
+            {% endfor %}
+            </ul>
+
+            <!-- Hide until we have published at least 4 articles -->
+            <!-- <a class="more-articles_read-more-link call-to-action__icon"
+               href="../../articles/">
+               Read more articles <i class="icon-right"></i>
+            </a> -->
+        </div>
+    </section>
 </div>
