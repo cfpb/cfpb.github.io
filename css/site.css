@@ -768,6 +768,16 @@ sub {
 .entry__single {
     margin-top: 2em;
 }
+#disqus_thread {
+    padding-top: 1em;
+    border-top: 1px solid #BABBBD;
+    margin-top: 3em;
+}
+.comment-policy {
+    color: #75787B;
+    font-size: 0.8125em;
+    font-style: italic;
+}
 
 
 /* MEDIA QUERIES */
