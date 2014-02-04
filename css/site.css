@@ -384,9 +384,6 @@ del {
 
 /* OTHERS */
 
-i {
-    padding-left: .25em;
-}
 strong,
 b,
 dt {
@@ -565,6 +562,10 @@ sub {
 .icon-external-link {
     color: #0072CE;
 }
+.call-to-action__icon > [class^="icon"],
+.sidebar_list_item_head > [class^="icon"] {
+    padding-left: .25em;
+}
 
 .intro h1 {
     margin-bottom: 0.79411764705882em; /* 27/34 */
@@ -657,7 +658,7 @@ sub {
 }
 .entry_title {
     margin-bottom: 0.25em;
-    font-size: 2.125em;
+    font-size: 1.625em;
 }
 .entry_tagline {
     margin-bottom: 0.5em;
@@ -956,9 +957,8 @@ sub {
         z-index: -1;
         background: #F8F8F8;
     }
-
-    .entry__single_title {
-        margin-bottom: 1em;
+    .entry__single .entry_title {
+        font-size: 2.125em;
     }
     .entry p {
         line-height: 1.625;
