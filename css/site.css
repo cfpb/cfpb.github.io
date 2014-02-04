@@ -384,6 +384,9 @@ del {
 
 /* OTHERS */
 
+i {
+    padding-left: .25em;
+}
 strong,
 b,
 dt {
@@ -560,7 +563,7 @@ sub {
     border-bottom-width: 0;
 }
 .icon-external-link {
-    color: #75787B;
+    color: #0072CE;
 }
 
 .intro h1 {
@@ -711,13 +714,18 @@ sub {
 .entry p {
     max-width: 40em;
 }
+.repositories {
+    margin-bottom: 3em;
+}
 .repo p {
     max-width: 30em;
 }
-.more-repos .sidebar_list_item_head {
-    margin-bottom: 0.5em;
+.more-repos .sidebar_head {
+    margin-top: 0;
 }
-
+.more-repos li {
+    margin: 0;
+}
 .footer {
     padding: 2em 0;
     border-top: 2px solid #BABBBD;
