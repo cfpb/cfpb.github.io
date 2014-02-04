@@ -73,6 +73,7 @@ h1 {
 h2 {
     font-size: 1.625em;
     line-height: 1.23076923076923;
+    margin: 1.5em 0 .75em 0;
 }
 h3 {
     font-size: 1.375em;
@@ -587,11 +588,12 @@ sub {
     
 }
 .sidebar_list_item {
-    
+    margin-bottom: 1.5em;
 }
 .sidebar_head {
-    padding-bottom: 0.5em;
+    padding-bottom: 0.25em;
     border-bottom: 1px solid #BABBBD;
+    margin-top: 0.25em;
     margin-bottom: 1.25em;
     color: #75787B;
     font-family: "Avenir Next Medium", Arial, sans-serif;
@@ -652,13 +654,13 @@ sub {
 }
 .entry_title {
     margin-bottom: 0.25em;
-    font-size: 1.625em;
+    font-size: 2.125em;
 }
 .entry_tagline {
     margin-bottom: 0.5em;
-    font-family: "Avenir Next Medium", Arial, sans-serif;
-    font-size: 1.125em;
-    line-height: 22px; /* EMs */
+    font-family: "Avenir Next", Arial, sans-serif;
+    font-size: 1.375em;
+    line-height: 1.27272727272727;
 }
 
 .entry_meta {
