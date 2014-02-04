@@ -73,6 +73,7 @@ h1 {
 h2 {
     font-size: 1.625em;
     line-height: 1.23076923076923;
+    margin: 1.5em 0 .75em 0;
 }
 h3 {
     font-size: 1.375em;
@@ -107,10 +108,10 @@ h6 {
 
 pre {
     padding: 0.625em 1em;
-    border: 1px solid #BABBBD; /* Gray/50 */
-    border-radius: 0.625em;
+    border: 1px solid #E3E4E5; /* Gray/20 */
+    border-radius: 0.250em;
     margin-top: 1.375em;
-    background-color: #E3E4E5; /* Gray/20 */
+    background-color: #F1F2F2; /* Gray/10 */
     color: #101820; /* CFPB Black */
     /* Allow line wrapping of 'pre' */
     overflow-x: auto;
@@ -559,7 +560,11 @@ sub {
     border-bottom-width: 0;
 }
 .icon-external-link {
-    color: #75787B;
+    color: #0072CE;
+}
+.call-to-action__icon > [class^="icon"],
+.sidebar_list_item_head > [class^="icon"] {
+    padding-left: .25em;
 }
 
 .intro h1 {
@@ -587,11 +592,12 @@ sub {
     
 }
 .sidebar_list_item {
-    
+    margin-bottom: 1.5em;
 }
 .sidebar_head {
-    padding-bottom: 0.5em;
+    padding-bottom: 0.25em;
     border-bottom: 1px solid #BABBBD;
+    margin-top: 0.25em;
     margin-bottom: 1.25em;
     color: #75787B;
     font-family: "Avenir Next Medium", Arial, sans-serif;
@@ -656,9 +662,9 @@ sub {
 }
 .entry_tagline {
     margin-bottom: 0.5em;
-    font-family: "Avenir Next Medium", Arial, sans-serif;
-    font-size: 1.125em;
-    line-height: 22px; /* EMs */
+    font-family: "Avenir Next", Arial, sans-serif;
+    font-size: 1.375em;
+    line-height: 1.27272727272727;
 }
 
 .entry_meta {
@@ -709,13 +715,18 @@ sub {
 .entry p {
     max-width: 40em;
 }
+.repositories {
+    margin-bottom: 3em;
+}
 .repo p {
     max-width: 30em;
 }
-.more-repos .sidebar_list_item_head {
-    margin-bottom: 0.5em;
+.more-repos .sidebar_head {
+    margin-top: 0;
 }
-
+.more-repos li {
+    margin: 0;
+}
 .footer {
     padding: 2em 0;
     border-top: 2px solid #BABBBD;
@@ -946,9 +957,8 @@ sub {
         z-index: -1;
         background: #F8F8F8;
     }
-
-    .entry__single_title {
-        margin-bottom: 1em;
+    .entry__single .entry_title {
+        font-size: 2.125em;
     }
     .entry p {
         line-height: 1.625;
