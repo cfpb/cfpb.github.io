@@ -107,10 +107,10 @@ h6 {
 
 pre {
     padding: 0.625em 1em;
-    border: 1px solid #BABBBD; /* Gray/50 */
-    border-radius: 0.625em;
+    border: 1px solid #E3E4E5; /* Gray/20 */
+    border-radius: 0.250em;
     margin-top: 1.375em;
-    background-color: #E3E4E5; /* Gray/20 */
+    background-color: #F1F2F2; /* Gray/10 */
     color: #101820; /* CFPB Black */
     /* Allow line wrapping of 'pre' */
     overflow-x: auto;
