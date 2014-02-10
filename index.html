@@ -114,6 +114,10 @@ title: Home
                         <p class="entry_tagline">{{ post.tagline }}</p>
                         {% endif %}
                         
+                        {% if post.excerpt %}
+                        <p class="entry_description">{{ post.excerpt | markdownify }}</p>
+                        {% endif %}
+                        
                         <div class="entry_meta">
                             {% if post.author %}
                             By <span class="author">{{ post.author }}</span> &ndash;
@@ -140,15 +144,10 @@ title: Home
                                 {% endif %}
                             {% endcomment %}
                         </div>
-                        
-                        {% if post.excerpt %}
-                        <p class="entry_description">{{ post.excerpt | markdownify }}</p>
-                        {% endif %}
-                        
-                        <a class="entry_read-more-link call-to-action__icon"
+<!--                         <a class="entry_read-more-link call-to-action__icon"
                            href="{{ post.url | remove_first:'/'}}/">
                            Read more <i class="icon-right"></i>
-                        </a>
+                        </a> -->
                     </article>
                 {% endfor %}
                 </section>
