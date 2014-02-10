@@ -817,8 +817,17 @@ sub {
 @media only screen and (min-width: 20em) {
     body {
     }
+    .header .logo {
+        margin: 1em 0 0 0;
+    }
+    .header h2 {
+        margin-bottom: .5em;
+    }
     .entry__single h3 {
         margin: 1.5em 0 1em 0;
+    }
+    .articles .sidebar_head {
+        margin-top: 2em;
     }
 }
 
@@ -828,11 +837,11 @@ sub {
         margin: 1em 0;
         float: right;
     }
-    .header h1 {
+/*    .header h1 {
         margin-top: 0.75em;
         float: left;
         font-size: 2.125em;
-    }
+    }*/
 
     .learn-more_item {
         float: left;
@@ -840,6 +849,9 @@ sub {
     }
     .learn-more_item:first-child {
         margin-left: 0;
+    }
+    .articles .sidebar_head {
+        margin-top: 0;
     }
 }
 
