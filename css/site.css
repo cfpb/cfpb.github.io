@@ -673,8 +673,8 @@ sub {
     margin-bottom: 0;
 }
 .entry_meta {
-    font-family: "Avenir Next Medium", Arial, sans-serif;
-    font-weight: 500;
+    font-family: "Avenir Next", Arial, sans-serif;
+    font-weight: 400;
 }
 .entry_meta time {
     color: #919395; /* Gray/80 */
