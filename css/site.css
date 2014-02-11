@@ -517,7 +517,7 @@ sub {
     margin: 1em 0;
 }
 
-.header h2 {
+.header h1 {
     margin: 1em 0 0 0;
     font-family: "Avenir Next Medium", Arial, sans-serif;
     font-size: 1.625em;
@@ -525,7 +525,7 @@ sub {
     display: inline-block;
 }
 
-.header h2 span {
+.header h1 span {
     font-family: "Avenir Next Demi", Arial, sans-serif;
     font-weight: bold;
 }
@@ -820,13 +820,15 @@ sub {
     .header .logo {
         margin: 1em 0 0 0;
     }
-    .header h2 {
+    .header h1 {
         margin-bottom: .5em;
     }
-    .entry__single h3 {
+    .entry__single h2 {
+        font-size: 1.375em;
+        line-height: 1.27272727272727;
         margin: 1.5em 0 1em 0;
     }
-    .articles .sidebar_head {
+    .sidebar_head {
         margin-top: 2em;
     }
 }
@@ -850,7 +852,7 @@ sub {
     .learn-more_item:first-child {
         margin-left: 0;
     }
-    .articles .sidebar_head {
+    .sidebar_head {
         margin-top: 0;
     }
 }
