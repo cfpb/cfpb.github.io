@@ -60,9 +60,9 @@ title: Home
                 <ul class="wrap nav-list">
                     <li class="featured-project">
                         <div class="featured-project_img__eregs"></div>
-                        <h2 class="featured-project_head">
+                        <h3 class="featured-project_head">
                             <a href="http://www.consumerfinance.gov/eregulations/">eRegulations</a>
-                        </h2>
+                        </h3>
                         <p class="featured-project_desc">eRegulations is a web-based application that makes
                             regulations easy to find, read, and understand.</p>
                         <p class="featured-project_links">
@@ -75,9 +75,9 @@ title: Home
                     </li>
                     <li class="featured-project">
                         <div class="featured-project_img__pdp"></div>
-                        <h2 class="featured-project_head">
+                        <h3 class="featured-project_head">
                             <a href="http://www.consumerfinance.gov/hmda/">Public Data Platform</a>
-                        </h2>
+                        </h3>
                         <p class="featured-project_desc">Learn more about home mortgage data, download the data
                             yourself, or build new tools using our API.</p>
                         <div class="featured-project_links">
@@ -87,9 +87,9 @@ title: Home
                     </li>
                     <li class="featured-project">
                         <div class="featured-project_img__collab"></div>
-                        <h2 class="featured-project_head">
+                        <h3 class="featured-project_head">
                             <a href="http://cfpb.github.io/collab/">Collab</a>
-                        </h2>
+                        </h3>
                         <p class="featured-project_desc">Collab is a Django project with a standard set of
                             configurations to provide services to reusable apps.</p>
                         <div class="featured-project_links">
@@ -112,6 +112,10 @@ title: Home
                         </h3>
                         {% if post.tagline %}
                         <p class="entry_tagline">{{ post.tagline }}</p>
+                        {% endif %}
+                        
+                        {% if post.excerpt %}
+                        <p class="entry_description">{{ post.excerpt | markdownify }}</p>
                         {% endif %}
                         
                         <div class="entry_meta">
@@ -140,15 +144,10 @@ title: Home
                                 {% endif %}
                             {% endcomment %}
                         </div>
-                        
-                        {% if post.excerpt %}
-                        <p class="entry_description">{{ post.excerpt | markdownify }}</p>
-                        {% endif %}
-                        
-                        <a class="entry_read-more-link call-to-action__icon"
+<!--                         <a class="entry_read-more-link call-to-action__icon"
                            href="{{ post.url | remove_first:'/'}}/">
                            Read more <i class="icon-right"></i>
-                        </a>
+                        </a> -->
                     </article>
                 {% endfor %}
                 </section>

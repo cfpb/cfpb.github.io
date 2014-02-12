@@ -73,7 +73,6 @@ h1 {
 h2 {
     font-size: 1.625em;
     line-height: 1.23076923076923;
-    margin: 1.5em 0 .75em 0;
 }
 h3 {
     font-size: 1.375em;
@@ -519,11 +518,11 @@ sub {
 }
 
 .header h1 {
-    margin: 0.5em 0;
+    margin: 1em 0 0 0;
     font-family: "Avenir Next Medium", Arial, sans-serif;
-    font-size: 1.375em;
+    font-size: 1.625em;
     font-weight: 500;
-    line-height: 1;
+    display: inline-block;
 }
 
 .header h1 span {
@@ -549,8 +548,8 @@ sub {
 }
 
 [class*="call-to-action"] {
-    font-family: "Avenir Next Medium", Arial, sans-serif;
-    font-weight: 500;
+    font-family: "Avenir Next", Arial, sans-serif;
+    font-weight: 400;
 }
 .call-to-action__icon,
 .call-to-action__icon:visited,
@@ -591,13 +590,16 @@ sub {
 .sidebar_list {
     
 }
+.sidebar_list .author {
+    font-family: "Avenir Next", Arial, sans-serif;
+    font-weight: 400;
+}
 .sidebar_list_item {
     margin-bottom: 1.5em;
 }
 .sidebar_head {
     padding-bottom: 0.25em;
     border-bottom: 1px solid #BABBBD;
-    margin-top: 0.25em;
     margin-bottom: 1.25em;
     color: #75787B;
     font-family: "Avenir Next Medium", Arial, sans-serif;
@@ -608,9 +610,9 @@ sub {
 }
 .sidebar_list_item_head {
     margin-bottom: 0.5em;
-    font-family: "Avenir Next Medium", Arial, sans-serif;
+    font-family: "Avenir Next", Arial, sans-serif;
     font-size: 1em;
-    font-weight: 500;
+    font-weight: 400;
 }
 
 .featured-projects {
@@ -638,38 +640,41 @@ sub {
     background: url(../img/feature_collab_150x150.png) no-repeat;
 }
 .featured-project_head {
-
+    margin-bottom: .75em;
+    font-family: "Avenir Next", Arial, sans-serif;
 }
 
 .section-head {
     padding: 0 0 0.5em;
     border-bottom: 1px solid #D0D0CE;
     margin: 1.5em 0 1em;
-    font-family: "Avenir Next Medium", Arial, sans-serif;
-    font-size: 2.125em;
+    font-family: "Avenir Next", Arial, sans-serif;
+/*    font-size: 2.125em;*/
     line-height: 1;
-    font-weight: 500;
+    font-weight: 400;
 }
 
 .entry_title,
 .repo_name {
-    font-family: "Avenir Next Medium", Arial, sans-serif;
-    font-weight: 500;
+    font-family: "Avenir Next", Arial, sans-serif;
+    font-weight: 400;
 }
 .entry_title {
     margin-bottom: 0.25em;
-    font-size: 1.625em;
-}
+/*    font-size: 1.625em;
+*/}
 .entry_tagline {
-    margin-bottom: 0.5em;
-    font-family: "Avenir Next", Arial, sans-serif;
-    font-size: 1.375em;
-    line-height: 1.27272727272727;
-}
-
-.entry_meta {
+    margin-bottom: 1em;
     font-family: "Avenir Next Medium", Arial, sans-serif;
-    font-weight: 500;
+    font-size: 1.125em;
+    line-height: 1.22222222222222;
+}
+.entry_description {
+    margin-bottom: 0;
+}
+.entry_meta {
+    font-family: "Avenir Next", Arial, sans-serif;
+    font-weight: 400;
 }
 .entry_meta time {
     color: #919395; /* Gray/80 */
@@ -741,15 +746,15 @@ sub {
     margin-bottom: 1em;
     color: #101820;
     font-family: "Avenir Next Medium", Arial, sans-serif;
-    font-size: 1.375em;
+    font-size: 1.125em;
     line-height: 1;
     font-weight: 500;
 }
 .footer-links_secondary a {
     border-bottom-color: #75787B;
     color: #75787B;
-    font-family: "Avenir Next Medium", Arial, sans-serif;
-    font-weight: 500;
+    font-family: "Avenir Next", Arial, sans-serif;
+    font-weight: 400;
 }
 .footer-links_social li {
     float: left;
@@ -765,7 +770,7 @@ sub {
 .footer h4 {
     margin-bottom: 1em;
     font-family: "Avenir Next Medium", Arial, sans-serif;
-    font-size: 1.375em;
+    font-size: 1.125em;
     line-height: 1;
     font-weight: 500;
 }
@@ -779,6 +784,20 @@ sub {
 .entry__single {
     margin-top: 2em;
 }
+.entry__single h1.entry_title{
+    font-family: "Avenir Next Medium", Arial, sans-serif;
+    font-weight: 500;
+    margin-bottom: .125em;
+}
+.entry__single .entry_tagline {
+    font-family: "Avenir Next", Arial, sans-serif;
+    font-size: 1.625em;
+    line-height: 1.23076923076923;
+    font-weight: normal;
+}
+.entry__single .entry_meta {
+    margin-bottom: 2em;
+}
 #disqus_thread {
     padding-top: 1em;
     border-top: 1px solid #BABBBD;
@@ -791,26 +810,40 @@ sub {
 }
 
 
+
 /* MEDIA QUERIES */
 
 /* MOBILE PORTRAIT (320px) */
 @media only screen and (min-width: 20em) {
     body {
-
+    }
+    .header .logo {
+        margin: 1em 0 0 0;
+    }
+    .header h1 {
+        margin-bottom: .5em;
+    }
+    .entry__single h2 {
+        font-size: 1.375em;
+        line-height: 1.27272727272727;
+        margin: 1.5em 0 1em 0;
+    }
+    .sidebar_head {
+        margin-top: 2em;
     }
 }
 
 /* MOBILE LANDSCAPE (480px) */
 @media only screen and (min-width: 30em) {
     .header .logo {
-        margin: 1.25em 0;
+        margin: 1em 0;
         float: right;
     }
-    .header h1 {
+/*    .header h1 {
         margin-top: 0.75em;
         float: left;
         font-size: 2.125em;
-    }
+    }*/
 
     .learn-more_item {
         float: left;
@@ -818,6 +851,9 @@ sub {
     }
     .learn-more_item:first-child {
         margin-left: 0;
+    }
+    .sidebar_head {
+        margin-top: 0;
     }
 }
 
@@ -878,9 +914,9 @@ sub {
     .hero section {
         padding: 2em 0;
     }
-    .intro h1 {
+/*    .intro h1 {
         font-size: 1.75em;
-    }
+    }*/
     
     .sidebar {
         width: 23%;
@@ -963,7 +999,6 @@ sub {
     .entry p {
         line-height: 1.625;
     }
-
     .footer-links {
         width: 45%;
     }
@@ -986,9 +1021,9 @@ sub {
         position: relative;
     }
 
-    .intro h1 {
+/*    .intro h1 {
         font-size: 2.375em;
-    }
+    }*/
     
     .featured-project {
         width: 33.333333333%;
@@ -1008,9 +1043,9 @@ sub {
     .wrap {
         max-width: 1200px;
     }
-    .intro h1 {
+/*    .intro h1 {
         font-size: 2.625em;
-    }
+    }*/
     .repo {
         width: 31%;
         margin-left: 3.5%;

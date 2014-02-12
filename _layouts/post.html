@@ -22,8 +22,11 @@ assetpath: ../../
                     {{ page.date | date: '%b %d, %Y' }}
                 </time>
                 {% endif %}
+            </div>
 
-                {% if page.tags %}
+            {{ content }}
+
+<!--             {% if page.tags %}
                 <div class="tags cf">
                     <h4 class="tags_head">Tags:</h4>
                     <ul class="tag-list">
@@ -34,10 +37,7 @@ assetpath: ../../
                         {% endfor %}
                     </ul>
                 </div>
-                {% endif %}
-            </div>
-
-            {{ content }}
+            {% endif %} -->
 
             <div id="disqus_thread"></div>
             <script type="text/javascript">
