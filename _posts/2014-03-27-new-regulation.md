@@ -48,10 +48,15 @@ the regulations: which can add, revise, move or delete individual paragraphs.
 For example: 
 
 > Section 1026.32 is amended by:
+
 > a. Revising paragraph (a)(2)(iii)
+
 > The revisions read as follows:
+
 > (a) *** 
+
 > (2) ***
+
 > (iii) A transaction originated by a Housing Finance Agency, where the Housing
 > Finance Agency is the creditor for the transaction; or 
 
