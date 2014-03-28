@@ -34,9 +34,11 @@ sections while Z has 54.
 
 Table 1: The number of each types of content per regulation.
 
-The fact that Z is significantly longer of a regulation than E drove almost
-every aspect of what  we did ove r the next six months, especially when it came
-to actually getting all the content together. 
+On disk, represented as pretty-printed JSON trees, E is 1.5Mb - Z is almost ten
+times larger at a whopping 11Mb. That's a lot of text. The fact that Z is
+significantly longer of a regulation than E drove almost every aspect of what
+we did over the next six months, especially when it came to actually getting
+all the content together. 
 
 ## Compiling regulations
 
@@ -45,6 +47,9 @@ and future versions of a regulation. Each version of a regulation can be
 thought of as the previous version of a regulation, plus a series of Federal
 Register (FR) final rule notices. Each FR notice describes specific changes to
 the regulations: which can add, revise, move or delete individual paragraphs.
+Basically each FR notice is a diff of the new changes, to derive the
+regulation, you would have to apply the diff. 
+
 For example: 
 
 > Section 1026.32 is amended by:
@@ -63,7 +68,7 @@ For example:
 > *[1] This example is from https://www.federalregister.gov/articles/2013/10/01/2013-22752/amendments-to-the-2013-mortgage-rules-under-the-equal-credit-opportunity-act-regulation-b-real#p-amd-32*
 
 Each version of a regulation on our platform is essentially represented
-behind-the-scenes as a data structure (more specifically an n-ary tree) that
+behind-the-scenes as a data structure (more specifically an ordered n-ary tree) that
 represents the entire regulation at that point in time. For E, we meticulously
 compiled plaintext versions and let our parser generate these trees. E is 3
 versions, and 8 FR notices while Z is 12 versions and 23 notices. It became
@@ -122,10 +127,12 @@ override made the most sense given time and effort constraints.
 ## Appendices 
 
 The appendices for Z include are far more varied than those for E in the types
-of information they contain. The appendices for Z contain equations, tables,
-SAS code, and many images. Each of those presented unique challenges. To handle
-tables we had to parse the XML that exhaustively represented the tables into
-something [meaningful and concise]
+of information they contain. First, the structure of the text in the appendices
+for Z differs from that of E. This required a complete re-write of the appendix
+parsing code to allow for the new format. Secondly. the appendices for Z
+contain equations, tables, SAS code, and many images. Each of those presented
+unique challenges. To handle tables we had to parse the XML that exhaustively
+represented the tables into something [meaningful and concise]
 (https://github.com/cfpb/regulations-parser/blob/master/regparser/layer/formatting.py),
 and then display that in visually pleasing HTML [tables]
 (https://github.com/eregs/regulations-site/blob/master/regulations/generator/layers/formatting.py#L18).
