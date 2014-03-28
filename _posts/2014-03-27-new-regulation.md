@@ -60,8 +60,7 @@ For example:
 > (iii) A transaction originated by a Housing Finance Agency, where the Housing
 > Finance Agency is the creditor for the transaction; or 
 
-
-[1] This example is from https://www.federalregister.gov/articles/2013/10/01/2013-22752/amendments-to-the-2013-mortgage-rules-under-the-equal-credit-opportunity-act-regulation-b-real#p-amd-32
+> *[1] This example is from https://www.federalregister.gov/articles/2013/10/01/2013-22752/amendments-to-the-2013-mortgage-rules-under-the-equal-credit-opportunity-act-regulation-b-real#p-amd-32*
 
 Each version of a regulation on our platform is essentially represented
 behind-the-scenes as a data structure (more specifically an n-ary tree) that
@@ -87,6 +86,91 @@ into a new version. When you account for all the corner cases, all of that
 probably accounted for 3 months of development time.  In the end though, we
 think we have a fair more sustainable application that requires less manual
 intervention to add an additional regulation. 
+
+## Fixing FR Notices
+
+Parsing amendatory instructions is tractable because the vocabulary of changes
+is limited (changes are expressed relatively consistently), however sometimes
+things are not expressed clearly or use a turn of phrasing that is unique.
+Adding these rules to the code would have diminishing returns in the sense that
+the effort of getting the code correct, tested and ensuring that it doesn't
+break any of the other parsing would far outweigh the benefits of the unique
+instance. To handle those cases, we built in a system to allow us to keep local
+copies of the XML notices, and change those manually. The parser looks first in
+our local repository of notices to see if a required notice exists, before
+downloading it from the Federal Register. This enabled us to make quick changes
+to the source XML that helps our parser along. 
+
+The same mechanism came in handy when we discovered that several notices for Z
+had more than one effective date. Notices with the same effective date are what
+comprise a version of a regulation. The following example illustrates how
+complicated this can get: 
+
+> This final rule is effective January 10, 2014, except for the amendments to
+> §§ 1026.35(b)(2)(iii), 1026.36(a), (b), and (j), and commentary to §§
+> 1026.25(c)(2), 1026.35, and 1026.36(a), (b), (d), and (f) in Supp. I to part
+> 1026, which are effective January 1, 2014, and the amendments to commentary to
+> § 1002.14(b)(3) in Supplement I to part 1002, which are effective January 18,
+> 2014. 
+
+> [2] From: (https://www.federalregister.gov/articles/2013/10/01/2013-22752/amendments-to-the-2013-mortgage-rules-under-the-equal-credit-opportunity-act-regulation-b-real#p-40)
+
+In these cases, we manually split up the notices, creating a new XML source
+document for each effective date. This was another situation in which a manual
+override made the most sense given time and effort constraints. 
+
+## Appendices 
+
+The appendices for Z include are far more varied than those for E in the types
+of information they contain. The appendices for Z contain equations, tables,
+SAS code, and many images. Each of those presented unique challenges. To handle
+tables we had to parse the XML that exhaustively represented the tables into
+something [meaningful and concise]
+(https://github.com/cfpb/regulations-parser/blob/master/regparser/layer/formatting.py),
+and then display that in visually pleasing HTML [tables]
+(https://github.com/eregs/regulations-site/blob/master/regulations/generator/layers/formatting.py#L18).
+The SAS code was handled by the same mechanism. Some of the appendices in Z
+contain many images.  To speed up page loads for those sections we re-saved
+some of the images using image formats that compress the content with minimal
+quality degradation and introduced thumbnails. Clicking on the thumbnail brings
+the user to the larger image, but the thumbnails ensure that pages load faster.
+Regulation Z also contained a number of appendices where the images contained
+text. We pulled out the text out of those images, so that the text is now
+searchable and linkable providing for a better user experience.  With the
+exception of compiling regulations, most of the changes we made for Regulation
+Z were directly a result of that fact that regulation Z is longer. 
+
+
+## Subterps
+
+Loading Supplement I as a single page worked well for Regulation E (where the
+content is relatively short) but with Z this led to a degraded experience. We
+split Supplement I, so it could be displayed a subpart at a time - we named
+these subterps. Our code was previously written with the intent of displaying a
+section at a time (the entirety of Supplement I considered as a section). This
+worked nicely because that also reflects how the data that drives everything is
+represented. With subterps, there is no corresponding underlying data structure
+that tells us that the following sections of Supplement I should be collected
+and displayed together. This required a [rewrite]
+(https://github.com/eregs/regulations-site/blob/master/regulations/views/partial_interp.py#L35)
+of some of our display logic.  Supplement I is now easier to read as a result.   
+
+## Conclusion
+
+We made many other changes: introducing a landing page for all the regulations,
+extending the logic to identify defined terms with the regulation, and based on
+user feedback - introducing help text to the application. Each one of those
+represents a significant effort, but here I want to explain some of the more
+interesting ones. All our code is open source, so you can see what we've
+been up to in excruciating detail (and suggest changes).
+
+Through these set of changes, we've hopefully made it much easier to add the
+next regulation and also deal with longer regulations. I've just received word
+that we're moving from our build server to our staging seerver. I'm so excited,
+I hope you will be too. 
+
+
+
 
 
 
