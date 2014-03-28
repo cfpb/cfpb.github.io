@@ -32,11 +32,60 @@ sections while Z has 54.
 |Sections| 26 | 54 | 
 |Appendices| 2| 15 | 
 
-## Regular expressions: Regexi?
+Table 1: The number of each types of content per regulation.
 
-Regular expressions are one of the building blocks of almost any text parser. While we won't discuss them in great detail (there are many, better resources available), I will note that learning how to write simple regexes doesn't take much time at all. As you progress and want to match more and more, Google around: due to their widespread use, it's basically guaranteed that someone's had the same problem.
+The fact that Z is significantly longer of a regulation than E drove almost
+every aspect of what  we did ove r the next six months, especially when it came
+to actually getting all the content together. 
 
-Regular expressions allow you to describe the "shape" of text you would like to match. For example, if a sentence has the phrase "the term", followed by some text, followed by "means" we might assume that that sentence is defining a word or phrase. Regexes give us many tools to narrow down the shape of acceptable text, including special characters to indicate whitespace, the beginning and end of a line, and "word boundaries" like commas, spaces, etc.
+## Compiling regulations
+
+One of the primary features of eRegulations is the ability to see past, current
+and future versions of a regulation. Each version of a regulation can be
+thought of as the previous version of a regulation, plus a series of Federal
+Register (FR) final rule notices. Each FR notice describes specific changes to
+the regulations: which can add, revise, move or delete individual paragraphs.
+For example: 
+
+> Section 1026.32 is amended by:
+> a. Revising paragraph (a)(2)(iii)
+> The revisions read as follows:
+> (a) *** 
+> (2) ***
+> (iii) A transaction originated by a Housing Finance Agency, where the Housing
+> Finance Agency is the creditor for the transaction; or 
+
+
+[1] This example is from https://www.federalregister.gov/articles/2013/10/01/2013-22752/amendments-to-the-2013-mortgage-rules-under-the-equal-credit-opportunity-act-regulation-b-real#p-amd-32
+
+Each version of a regulation on our platform is essentially represented
+behind-the-scenes as a data structure (more specifically an n-ary tree) that
+represents the entire regulation at that point in time. For E, we meticulously
+compiled plaintext versions and let our parser generate these trees. E is 3
+versions, and 8 FR notices while Z is 12 versions and 23 notices. It became
+apparent early on that any manual compilation of regulations would not only be
+too error prone, but also not a maintainable and sustainable solution. The most
+significant change over the past six months was to parse and compile FR notices
+into regulation versions. 
+
+Each FR notice also has a corresponding XML representation. We converted our
+primary regulations parser from being text-based to XML based. This enabled us
+to parse each FR notice by parsing the [amendatory
+instructions](https://github.com/cfpb/regulations-parser/blob/master/regparser/notice/diff.py#L210)
+(what has changed) and the [actual
+changes](https://github.com/cfpb/regulations-parser/blob/master/regparser/notice/build.py#L302)
+(how it has changed), [matching those
+up](https://github.com/cfpb/regulations-parser/blob/master/regparser/notice/changes.py#L101)
+and [compiling the
+changes](https://github.com/cfpb/regulations-parser/blob/master/regparser/notice/compiler.py#L509)
+into a new version. When you account for all the corner cases, all of that
+probably accounted for 3 months of development time.  In the end though, we
+think we have a fair more sustainable application that requires less manual
+intervention to add an additional regulation. 
+
+
+
+
 
 {% highlight python %}
 "the term .* means"    # likely indicates a defined term
