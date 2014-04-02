@@ -11,12 +11,11 @@ As I'm writing this, my team is working on deploying new code and content
 through our process into production. It's a very exciting time, as we're going
 to be hosting Regulation Z (Truth in Lending) on our eRegulations platform.
 It's taken us approximately six months since the last regulation (Regulation E
-- Electronic Fund Transfers) to release this new one. That's admittedly a long
-time between what is seems like a simple content update. However, Regulation Z is
-significantly different to Regulation E in a number of ways that made it
-necessary for us to improve and update the eRegulations platform.  I'd like to
-share some of the more interesting things we did, and in the process also
-reveal a bit more about how our platform works. 
+- Electronic Fund Transfers) to release this new one. That's admittedly a long time between what is seems like a simple content
+update. However, Regulation Z differs significantly from Regulation E,
+requiring us to improve and update the eRegulations platform.  Here, I'll share
+some of the more interesting improvements, and in the process also reveal more
+about how our platform works. 
 
 ## Significant differences in size
 
@@ -33,11 +32,12 @@ sections while Z has 54.
 
 Table 1: The number of each types of content per regulation.
 
-Regulation E is 1.5 Mb on disk, while Z is almost ten times larger at 11Mb when
+Regulation E is 1.5 MB on disk, while Z is almost ten times larger at 11MB when
 the text of both is represented as a pretty-printed JSON trees (not including
-images). That's a lot of text. The fact that Z is significantly longer of a
-regulation than E drove almost every aspect of what we did over the next six
-months, especially when it came to actually getting all the content together. 
+images). That's a lot of text, in comparision War and Peace by Leo Tolstoy is
+3.1 MB. The fact that Z is significantly longer of a regulation than E drove
+almost every aspect of what we did over the next six months, especially when it
+came to actually getting all the content together. 
 
 ## Compiling regulations
 
@@ -46,10 +46,10 @@ future versions of a regulation. Previously, the source content that was fed to
 the parser to generate each version was created manually. The most significant
 change we made over the past six months was to automate this process.
 
-Each version of a regulation consists of a series of Federal Register final
-rule notices applied to the previous version of the regulation. Each notice
-describes changes to individual paragraphs of the regulation (think of it like
-a diff). A change can add, revise, delete or move a paragraph and looks
+Each version of a regulation consists of a series of Federal Register (FR)
+final rule notices applied to the previous version of the regulation. Each
+notice describes changes to individual paragraphs of the regulation (think of
+it like a diff). A change can add, revise, delete or move a paragraph and looks
 something like this: 
 
 > 1. Section 1026.32 is amended by:
@@ -68,7 +68,7 @@ something like this:
 > This example is from https://www.federalregister.gov/articles/2013/10/01/2013-22752/amendments-to-the-2013-mortgage-rules-under-the-equal-credit-opportunity-act-regulation-b-real#p-amd-32*
 
 Lines 1 and 2 describe which paragraph has changed, and how it has changed
-(known has the amendatory instructions). Line 6 shows you how paragraph 1026.36
+(known as the amendatory instructions). Line 6 shows you how paragraph 1026.36
 (a)(2)(iii) reads after the revision. A notice can contain multiples of these
 changes. 
 
@@ -76,12 +76,12 @@ Each version of a regulation on our platform is represented behind-the-scenes
 as a data structure (more specifically an ordered n-ary tree) that represents
 the entire regulation at that point in time. For each version of E, we manually
 read each FR notice and meticulously compiled plaintext versions that were fed
-to our parser to generate the tree. This was possible since E we have 3
+to our parser to generate the tree. This was possible since in E we have 3
 versions consisting of 8 FR notices. Regulation Z, on the other hand, is 12
 versions and 23 notices. Manual compilation of versions would not only be
 tedious and error prone, but also not a maintainable and sustainable solution
 going  forward. We wanted to be able to simply start the parser when the next
-regulation E or Z notice was published - without having to manually apply the
+regulation E or Z notice was published -- without having to manually apply the
 changes from the new notice. 
 
 
@@ -96,27 +96,26 @@ and [compiling the
 changes](https://github.com/cfpb/regulations-parser/blob/master/regparser/notice/compiler.py#L509)
 into a new version. Each FR notice has a corresponding XML representation -
 this also drove the conversion of our parser from being text-based to
-XML-based. In the end, we think we have a fair more sustainable application
-that requires less manual intervention to add an additional regulation. 
+XML-based. This resulted in a far more sustainable application requiring less
+manual intervention to add an additional regulation. 
 
 
 ## Fixing FR Notices
 
-There are limited number of the types of changes that can happen to an
-individual regulation paragraph. A paragraph can be added, revised, moved or
-deleted. Usually, these changes are written with reasonably consistent phrasing
-- making parsing them tractable. However, there are exceptions when the change
-is not sometimes expressed as clearly as possible. Adding rules  rules to the
-code  for these exceptions would have diminishing returns in the sense that the
-effort of getting the code correct, tested and ensuring that it doesn't
-break any of the other parsing would far outweigh the benefits of the unique
-rule. To handle those special cases, we built a mechanism to allow us to keep
-local copies of the XML notices taken from the Federal Register, and make
-changes to that copy to make it easier to parser. The parser looks first in our
-local repository of notices to see if a copy of a required notice exists,
-before downloading it from the Federal Register. This enabled us gracefully
-handle phrases that aren't used frequently enough to warrant their own
-custom rule.
+An individual regulation paragraph can change in a limited number of ways. A
+paragraph can be added, revised, moved or deleted. Usually, these changes are
+written with reasonably consistent phrasing -- making parsing them tractable.
+However, there are exceptions when the change is not sometimes expressed as
+clearly as possible. Adding rules  rules to the code  for these exceptions
+would have diminishing returns in the sense that the effort of getting the code
+correct, tested and ensuring that it doesn't break any of the other parsing
+would far outweigh the benefits of the unique rule. To handle those special
+cases, we built a mechanism to allow us to keep local copies of the XML notices
+taken from the Federal Register, and make changes to that copy to make it
+easier to parser. The parser looks first in our local repository of notices to
+see if a copy of a required notice exists, before downloading it from the
+Federal Register. This enabled us gracefully handle phrases that aren't used
+frequently enough to warrant their own custom rule.
 
 The same mechanism came in handy when we discovered that several notices for Z
 had more than one effective date. Notices with the same effective date are what
@@ -155,12 +154,12 @@ those sections we re-saved all of the images using image formats that compress
 the content with minimal quality degradation and introduced thumbnails.
 Clicking on the thumbnail brings the user to the larger image, but the
 thumbnails ensure that pages load faster.  We also lazy-load the images on
-scroll to speed up the initial page load. Regulation Z also contained a number
-of appendices where the images contained text. We pulled out the text out of
-those images, so that the text is now searchable and linkable providing for a
-better user experience.  With the exception of compiling regulations, most of
-the changes we made for Regulation Z were directly a result of that fact that
-regulation Z is longer. 
+scroll to speed up the initial page load. Regulation Z, in it's original form,
+also contains a number of appendices where the images contain text. We pulled
+out the text out of those images, so that the text is now searchable and
+linkable providing for a better user experience.  With the exception of
+compiling regulations, most of the changes we made for Regulation Z were
+directly a result of that fact that regulation Z is longer. 
 
 
 ## Subterps
@@ -192,6 +191,4 @@ efforts. All our code is open source, so you can see what we've been up to in
 excruciating detail (and suggest changes).
 
 Through these set of changes, we've hopefully made it much easier to add the
-next regulation and also deal with longer regulations. I've just received word
-that we're moving from our build server to our staging seerver. I'm so excited,
-I hope you will be too. 
+next regulation and also deal with longer regulations. 
