@@ -103,7 +103,7 @@ manual intervention to add an additional regulation.
 
 An individual regulation paragraph can change in a limited number of ways. A
 paragraph can be added, revised, moved, or deleted. Usually, these changes are
-written with reasonably consistent phrasing -- making parsing them tractable.
+written with reasonably consistent phrasing — making parsing them tractable.
 However, sometimes there are exceptions when the change is not expressed as
 clearly as possible. Adding rules to the code  for these exceptions
 would have diminishing returns in the sense that the effort of getting the code
