@@ -10,18 +10,17 @@ excerpt: "It's been approximately six months since we released our last regulati
 As I'm writing this, my team is working on deploying new code and content
 through our process into production. It's a very exciting time, as we're going
 to be hosting Regulation Z (Truth in Lending) on our eRegulations platform.
-It's taken us approximately six months since the last regulation (Regulation E
-- Electronic Fund Transfers) to release this new one. That's admittedly a long time between what is seems like a simple content
+It's taken us approximately six months since the last regulation (Regulation E - Electronic Fund Transfers) to release this new one. That's admittedly a long time between what seems like a simple content
 update. However, Regulation Z differs significantly from Regulation E,
 requiring us to improve and update the eRegulations platform.  Here, I'll share
-some of the more interesting improvements, and in the process also reveal more
+some of the more interesting improvements and in the process also reveal more
 about how our platform works. 
 
 ## Significant differences in size
 
 The first and foremost difference between the two regulations is that Z is
-significantly larger than E in almost all aspects.  In Table 1, for each type
-of content you can see the difference between E and Z. For example, E has 26
+significantly larger than E in almost all aspects.  In Table 1, you can see the
+difference between E and Z for each type of content. For example, E has 26
 sections while Z has 54. 
 
 | | Regulation E | Regulation Z |
@@ -30,12 +29,12 @@ sections while Z has 54.
 |Sections| 26 | 54 | 
 |Appendices| 2| 15 | 
 
-Table 1: The number of each types of content per regulation.
+Table 1: The number of each type of content per regulation.
 
 Regulation E is 1.5 MB on disk, while Z is almost ten times larger at 11MB when
-the text of both is represented as a pretty-printed JSON trees (not including
-images). That's a lot of text, in comparision War and Peace by Leo Tolstoy is
-3.1 MB. The fact that Z is significantly longer of a regulation than E drove
+both texts are represented as a pretty-printed JSON trees (not including
+images). That's a lot of text; in comparison, War and Peace by Leo Tolstoy is
+3.1 MB. The fact that Z is a significantly longer regulation than E drove
 almost every aspect of what we did over the next six months, especially when it
 came to actually getting all the content together. 
 
@@ -103,18 +102,18 @@ manual intervention to add an additional regulation.
 ## Fixing FR Notices
 
 An individual regulation paragraph can change in a limited number of ways. A
-paragraph can be added, revised, moved or deleted. Usually, these changes are
+paragraph can be added, revised, moved, or deleted. Usually, these changes are
 written with reasonably consistent phrasing -- making parsing them tractable.
-However, there are exceptions when the change is not sometimes expressed as
-clearly as possible. Adding rules  rules to the code  for these exceptions
+However, sometimes there are exceptions when the change is not expressed as
+clearly as possible. Adding rules to the code  for these exceptions
 would have diminishing returns in the sense that the effort of getting the code
 correct, tested and ensuring that it doesn't break any of the other parsing
 would far outweigh the benefits of the unique rule. To handle those special
 cases, we built a mechanism to allow us to keep local copies of the XML notices
-taken from the Federal Register, and make changes to that copy to make it
+taken from the Federal Register and make changes to that copy to make it
 easier to parser. The parser looks first in our local repository of notices to
 see if a copy of a required notice exists, before downloading it from the
-Federal Register. This enabled us gracefully handle phrases that aren't used
+Federal Register. This enabled us to gracefully handle phrases that aren't used
 frequently enough to warrant their own custom rule.
 
 The same mechanism came in handy when we discovered that several notices for Z
@@ -137,13 +136,13 @@ override made the most sense given time and effort constraints.
 
 ## Appendices 
 
-The appendices for Z include are far more varied than those for E in the types
-of information they contain. First, the structure of the text in the appendices
-for Z differs from that of E. This required a complete re-write of the appendix
-parsing code to allow for the new format. Secondly. the appendices for Z
-contain equations, tables, SAS code, and many images. Each of those presented
-unique challenges. To handle tables we had to parse the XML that exhaustively
-represented the tables into something [meaningful and concise]
+The types of information the appendices for Z contain are far more varied than
+those for E. First, the structure of the text in the appendices for Z differs
+from that of E. This required a complete re-write of the appendix parsing code
+to allow for the new format. Secondly. the appendices for Z contain equations,
+tables, SAS code, and many images. Each of those presented unique challenges.
+To handle tables we had to parse the XML that exhaustively represented the
+tables into something [meaningful and concise]
 (https://github.com/cfpb/regulations-parser/blob/master/regparser/layer/formatting.py),
 and then display that in visually pleasing HTML [tables]
 (https://github.com/eregs/regulations-site/blob/master/regulations/generator/layers/formatting.py#L18).
@@ -154,10 +153,10 @@ those sections we re-saved all of the images using image formats that compress
 the content with minimal quality degradation and introduced thumbnails.
 Clicking on the thumbnail brings the user to the larger image, but the
 thumbnails ensure that pages load faster.  We also lazy-load the images on
-scroll to speed up the initial page load. Regulation Z, in it's original form,
+scroll to speed up the initial page load. Regulation Z, in its original form,
 also contains a number of appendices where the images contain text. We pulled
-out the text out of those images, so that the text is now searchable and
-linkable providing for a better user experience.  With the exception of
+the text out of those images, so that the text is now searchable and
+linkable providing for a better user experience. With the exception of
 compiling regulations, most of the changes we made for Regulation Z were
 directly a result of that fact that regulation Z is longer. 
 
@@ -186,9 +185,9 @@ of some of our display logic.  Supplement I is now easier to read as a result.
 We made many other changes: introducing a landing page for all the regulations,
 extending the logic to identify defined terms with the regulation, and based on
 user feedback - introducing help text to the application. Each one of those
-represents a significant effort, but here I want to explain some of the larger
+represents a significant effort, but here I wanted to explain some of the larger
 efforts. All our code is open source, so you can see what we've been up to in
 excruciating detail (and suggest changes).
 
-Through these set of changes, we've hopefully made it much easier to add the
+Through this set of changes, we've hopefully made it much easier to add the
 next regulation and also deal with longer regulations. 
