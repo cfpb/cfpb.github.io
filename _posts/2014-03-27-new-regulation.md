@@ -184,7 +184,7 @@ of some of our display logic.  Supplement I is now easier to read as a result.
 
 We made many other changes: introducing a landing page for all the regulations,
 extending the logic to identify defined terms with the regulation, and based on
-user feedback - introducing help text to the application. Each one of those
+user feedback — introducing help text to the application. Each one of those
 represents a significant effort, but here I wanted to explain some of the larger
 efforts. All our code is open source, so you can see what we've been up to in
 excruciating detail (and suggest changes).
