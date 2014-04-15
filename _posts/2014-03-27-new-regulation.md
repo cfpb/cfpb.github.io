@@ -7,14 +7,16 @@ tagline: Behind the scenes
 excerpt: "It's been approximately six months since we released our last regulation on [eRegulations](http://www.consumerfinance.gov/eregulations), our effort to make regulations more usable. We talk about what we've been up to since then. " 
 ---
 
-As I'm writing this, my team is working on deploying new code and content
-through our process into production. It's a very exciting time, as we're going
-to be hosting Regulation Z (Truth in Lending) on our eRegulations platform.
-It's taken us approximately six months since the last regulation (Regulation E - Electronic Fund Transfers) to release this new one. That's admittedly a long time between what seems like a simple content
-update. However, Regulation Z differs significantly from Regulation E,
-requiring us to improve and update the eRegulations platform.  Here, I'll share
-some of the more interesting improvements and in the process also reveal more
-about how our platform works. 
+Regulation Z (Truth in Lending) will soon be hosted on eRegulations - our
+platform to make regulations easier to find, read and understand.  This
+regulation follows approximately six months since the last regulation
+(Regulation E - Electronic Fund Transfers) was first hosted. That's admittedly
+a long time between what seems like a simple content update. However,
+Regulation Z differs significantly from Regulation E, requiring us to improve
+and update the eRegulations platform.  eRegulations now handles longer
+regulations gracefully and also makes it significantly easier to add the next
+regulation. Here, I'll share some of the more interesting improvements and in
+the process also reveal more about how our platform works. 
 
 ## Significant differences in size
 
