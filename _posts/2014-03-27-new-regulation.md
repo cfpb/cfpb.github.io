@@ -7,7 +7,7 @@ tagline: Behind the scenes
 excerpt: "It's been approximately six months since we released our last regulation on [eRegulations](http://www.consumerfinance.gov/eregulations), our effort to make regulations more usable. We talk about what we've been up to since then. " 
 ---
 
-Regulation Z (Truth in Lending) will soon be hosted on eRegulations - our
+Regulation Z (Truth in Lending) will soon be hosted on eRegulations - CFPB's 
 platform to make regulations easier to find, read and understand.  This
 regulation follows approximately six months since the last regulation
 (Regulation E - Electronic Fund Transfers) was first hosted. That's admittedly
