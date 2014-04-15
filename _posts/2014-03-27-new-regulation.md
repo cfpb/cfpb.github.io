@@ -103,7 +103,7 @@ manual intervention to add an additional regulation.
 
 An individual regulation paragraph can change in a limited number of ways. A
 paragraph can be added, revised, moved, or deleted. Usually, these changes are
-written with reasonably consistent phrasing -- making parsing them tractable.
+written with reasonably consistent phrasing — making parsing them tractable.
 However, sometimes there are exceptions when the change is not expressed as
 clearly as possible. Adding rules to the code  for these exceptions
 would have diminishing returns in the sense that the effort of getting the code
@@ -184,7 +184,7 @@ of some of our display logic.  Supplement I is now easier to read as a result.
 
 We made many other changes: introducing a landing page for all the regulations,
 extending the logic to identify defined terms with the regulation, and based on
-user feedback - introducing help text to the application. Each one of those
+user feedback — introducing help text to the application. Each one of those
 represents a significant effort, but here I wanted to explain some of the larger
 efforts. All our code is open source, so you can see what we've been up to in
 excruciating detail (and suggest changes).
