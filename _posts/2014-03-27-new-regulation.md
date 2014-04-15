@@ -99,7 +99,7 @@ XML-based. This resulted in a far more sustainable application requiring less
 manual intervention to add an additional regulation. 
 
 
-## Fixing FR Notices
+## Fixing Federal Register notices
 
 An individual regulation paragraph can change in a limited number of ways. A
 paragraph can be added, revised, moved, or deleted. Usually, these changes are
@@ -134,7 +134,7 @@ In these cases, we manually split up the notices, creating a new XML source
 document for each effective date. This was another situation in which a manual
 override made the most sense given time and effort constraints. 
 
-## Appendices 
+## Improving appendices 
 
 The types of information the appendices for Z contain are far more varied than
 those for E. First, the structure of the text in the appendices for Z differs
@@ -161,9 +161,9 @@ compiling regulations, most of the changes we made for Regulation Z were
 directly a result of that fact that regulation Z is longer. 
 
 
-## Subterps
+## Breaking up the supplement
 
-Supplement I is part of the regulation that contains the official
+Supplement I is the part of the regulation that contains the official
 interpretations to the regulation. Loading Supplement I as a single page worked
 well for Regulation E (where the content is relatively short) but with Z this
 led to a degraded experience as the supplement is significantly longer. We
@@ -173,10 +173,10 @@ experience by our product owner (rather than breaking Supplement I to be read a
 section at a time).  Our code was previously written with the intent of
 displaying a section at a time (with the entirety of Supplement I considered as
 a section). This worked nicely because that also reflects how the data that
-drives everything is represented. With subterps, there is no corresponding
-underlying data structure that tells us that the following sections of
-Supplement I should be collected and displayed together. This required a
-[rewrite]
+drives everything is represented. With the Supplement displayed a subpart at a
+time, , there is no corresponding underlying data structure that tells us that
+the following sections of Supplement I should be collected and displayed
+together. This required a [rewrite]
 (https://github.com/eregs/regulations-site/blob/master/regulations/views/partial_interp.py#L35)
 of some of our display logic.  Supplement I is now easier to read as a result.   
 
