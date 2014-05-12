@@ -2,7 +2,8 @@ baseurl:     ''
 exclude:     [README.md, Gemfile, Gemfile.lock, vendor, _site]
 permalink:   /articles/:title
 pygments:    true
+markdown:    kramdown
 
 title: CFPB Open Tech
-url: "http://cfpb.github.io"
+url: "https://cfpb.github.io/"
 description: "Learn about the design and development work the Consumer Financial Protection Bureau undertakes to support its mission."
