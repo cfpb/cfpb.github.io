@@ -33,7 +33,11 @@ title: Home
                         {% for post in site.posts limit:2 %}
                             <li class="sidebar_list_item">
                                 <h3 class="sidebar_list_item_head">
+                                {% if post.external-url %}
+                                    <a href="{{ post.external-url }}">
+                                {% else %}
                                     <a href="{{ post.url | remove_first:'/'}}/">
+                                {% endif %}
                                         {{ post.title }}
                                     </a>
                                 </h3>
@@ -106,7 +110,11 @@ title: Home
                 {% for post in site.posts limit:1 %}
                     <article class="entry">
                         <h3 class="entry_title">
+                        {% if post.external-url %}
+                            <a href="{{ post.external-url }}">
+                        {% else %}
                             <a href="{{ post.url | remove_first:'/'}}/">
+                        {% endif %}
                                 {{ post.title }}
                             </a>
                         </h3>
