@@ -38,7 +38,7 @@ Fellows have been instrumental in creating and building:
   easier to read, navigate, and understand
 - Consumer-friendly design that is being incorporated in all facets of our work,
   such as forms that consumers use for
-  [submitting complaints](http://www.consumerfinance.gov/blog/now-recruiting-technology-innovation-fellows-for-2015/%22/complaint/),
+  [submitting complaints](http://www.consumerfinance.gov/complaint/),
   the [college cost shopping sheet](http://collegecost.ed.gov/shopping_sheet.pdf)
   and [student debt repayment tool](http://www.consumerfinance.gov/paying-for-college/repay-student-debt/),
   or our public reports.
