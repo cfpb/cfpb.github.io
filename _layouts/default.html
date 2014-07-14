@@ -58,7 +58,9 @@
     <script src="{% if page.assetpath %}{{ page.assetpath }}{% endif %}js/afontgarde.js"></script>
     <script>
         AFontGarde( 'CFPB_Icons', '\uE600\uE601\uE602\uE605' );
-        console.log('Hey! If you\'re viewing this, you should apply to our Technology and Innovation Fellowship. http://www.consumerfinance.gov/jobs/technology-innovation-fellows/');
+        if ( window.console && window.console.log ) {
+          console.log('Hey! If you\'re viewing this, you should apply to our Technology and Innovation Fellowship. http://www.consumerfinance.gov/jobs/technology-innovation-fellows/');
+        }
     </script>
     <!-- <script src="{% if page.assetpath %}{{ page.assetpath }}{% endif %}js/site.js"></script> -->
 
