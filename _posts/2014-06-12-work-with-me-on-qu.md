@@ -2,7 +2,7 @@
 published: false
 layout: post
 author: Marc Esher
-title: "Work with us on the Public Data Platform"
+title: "Clojure developers: Work with us on the Public Data Platform"
 tagline: "Seeking developers for the CFPB Technology and Innovation Fellowship"
 excerpt: "We're seeking Clojure developers to help build technologies that support the Bureau's work"
 ---
