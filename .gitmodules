@@ -1,0 +1,3 @@
+[submodule "source-code-policy"]
+	path = source-code-policy
+	url = https://github.com/cfpb/source-code-policy.git

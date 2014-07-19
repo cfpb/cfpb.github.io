@@ -26,6 +26,15 @@
 </head>
 
 <body>
+    <!-- Google Tag Manager -->
+    <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MVLMCF"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-MVLMCF');</script>
+    <!-- End Google Tag Manager -->
 
     <div class="wrap skip cf">
         <a class="visuallyhidden focusable" href="#content">Skip to Main Content</a>
@@ -49,6 +58,18 @@
     <script src="{% if page.assetpath %}{{ page.assetpath }}{% endif %}js/afontgarde.js"></script>
     <script>
         AFontGarde( 'CFPB_Icons', '\uE600\uE601\uE602\uE605' );
+        var consoleText = 'Hey! If you\'re viewing this, you should %capply() %cto our Technology and Innovation Fellowship. http://www.consumerfinance.gov/jobs/technology-innovation-fellows/';
+        var consoleCSSBold = 'font-weight: bold';
+        var consoleCSSNorm = 'font-weight: normal';
+
+        function apply() {
+          console.log('Here we go!');
+          window.location.href = 'http://www.consumerfinance.gov/jobs/technology-innovation-fellows/';
+        }
+
+        if ( window.console && window.console.log ) {
+          console.log(consoleText, consoleCSSBold, consoleCSSNorm);
+        }
     </script>
     <!-- <script src="{% if page.assetpath %}{{ page.assetpath }}{% endif %}js/site.js"></script> -->
 

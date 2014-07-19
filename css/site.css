@@ -246,13 +246,7 @@ blockquote > p {
 
 ul,
 ol {
-    padding: 0;
-    list-style-position: inside;
-}
-
-li ul,
-li ol {
-    margin: 0 1.375em;
+    padding: 0 0 0 2em;
 }
 
 dl dd {
@@ -1060,6 +1054,36 @@ sub {
 /* WIDESCREEN */
 @media only screen and (min-width: 87.5em) { 
     /*body { font-size: 1.125em; }*/
+}
+
+
+/* Fancy OL styling for the Source Code Policy */
+li ol {
+    counter-reset: list;
+}
+ol > li {
+    list-style: decimal;
+    text-transform: uppercase;
+}
+ol ol > li {
+    list-style: none;
+    position: relative;
+    text-transform: none;
+}
+ol ol > li:before {
+    counter-increment: list;
+    content: counter(list, lower-alpha) ") ";
+    position: absolute;
+    left: -1.4em;
+}
+ol ol ol > li:before {
+    content: none;
+}
+ol ol ol > li {
+    list-style-type: lower-alpha;
+}
+ol ol ol ol > li {
+    list-style-type: lower-roman;
 }
     
 /* PRINT */
