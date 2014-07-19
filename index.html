@@ -167,7 +167,11 @@ title: Home
                     {% for post in site.posts limit:3 offset:1 %}
                         <li class="sidebar_list_item">
                             <h3 class="sidebar_list_item_head">
+                            {% if post.external-url %}
+                                <a href="{{ post.external-url }}">
+                            {% else %}
                                 <a href="{{ post.url | remove_first:'/' }}/">
+                            {% endif %}
                                     {{ post.title }}
                                 </a>
                             </h3>
