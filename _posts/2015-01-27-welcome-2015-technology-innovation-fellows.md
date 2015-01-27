@@ -56,3 +56,6 @@ Thanks for all of the interest in our program,
 and congratulations to the new fellows.
 We’re really excited to see the impact they will have at the CFPB.
 
+---
+
+_**Ashwin Vasan** is the Chief Information Officer of the CFPB._
