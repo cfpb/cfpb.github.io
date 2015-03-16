@@ -7,7 +7,7 @@ tagline:
 excerpt: CFPB's in-house design and user experience team spent the past year working with our colleagues in Research, Markets, and Regulations to design standardized model disclosure forms that would enable consumers to make more informed choices among prepaid options.
 ---
 
-![](/img/prepaid/comparison-shopping-prepaid-cards.jpg)
+![A person displaying examples of two proposed disclosure designs as they would appear on product packaging](../img/prepaid/comparison-shopping-prepaid-cards.jpg)
 
 _Comparison shopping with two proposed short-form disclosures for prepaid cards._
 
@@ -25,7 +25,7 @@ In a retail store, the proposed short-form disclosure is designed to appear on t
 
 We used a limited set of design tools in the proposed short-form disclosure to fit in a small space (3.5-inch square) similar to the industry's current package design. Our aim is to improve the consumer shopping experience through a clear and simple layout, active language, and mobile-friendly access to the long-form disclosure. We designed the proposed disclosure with a single, easy-to-read typeface that is set at minimum font sizes to aid legibility. The proposed disclosure presents fees in two levels of hierarchy with what we believe to be clear, concise language. Horizontal lines are used to direct the eye and whitespace eases reading.
 
-![](/img/prepaid/proposed-short-form-disclosure-design.png)
+![The proposed short-form disclosure design](../img/prepaid/proposed-short-form-disclosure-design.png)
 
 _The proposed short-form disclosure design._
 
@@ -39,7 +39,7 @@ Because the short-form disclosure would not include _all_ fees, we added to the 
 
 We also identified a few suggested requirements that we believe will improve consumers' in-store access to the electronic long-form disclosure. The [proposed rule](https://www.federalregister.gov/articles/2014/12/23/2014-27286/prepaid-accounts-under-the-electronic-fund-transfer-act-regulation-e-and-the-truth-in-lending-act) would require that the URL to the long-form disclosure be less than 22 characters and be meaningfully named. Under the proposal, the electronic long-form disclosure would have to be machine-readable so that consumers can read and retain it using the device that is best for them, in other words, it shouldn't be presented as a static image.
 
-![](/img/prepaid/viewing-prepaid-long-form-disclosure.jpg)
+![A person holding an example package with the proposed disclosure design and a smartphone displaying the corresponding long-form disclosure](../img/prepaid/viewing-prepaid-long-form-disclosure.jpg)
 
 _Reviewing the proposed electronic long form in the store with the proposed short-form disclosure._
 
