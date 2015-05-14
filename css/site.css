@@ -1057,35 +1057,6 @@ sub {
 }
 
 
-/* Fancy OL styling for the Source Code Policy */
-li ol {
-    counter-reset: list;
-}
-ol > li {
-    list-style: decimal;
-    text-transform: uppercase;
-}
-ol ol > li {
-    list-style: none;
-    position: relative;
-    text-transform: none;
-}
-ol ol > li:before {
-    counter-increment: list;
-    content: counter(list, lower-alpha) ") ";
-    position: absolute;
-    left: -1.4em;
-}
-ol ol ol > li:before {
-    content: none;
-}
-ol ol ol > li {
-    list-style-type: lower-alpha;
-}
-ol ol ol ol > li {
-    list-style-type: lower-roman;
-}
-    
 /* PRINT */
 @media print {
   * {background: transparent !important; color: black !important; text-shadow: none !important; filter:none !important; -ms-filter: none !important} /* Black prints faster */
