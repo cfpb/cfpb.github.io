@@ -373,6 +373,55 @@ del {
     text-shadow: none;
 }
 
+/* BUTTONS */
+.btn {
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0.57142857em 1em;
+  border: 0;
+  border-radius: 0.28571429em;
+  margin: 0;
+  vertical-align: middle;
+  font-family: "AvenirNextLTW01-Medium", "Avenir Next W01", Arial, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: .875em;
+  line-height: normal;
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-transition: background-color 0.1s;
+  transition: background-color 0.1s;
+  -webkit-appearance: none;
+}
+
+.btn,
+.btn:link,
+.btn:visited {
+  background-color: #0072ce;
+  color: #fff;
+}
+.btn:hover,
+.btn.hover {
+  background-color: #328ed8;
+  border-bottom: none;
+}
+.btn:focus,
+.btn.focus {
+  background-color: #328ed8;
+  outline: 1px dotted #0072ce;
+  outline-offset: 1px;
+}
+.btn:active,
+.btn.active {
+  background-color: #33578e;;
+}
+
+.btn__super {
+  padding: .61111111em 1.61111111em;
+  font-size: 1.125em;
+}
 
 /* OTHERS */
 
@@ -581,7 +630,7 @@ sub {
 }
 
 .sidebar_list {
-    
+
 }
 .sidebar_list .author {
     font-family: "Avenir Next W01", Arial, sans-serif;
@@ -884,7 +933,7 @@ sub {
 }
 
 /* TABLET/NETBOOK (768px) */
-@media only screen and (min-width: 48em) { 
+@media only screen and (min-width: 48em) {
     .intro,
     .featured-entries,
     .repos,
@@ -910,7 +959,7 @@ sub {
 /*    .intro h1 {
         font-size: 1.75em;
     }*/
-    
+
     .sidebar {
         width: 23%;
         margin-left: 4%;
@@ -1002,7 +1051,7 @@ sub {
 }
 
 /* LANDSCAPE TABLET/NETBOOK/LAPTOP (1024px) */
-@media only screen and (min-width: 64em) { 
+@media only screen and (min-width: 64em) {
     /*.content {
         overflow: hidden;
     }*/
@@ -1017,7 +1066,7 @@ sub {
 /*    .intro h1 {
         font-size: 2.375em;
     }*/
-    
+
     .featured-project {
         width: 33.333333333%;
     }
@@ -1032,7 +1081,7 @@ sub {
 }
 
 /* DESKTOP (1200px) */
-@media only screen and (min-width: 75em) { 
+@media only screen and (min-width: 75em) {
     .wrap {
         max-width: 1200px;
     }
@@ -1052,7 +1101,7 @@ sub {
 }
 
 /* WIDESCREEN */
-@media only screen and (min-width: 87.5em) { 
+@media only screen and (min-width: 87.5em) {
     /*body { font-size: 1.125em; }*/
 }
 

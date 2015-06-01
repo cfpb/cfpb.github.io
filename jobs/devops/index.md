@@ -48,7 +48,9 @@ multiple competing priorities is a must.
 
 ## Ready for the challenge?
 
-[Apply as an Information Technology Specialist](https://www.usajobs.gov/GetJob/ViewDetails/405469200)
+Apply for the Information Technology Specialist position on USA Jobs
+
+<a class="btn btn__super" href="https://www.usajobs.gov/GetJob/ViewDetails/405469200">Apply Now</a>
 
 
 <small>The Consumer Financial Protection Bureau (CFPB) is an equal
