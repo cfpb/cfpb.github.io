@@ -48,7 +48,7 @@ multiple competing priorities is a must.
 
 ## Ready for the challenge?
 
-Apply for the Information Technology Specialist position on USA Jobs
+Apply for the Information Technology Specialist(Applications Software) position on USA Jobs.
 
 <a class="btn btn__super" href="https://www.usajobs.gov/GetJob/ViewDetails/405469200">Apply Now</a>
 
