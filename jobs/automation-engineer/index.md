@@ -53,6 +53,10 @@ Apply for the Information Technology Specialist position on USA Jobs
 
 <a class="btn btn__super" href="https://www.usajobs.gov/GetJob/ViewDetails/405469200">Apply Now</a>
 
+## Watch this high-level overview of the federal hiring process
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/XCbZnTIeTOY" frameborder="0" allowfullscreen></iframe>
+
 <small>The Consumer Financial Protection Bureau (CFPB) is an equal
 opportunity employer and seeks to create and maintain a
 vibrant and diverse workforce. Women, minorities, veterans,
