@@ -459,6 +459,12 @@ sub {
     bottom: -0.25em;
 }
 
+hr {
+    border: 0;
+    height: 1px;
+    background: #babbbc;
+}
+
 
 /* MICRO CLEARFIX HACK */
 
@@ -930,6 +936,10 @@ sub {
     .view-all-repos {
         margin-left: 1em;
     }
+
+    .pull-r {
+      display: none;
+    }
 }
 
 /* TABLET/NETBOOK (768px) */
@@ -1077,6 +1087,11 @@ sub {
     }
     .footer-links li:first-child {
         margin-left: 0;
+    }
+
+    .pull-r {
+      display: block;
+      float: right;
     }
 }
 

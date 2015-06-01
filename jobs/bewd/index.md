@@ -44,11 +44,17 @@ standards for creating Application Programming Interfaces (APIs). A proven
 track record of delivering significant results as part of a team and handling
 multiple competing priorities is a must.
 
+---
+
+<img src="../../img/flag.png" alt="" class="pull-r">
+
 ## Ready for the challenge?
 
 Apply for the Information Technology Specialist(Applications Software) position on USA Jobs.
 
 <a class="btn btn__super" href="https://www.usajobs.gov/GetJob/ViewDetails/405469200">Apply Now</a>
+
+---
 
 ## Watch this high-level overview of the federal hiring process
 
