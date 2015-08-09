@@ -631,13 +631,8 @@ hr {
     border-bottom-color: #0072CE;
 }
 .intro .learn-more {
-    margin: 0;
-    padding: 0;
+    margin: 0; padding: 0;
     list-style: none;
-}
-
-.intro .work-with-us {
-    padding-bottom: 0px;
 }
 
 .sidebar_list {
@@ -904,9 +899,6 @@ hr {
     }
     .learn-more_item:first-child {
         margin-left: 0;
-    }
-    .intro .work-with-us {
-        padding-top: 60px;
     }
     .sidebar_head {
         margin-top: 0;
