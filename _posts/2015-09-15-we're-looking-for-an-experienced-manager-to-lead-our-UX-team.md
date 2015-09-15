@@ -1,7 +1,7 @@
 ---
 published: true
 layout: post
-author: Benjamin Guhin
+author: Ben Guhin
 title: We&rsquo;re looking for an experienced manager to lead our UX team
 description: We&rsquo;re hiring an experienced manager to lead the disciplines of interaction design, user research, and content strategy.
 excerpt: As the larger design and development group has grown, our group of UX designers has been working on the best ways to integrate user research, content strategy, and user-centered design into the Bureau’s initiatives for rulemaking, supervision, enforcement, and consumer engagement.
