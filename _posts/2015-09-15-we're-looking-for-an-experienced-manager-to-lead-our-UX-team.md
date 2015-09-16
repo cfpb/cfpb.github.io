@@ -34,7 +34,7 @@ Our UX designers, researchers, and content strategists add to this base understa
 
 >UX is a complex field because there are lots of complexities: accessibility, mobile design, working in government agencies, working in an agile development process, and dealing with cross-cultural needs, to name a few. Yet, these are edge cases. 80% of UX work is quite routine and when learned by everyone on the team, creates consistently good designs.
 
-What this means for our UX designers is:
+What this means for our UX designers:
 
 1.	We get to work alongside economists, attorneys, data analysts, and other experts in their fields to create tools, services, and regulations to help American consumers; and
 2.	We’re more able to focus on the complexity of designing for the entire American public in a marketplace known for fine print, confusing terms, and deceptive marketing.
