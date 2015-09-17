@@ -2,7 +2,7 @@
 published: true
 layout: post
 author: Catherine Farman, Amy Mok, Stephanie Osan
-title: "Updated Owning a Home tool guides users through homebuying process"
+title: "Updated Owning a Home tool guides users through home-buying process"
 excerpt: Today we’re releasing improvements to our Owning a Home suite of tools and resources. Owning a Home helps consumers decide what kind of loan they want to get, choose the deal that’s right for them, and close with confidence. We help consumers spot red flags and ask the right questions throughout their home-buying journey. And now we’ve designed a user-friendly guide to help consumers prepare for and navigate the home-buying process, from start to finish.
 ---
 
