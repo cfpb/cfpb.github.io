@@ -31,13 +31,17 @@ These goals presented a few challenges for our designers. The home-buying proces
 
 These were the questions we considered as we designed the first iteration of the tool. We then shared our first design prototype with people currently buying a home to get feedback—and see whether we were successful in meeting our goals. 
 
-![First iteration of the tool](../../img/updated-oah-tool/image01.png)
+![First iteration of a phase page layout](../../img/updated-oah-tool/image01.png)
+*First iteration of a phase page layout.*
 
 Our early usability testing revealed that our prototype did not include enough information for users to make sense of the process. Users requested more information about what the action steps meant, and wanted our tools and resources to be connected to specific action steps. We also discovered that our navigation wasn’t successful—it took users a long time to notice the phases of the process because we had placed them at the bottom of the page. 
 
 With these problems now defined, we went back to work. We made the action steps expandable, with additional information, so that consumers could selectively dig into the details without being initially overwhelmed. We embedded tools and links into the action steps to connect users with the extensive resources the CFPB has to offer. We duplicated the navigation on the top and bottom of the page, to make it findable and reinforce where a user is currently located within the process. 
 
-![Expandable action steps](../../img/updated-oah-tool/image00.png)
-![Embedded tools within action steps](../../img/updated-oah-tool/image02.png)
+![Final design for a phase page](../../img/updated-oah-tool/image00.png)
+*Final design for a phase page.*
+
+![Additional content in the action steps](../../img/updated-oah-tool/image02.png)
+*Additional content in the action steps.*
 
 This new tool will help home buyers throughout the process of buying a home: from the very start through to closing. Phases and action steps help make sure consumers don’t miss anything important, and our interactive tools give home buyers the information they need to feel more confident throughout the entire home-buying process. In addition to this new tool, we’ve added other tools to help consumers use the new Loan Estimate and Closing Disclosure forms and written new content to help consumers use these resources more effectively. [Visit the updated site here!](http://consumerfinance.gov/owning-a-home)
