@@ -10,7 +10,7 @@ excerpt: Starting October 3, homebuyers will see two new forms during the mortga
 
 ![On the right, the new Loan Estimate form. On the left, a web page that helps
 to explain it.](../../img/form-explainers/01-web-tool-and-paper-form-side-by-
-side.png) *On the right, the new Loan Estimate form. On the left, a web page
+side.jpg) *On the right, the new Loan Estimate form. On the left, a web page
 that helps to explain it.*
 
 Starting October 3, homebuyers will see two new forms during the mortgage
@@ -31,7 +31,7 @@ have about their mortgage, so we went one extra step. Both forms feature a URL
 that homebuyers can visit to get help understanding the forms.
 
 ![The URL on a paper Loan Estimate form.](../../img/form-explainers/02-url-on-
-paper-form.png) *The URL on a paper Loan Estimate form.*
+paper-form.jpg) *The URL on a paper Loan Estimate form.*
 
 Those URLs point to a set of tools that help answer consumers’ questions about
 the forms. These tools went through a design and usability testing process, and
@@ -43,7 +43,7 @@ When we started designing these tools, we had a very clear use case in mind: a
 homebuyer with a form in one hand and a mouse in the other.
 
 ![A homebuyer looking at both the paper form and the web page that explains
-it.](../../img/form-explainers/03-homebuyer-with-ipad-and-paper-form.png) *A
+it.](../../img/form-explainers/03-homebuyer-with-ipad-and-paper-form.jpg) *A
 homebuyer looking at both the paper form and the web page that explains it.*
 
 Though the specifics of the situation might change (the form might be a PDF
