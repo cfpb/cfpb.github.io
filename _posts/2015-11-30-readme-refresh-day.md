@@ -3,7 +3,7 @@ published: true
 layout: post
 author: Marc Esher
 title: Improving the new developer experience with a README refresh day
-excerpt: We held a README Refresh DAy to help us improve the quality of our open source software and its ability to be used and adopted by the general public
+excerpt: We held a README Refresh Day to help us improve the quality of our open source software and its ability to be used and adopted by the general public
 ---
 
 
