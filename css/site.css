@@ -850,6 +850,11 @@ hr {
 .entry__single .entry_meta {
     margin-bottom: 2em;
 }
+.content-sidebar {
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: #DBEDD4;
+}
 #disqus_thread {
     padding-top: 1em;
     border-top: 1px solid #BABBBD;
@@ -1097,8 +1102,15 @@ hr {
     }
 
     .pull-r {
-      display: block;
-      float: right;
+        display: block;
+        float: right;
+    }
+
+    .content-sidebar {
+        width: 50%;
+        min-width: 180px;
+        margin-left: 15px;
+        float: right;
     }
 }
 
