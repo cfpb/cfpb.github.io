@@ -55,7 +55,7 @@ Collaborators on software projects are frequently encouraged to write good insta
 ## Organizing the event
 
 A small group of existing CFPB developers organized the event, including planning and event-day activities,
-documented at [https://github.com/cfpb/readme-refresh-day](https://github.com/cfpb/readme_refresh_day).
+documented at [https://github.com/cfpb/readme_refresh_day](https://github.com/cfpb/readme_refresh_day).
 We scheduled it during the fellowship immersion period as an activity to bring new developers closer with existing developers,
 and also to provide all developers – veteran and newcomer – with an opportunity to explore software created by other CFPB project teams.
 This also provided veteran CFPB developers an exercise in humility and empathy,
@@ -63,7 +63,7 @@ as they watched other developers attempt to install and work on software, which 
 
 ## Outcomes
 
-Our raw notes can be read at [https://github.com/cfpb/readme-refresh-day](https://github.com/cfpb/readme_refresh_day/blob/master/notes.md).
+Our raw notes can be read at [https://github.com/cfpb/readme_refresh_day](https://github.com/cfpb/readme_refresh_day/blob/master/notes.md).
 
 During our three-hour session, 25 developers worked on software they had never seen before, using just the README.
 In the group intro discussion, our new developers contributed valuable insights into what constitutes a good README,
