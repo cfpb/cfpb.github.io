@@ -14,8 +14,8 @@
               recruitEmail +
               '%0D%0A%0D%0ADiscipline: ' +
               discipline +
-              '%0D%0A%0D%0ABe sure to attach your resume ' +
-              'and remove this line before sending';
+              '%0D%0A%0D%0ANote: Attaching your resume can help us identify ' +
+              'openings you may be interested in.';
 
     window.location.href = url;
   } );
