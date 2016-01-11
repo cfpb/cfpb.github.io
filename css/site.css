@@ -209,6 +209,32 @@ input::-moz-focus-inner {
     border: 0;
 }
 
+.recruit-form label,
+.recruit-form input {
+    display: inline-block;
+}
+
+.recruit-form label {
+    font-size: .9375em;
+}
+
+.recruit_chunk {
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+.recruit-form select {
+    display: block;
+    margin-top: 5px;
+}
+
+.recruit_submit.btn {
+    display: block;
+    width: 120px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
 
 /* QUOTES */
 
@@ -635,13 +661,6 @@ hr {
     padding: 0;
     list-style: none;
 }
-.intro .work-with-us {
-    padding-bottom: 0;
-}
-
-.sidebar_list {
-
-}
 .sidebar_list .author {
     font-family: "Avenir Next W01", Arial, sans-serif;
     font-weight: 400;
@@ -688,8 +707,8 @@ hr {
 .featured-project_img__eregs {
     background: url(../img/feature_eregs_150x150.png) no-repeat;
 }
-.featured-project_img__collab {
-    background: url(../img/feature_collab_150x150.png) no-repeat;
+.featured-project_img__ccdb {
+    background: url(../img/feature_ccdb_150x150.png) no-repeat;
 }
 .featured-project_head {
     margin-bottom: .75em;
@@ -759,7 +778,7 @@ hr {
 }
 
 .entry_read-more-link {
-    margin-bottom: 2em;
+    margin-bottom: 2em
 }
 
 .repos {
@@ -783,6 +802,12 @@ hr {
 }
 .more-repos li {
     margin: 0;
+}
+.work-at-cfpb {
+    margin-bottom: 3em;
+}
+.job-half {
+    margin-bottom: 1em;
 }
 .footer {
     padding: 2em 0;
@@ -826,9 +851,6 @@ hr {
     line-height: 1;
     font-weight: 500;
 }
-.footer p {
-
-}
 
 
 /* SINGLE ENTRY POSTS */
@@ -849,6 +871,11 @@ hr {
 }
 .entry__single .entry_meta {
     margin-bottom: 2em;
+}
+.content-sidebar {
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: #DBEDD4;
 }
 #disqus_thread {
     padding-top: 1em;
@@ -891,12 +918,6 @@ hr {
         margin: 1em 0;
         float: right;
     }
-/*    .header h1 {
-        margin-top: 0.75em;
-        float: left;
-        font-size: 2.125em;
-    }*/
-
     .learn-more_item {
         float: left;
         margin-left: 2em;
@@ -943,9 +964,17 @@ hr {
     .view-all-repos {
         margin-left: 1em;
     }
-
     .pull-r {
-      display: none;
+        display: none;
+    }
+    .job-half {
+        display: inline-block;
+        width: 47%;
+        margin: 0 0 0 0;
+        vertical-align: middle;
+    }
+    .job-half:nth-child(2) {
+        margin-left: 5%;
     }
 }
 
@@ -954,6 +983,7 @@ hr {
     .intro,
     .featured-entries,
     .repos,
+    .jobs,
     .entry__single,
     .sidebar,
     .footer-links,
@@ -963,23 +993,24 @@ hr {
         margin: 0 -0.26em 1em 0;
         vertical-align: top;
     }
-    .intro,
+    .intro {
+        width: 66%;
+    }
     .featured-entries,
     .repos,
     .entry__single {
         width: 73%;
     }
-
     .hero section {
         padding: 2em 0;
     }
-/*    .intro h1 {
-        font-size: 1.75em;
-    }*/
-
     .sidebar {
         width: 23%;
         margin-left: 4%;
+    }
+    .hero .sidebar {
+        width: 30%;
+        margin-left: 3%;
     }
     .sidebar_head {
         line-height: 1.77777777777778; /* 32/18 - aligns baseline with article title */
@@ -988,39 +1019,6 @@ hr {
     .hero .sidebar_head {
         line-height: 2.333333333; /* 42/18 */
     }
-
-    /*.content-body {
-        display: table;
-        width: 100%;
-        margin: 0;
-    }
-    .entry__single,
-    .sidebar__single {
-        display: table-cell;
-        height: auto;
-        padding: 2em 2em 2em 5%;
-        border: none;
-        margin: 0;
-    }
-    .entry__single {
-        width: 75%;
-    }
-    .sidebar__single {
-        width: 25%;
-        padding: 2em 5% 2em 2em;
-        background: #F8F8F8;
-    }
-    .entry__single_wrap {
-        width: 100%;
-        max-width: 868px;
-        float: right;
-    }
-    .sidebar__single_wrap {
-        width: 100%;
-        max-width: 268px;
-        float: left;
-    }*/
-
     .content {
         overflow: hidden;
     }
@@ -1069,21 +1067,9 @@ hr {
 
 /* LANDSCAPE TABLET/NETBOOK/LAPTOP (1024px) */
 @media only screen and (min-width: 64em) {
-    /*.content {
-        overflow: hidden;
-    }*/
-    /*.wrap {
-        max-width: 960px;
-    }*/
-
     .hero {
         position: relative;
     }
-
-/*    .intro h1 {
-        font-size: 2.375em;
-    }*/
-
     .featured-project {
         width: 33.333333333%;
     }
@@ -1097,8 +1083,24 @@ hr {
     }
 
     .pull-r {
-      display: block;
-      float: right;
+        display: block;
+        float: right;
+    }
+
+    .content-sidebar {
+        width: 50%;
+        min-width: 180px;
+        margin-left: 15px;
+        float: right;
+    }
+
+    .recruit_chunk__name,
+    .recruit_chunk__email {
+        width: 46.5%;
+    }
+
+    .recruit_chunk__email {
+        margin-left: 5%;
     }
 }
 
@@ -1107,9 +1109,6 @@ hr {
     .wrap {
         max-width: 1200px;
     }
-/*    .intro h1 {
-        font-size: 2.625em;
-    }*/
     .repo {
         width: 31%;
         margin-left: 3.5%;
@@ -1126,7 +1125,6 @@ hr {
 @media only screen and (min-width: 87.5em) {
     /*body { font-size: 1.125em; }*/
 }
-
 
 /* PRINT */
 @media print {

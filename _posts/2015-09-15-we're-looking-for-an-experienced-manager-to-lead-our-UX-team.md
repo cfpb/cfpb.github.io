@@ -66,7 +66,7 @@ The next phase in our growth is hiring an experienced manager to lead our discip
 
 We hear from hundreds of American consumers every day who believe that we may be able to help them find a solution to problems that are crippling their day-to-day lives. Designers are a part of the solution here. Please join us.
 
-
+[Apply now](https://my.usajobs.gov/GetJob/ViewDetails/417476600).
 
 To learn more about the CFPB’s UX Lead position, email us at [tech@cfpb.gov](mailto:tech@cfpb.gov?subject=Interested in UX Lead position shown on cfpb.github.io).
 
