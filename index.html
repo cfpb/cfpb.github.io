@@ -25,52 +25,11 @@ title: Home
                                 </a>
                             </li>
                         </ul>
-                        <section class="work-with-us">
-                            <h2>Want to work with us?</h2>
-                            <p>E-mail your resume to 
-                                <a href="mailto:tech@cfpb.gov?subject=Interested in working in tech at CFPB">tech@cfpb.gov</a> 
-                                and we'll contact you about relevant opportunities throughout the year. Previous 
-                                openings have been in the fields of cybersecurity, graphic design, web development, 
-                                user experience, and data architecture/analysis.</p>
-                            <ul class="learn-more">
-                                <li class="learn-more_item">
-                                    <a class="call-to-action" href="#privacy">
-                                        Privacy Act statement
-                                    </a>
-                                </li>
-                            </ul>
-                        </section>
                     </section>
-
-                    <section class="sidebar off-the-press">
-                        <h2 class="sidebar_head">Off the press</h2>
-                        <ul class="sidebar_list nav-list">
-                        {% for post in site.posts limit:4 %}
-                            <li class="sidebar_list_item">
-                                <h3 class="sidebar_list_item_head">
-                                {% if post.external-url %}
-                                    <a href="{{ post.external-url }}">
-                                {% else %}
-                                    <a href="{{ post.url | remove_first:'/' }}/">
-                                {% endif %}
-                                        {{ post.title }}
-                                    </a>
-                                </h3>
-                                
-                                <div class="sidebar_list_item_meta entry_meta">
-                                    {% if post.author %}
-                                    By <span class="author">{{ post.author }}</span> &ndash;
-                                    {% endif %}
-
-                                    {% if post.date %}
-                                    <time datetime="{{ post.date | date: '%b %d, %Y' }}">
-                                        {{ post.date | date: '%b %d, %Y' }}
-                                    </time>
-                                    {% endif %}
-                                </div>
-                            </li>
-                        {% endfor %}
-                        </ul>
+                    <section class="sidebar">
+                        <h2 class="sidebar_head">Want to make a difference?</h2>
+                        <p>Join the CFPB and help us build a better financial future. Get in touch and we'll give you a heads up about relevant opportunities as they become available.</p>
+                        <a href="#job-signup" class="btn btn-primary">Work with us</a>
                     </section>
                 </div>
             </section> <!-- /.hero -->
@@ -105,14 +64,14 @@ title: Home
                         </div>
                     </li>
                     <li class="featured-project">
-                        <div class="featured-project_img__collab"></div>
+                        <div class="featured-project_img__ccdb"></div>
                         <h3 class="featured-project_head">
-                            <a href="http://cfpb.github.io/collab/">Collab</a>
+                            <a href="http://www.consumerfinance.gov/complaintdatabase/">Consumer Complaint Database</a>
                         </h3>
-                        <p class="featured-project_desc">Collab is a Django project with a standard set of
-                            configurations to provide services to reusable apps.</p>
+                        <p class="featured-project_desc">View, sort, and analyze thousands of complaints. Download the data or build on it using our API.</p>
                         <div class="featured-project_links">
-                            <a class="call-to-action" href="http://github.com/cfpb/collab">GitHub repo</a>
+                            <a class="call-to-action" href="http://www.consumerfinance.gov/complaintdatabase/">Learn more</a> |
+                            <a class="call-to-action" href="http://www.consumerfinance.gov/complaintdatabase/technical-documentation/">API docs</a>
                         </div>
                     </li>
                 </ul>
@@ -136,11 +95,11 @@ title: Home
                         {% if post.tagline %}
                         <p class="entry_tagline">{{ post.tagline }}</p>
                         {% endif %}
-                        
+
                         {% if post.excerpt %}
                         <p class="entry_description">{{ post.excerpt | markdownify }}</p>
                         {% endif %}
-                        
+
                         <div class="entry_meta">
                             {% if post.author %}
                             By <span class="author">{{ post.author }}</span> &ndash;
@@ -151,7 +110,7 @@ title: Home
                                 {{ post.date | date: '%b %d, %Y' }}
                             </time>
                             {% endif %}
-                            
+
                             {% comment %}
                                 {% if post.tags %}
                                 <div class="tags cf">
@@ -167,7 +126,7 @@ title: Home
                                 {% endif %}
                             {% endcomment %}
                         </div>
-<!--                         <a class="entry_read-more-link call-to-action__icon"
+<!--                      <a class="entry_read-more-link call-to-action__icon"
                            href="{{ post.url | remove_first:'/'}}/">
                            Read more <i class="icon-right"></i>
                         </a> -->
@@ -273,37 +232,74 @@ title: Home
                             Come serve consumers by helping us design and build it.
                         </p>
                         <p>
-                            E-mail your resume to 
-                            <a href="mailto:tech@cfpb.gov?subject=Interested in working in tech at CFPB">tech@cfpb.gov</a>
-                             and we'll contact you about relevant opportunities throughout the year. Previous 
-                             openings have been in the fields of cybersecurity, graphic design, web development, 
-                             user experience, and data architecture/analysis.
+                            Learn more about the work we do at our page for the
+                            <a href="http://www.consumerfinance.gov/jobs/technology-innovation-fellows/">Technology &amp; Innovation Fellowship</a>
+                            <i class="icon-external-link"></i>.
                         </p>
                         <p>
-                            Learn more about the types of work we do at our page for the
-                            <a href="http://www.consumerfinance.gov/jobs/technology-innovation-fellows/">Technology &amp; Innovation Fellowship</a> <i class="icon-external-link"></i>.
+                            Share your contact information and
+                            we'll contact you with career opportunities opportunities throughout the year.
                         </p>
                     </div>
-                    <div>
-                        <h4 id="privacy">Privacy Act Statement</h4>
-		                <p><strong>5 U.S.C. 552(a)(e)(3)</strong></p>
-                        <p>By clicking on the 
-                            <a href="mailto:tech@cfpb.gov?subject=Interested in working in tech at CFPB">tech@cfpb.gov</a> 
-                            email address and submitting your resume, you are providing the Consumer Financial 
-                            Protection Bureau (“CFPB”) personally identifiable information for the purpose of 
-                            obtaining information on any current or future job openings, and for inclusion into 
-                            a mailing list that will be used in future communications.</p>
-                        <p>Information collected will be treated in accordance with the System of Records 
-                            Notice (“SORN”), CFPB.009 Employee Administrative Records, 78 FR 67340. This 
-                            information will not be disclosed as outlined in the Routine Uses for the SORN. 
-                            Direct identifying information will only be used to facilitate the potential 
-                            job openings, and to provide you with tailored updates from Human Resources, 
-                            and will be kept private except as required by law.</p>
-                        <p>This collection of information is authorized by Pub. L. No. 111-203, Title X, 
-                            Sections 1013 and 1022, codified at 12 U.S.C. §§ 5493 and 5512.</p>
-                        <p>Submission of your resume is voluntary. You are not required to submit or 
-                            provide any identifying information; however, not doing so may result in the CFPB 
-                            being unable to contact you about potential employment opportunities.</p>
+                    <div class="job-half">
+                        <form class="recruit-form">
+
+                            <div class="recruit_chunk recruit_chunk__name">
+                                <label class="recruit_fullname" for="recruit-name">
+                                    Full Name
+                                </label>
+                                <input type="text" id="recruit-name" class="js-recruit-name" name="fullname">
+                            </div>
+                            <div class="recruit_chunk recruit_chunk__email">
+                                <label class="recruit_email" for="email">
+                                    Email
+                                </label>
+                                <input type="email" id="email" class="js-recruit-email" name="email">
+                            </div>
+
+                            <div class="recruit_chunk recruit_chunk__discipline">
+                                <label class="recruit_discipline" for="discipline">
+                                    Select a discipline that best matches your skillset
+                                </label>
+                                <select id="discipline" name="discipline" class="js-recruit-discipline">
+                                    <option value="">Choose one</option>
+                                    <option value="Graphic Design">Graphic Design</option>
+                                    <option>Interaction Design</option>
+                                    <option>User Experience</option>
+                                    <option>Content Strategy</option>
+                                    <option>Front-End Development</option>
+                                    <option>Back-End Development</option>
+                                    <option>Cyber-security</option>
+                                    <option>Data Analysis</option>
+                                    <option>Dev Ops</option>
+                                </select>
+                            </div>
+
+                            <a href="mailto:tech@cfpb.gov?subject=Interested in working in tech at CFPB&body=First name:%0D%0ALast name:%0D%0ADiscipline: %0D%0AResume:" class="btn btn-primary recruit_submit js-recruit-submit">Email Us</a>
+
+                            <p class="u-disclaimer"><small>The information you send to <a href="mailto:tech@cfpb.gov?subject=Interested in working in tech at CFPB">tech@cfpb.gov</a> will permit the Consumer Financial Protection Bureau to send you updates about future job openings. <a href="#privacy">See More</a></small></p>
+                        </form>
                     </div>
                 </section>
+                <div>
+                    <h4 id="privacy">Privacy Act Statement</h4>
+                    <p><strong>5 U.S.C. 552(a)(e)(3)</strong></p>
+                    <p>By clicking on the
+                        <a href="mailto:tech@cfpb.gov?subject=Interested in working in tech at CFPB">tech@cfpb.gov</a>
+                        email address and submitting your resume, you are providing the Consumer Financial
+                        Protection Bureau (“CFPB”) personally identifiable information for the purpose of
+                        obtaining information on any current or future job openings, and for inclusion into
+                        a mailing list that will be used in future communications.</p>
+                    <p>Information collected will be treated in accordance with the System of Records
+                        Notice (“SORN”), CFPB.009 Employee Administrative Records, 78 FR 67340. This
+                        information will not be disclosed as outlined in the Routine Uses for the SORN.
+                        Direct identifying information will only be used to facilitate the potential
+                        job openings, and to provide you with tailored updates from Human Resources,
+                        and will be kept private except as required by law.</p>
+                    <p>This collection of information is authorized by Pub. L. No. 111-203, Title X,
+                        Sections 1013 and 1022, codified at 12 U.S.C. §§ 5493 and 5512.</p>
+                    <p>Submission of your resume is voluntary. You are not required to submit or
+                        provide any identifying information; however, not doing so may result in the CFPB
+                        being unable to contact you about potential employment opportunities.</p>
+                </div>
             </section>
