@@ -74,7 +74,7 @@ assetpath: ../../
             {% for post in site.posts limit:10 %}
                 <li class="sidebar_list_item">
                     <h3 class="sidebar_list_item_head">
-                        <a href="../../{{ post.url | remove_first:'/'}}/">
+                        <a href="../../{{ post.url | remove_first:'/'}}">
                             {{ post.title }}
                         </a>
                     </h3>
