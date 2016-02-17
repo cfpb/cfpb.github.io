@@ -87,7 +87,7 @@ title: Home
                         {% if post.external-url %}
                             <a href="{{ post.external-url }}">
                         {% else %}
-                            <a href="{{ post.url | remove_first:'/'}}/">
+                            <a href="{{ post.url | remove_first:'/'}}">
                         {% endif %}
                                 {{ post.title }}
                             </a>
@@ -144,7 +144,7 @@ title: Home
                             {% if post.external-url %}
                                 <a href="{{ post.external-url }}">
                             {% else %}
-                                <a href="{{ post.url | remove_first:'/' }}/">
+                                <a href="{{ post.url | remove_first:'/' }}">
                             {% endif %}
                                     {{ post.title }}
                                 </a>

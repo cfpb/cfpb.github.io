@@ -1,6 +1,6 @@
 baseurl:     ''
 exclude:     [README.md, Gemfile, Gemfile.lock, vendor, _site]
-permalink:   /articles/:title
+permalink:   /articles/:title/
 highlighter: pygments
 markdown:    kramdown
 
