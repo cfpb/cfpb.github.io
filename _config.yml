@@ -1,7 +1,7 @@
 baseurl:     ''
 exclude:     [README.md, Gemfile, Gemfile.lock, vendor, _site]
 permalink:   /articles/:title/
-highlighter: pygments
+highlighter: rouge
 markdown:    kramdown
 
 title: CFPB Open Tech
