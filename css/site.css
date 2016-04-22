@@ -343,7 +343,8 @@ figure {
 img,
 object,
 embed,
-video {
+video,
+iframe {
     /* Fluid images */
     max-width: 100%;
     _width: 100%;
