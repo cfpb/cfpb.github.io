@@ -972,7 +972,7 @@ hr {
         display: inline-block;
         width: 47%;
         margin: 0 0 0 0;
-        vertical-align: middle;
+        vertical-align: top;
     }
     .job-half:nth-child(2) {
         margin-left: 5%;
