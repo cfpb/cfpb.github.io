@@ -40,7 +40,7 @@ The ideal candidate should demonstrate hands-on experience designing web and pri
 
 ## Ready for the challenge?
 
-We are currently soliciting interest prior to a full posting. To be notified when a posting is open for applications, or to request more information, email us at jobs@cfpb.gov. Type “Graphic Designer” in
+We are currently soliciting interest prior to a full posting. To be notified when a posting is open for applications, or to request more information, email us at <a href="mailto:jobs@cfpb.gov?subject=Graphic%20Designer">jobs@cfpb.gov</a>. Type “Graphic Designer” in
 the subject line.
 
 To learn more, visit us at <a href="http://www.consumerfinance.gov/jobs">consumerfinance.gov/jobs</a>.
