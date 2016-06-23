@@ -23,6 +23,13 @@ Run the following command to install it:
 bundle install
 ```
 
+**Note:** As of 6/23/16, you may need to run this command before running
+`bundle install` to handle a bug in one of the dependencies:
+
+```sh
+bundle config build.nokogiri --use-system-libraries
+```
+
 [Fork and clone the repo](https://help.github.com/articles/fork-a-repo/)
 to your local machine.
 
