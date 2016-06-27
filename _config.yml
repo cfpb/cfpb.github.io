@@ -1,4 +1,3 @@
-baseurl:     ''
 exclude:     [README.md, Gemfile, Gemfile.lock, vendor, _site]
 permalink:   /articles/:title/
 highlighter: rouge
