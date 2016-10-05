@@ -343,7 +343,8 @@ figure {
 img,
 object,
 embed,
-video {
+video,
+iframe {
     /* Fluid images */
     max-width: 100%;
     _width: 100%;
@@ -971,7 +972,7 @@ hr {
         display: inline-block;
         width: 47%;
         margin: 0 0 0 0;
-        vertical-align: middle;
+        vertical-align: top;
     }
     .job-half:nth-child(2) {
         margin-left: 5%;
@@ -1030,7 +1031,8 @@ hr {
         width: 67%;
         padding: 2em 2em 2em 0;
     }
-    .entry__single p {
+    .entry__single p,
+    .entry__single li {
         max-width: 40em;
     }
     .sidebar__single {
@@ -1085,6 +1087,7 @@ hr {
     .pull-r {
         display: block;
         float: right;
+        margin-left: 1em;
     }
 
     .content-sidebar {
