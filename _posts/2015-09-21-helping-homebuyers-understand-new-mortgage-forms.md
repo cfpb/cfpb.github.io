@@ -92,14 +92,14 @@ Our tools use an HTML file for each page of the form to be explained. That file
 contains only a `data` object with two properties, `img` and `terms`. For
 example:
 
-{% highlight javascript %}
+```javascript
 data = {
   "img": url_for('static', filename='img/form-page.png'),
   "terms":
   [
     {
       "term": "Estimated Closing Costs",
-      "definition": "<p>Upfront costs you will be charged to get your loan and 
+      "definition": "<p>Upfront costs you will be charged to get your loan and
       transfer ownership of the property.</p>",
       "id": "estimated-closing",
       "category": "definitions",
@@ -111,7 +111,7 @@ data = {
     /* The rest of the terms being explained */
   ]
 }
-{% endhighlight %}
+```
 
 The `img` property is just a path to the image file of the form page being
 explained. The `terms` array is where the real action happens. It contains all

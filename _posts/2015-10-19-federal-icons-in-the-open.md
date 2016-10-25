@@ -27,9 +27,9 @@ tools, and resources.
 As a newly established agency, the opportunity for new ideas and
 novel approaches to technology influenced the evolving CFPB visual identity.
 Outreach efforts to communicate with consumers and industry took precedence,
-creating a need for developing new icons.Given this demand,
-we reconsidered the management of our existing icon library to
-streamline its use for print and web-based projects.
+creating a need for developing new icons.
+Given this demand, we reconsidered the management of our existing icon library
+to streamline its use for print and web-based projects.
 In keeping with the CFPB ethos of developing unique resources that cater to
 project needs, we sought to reinterpret our library of icons from a
 loose set of individual graphics to an easily accessible font.
