@@ -1,4 +1,4 @@
-exclude:     [README.md, Gemfile, Gemfile.lock, vendor, _site]
+exclude:     [CONTRIBUTING.md, Gemfile, Gemfile.lock, LICENSE, README.md, TERMS.md]
 permalink:   /articles/:title/
 highlighter: rouge
 markdown:    kramdown
