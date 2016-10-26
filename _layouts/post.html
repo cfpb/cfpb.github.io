@@ -74,6 +74,52 @@ layout: default
                href="../">
                View full archive
             </a>
+
+            <form class="recruit-form recruit-form__sidebar">
+                <h2 class="sidebar_head">Work with us</h2>
+                <p>
+                    Sign up to receive info on future job opportunities
+                </p>
+                <div class="recruit_chunk recruit_chunk__name">
+                    <label class="recruit_fullname" for="recruit-name">
+                        Full name
+                    </label>
+                    <input type="text" id="recruit-name" class="js-recruit-name" name="fullname">
+                </div>
+                <div class="recruit_chunk recruit_chunk__email">
+                    <label class="recruit_email" for="email">
+                        Email
+                    </label>
+                    <input type="email" id="email" class="js-recruit-email" name="email">
+                </div>
+
+                <div class="recruit_chunk recruit_chunk__discipline">
+                    <label class="recruit_discipline" for="discipline">
+                        Which of these best matches your skillset?
+                    </label>
+                    <select id="discipline" name="discipline" class="js-recruit-discipline">
+                        <option value="">Choose one</option>
+                        <option>Graphic Design</option>
+                        <option>Interaction Design</option>
+                        <option>User Experience</option>
+                        <option>Content Strategy</option>
+                        <option>Front-End Development</option>
+                        <option>Back-End Development</option>
+                        <option>Cyber-security</option>
+                        <option>Data Analysis</option>
+                        <option>Dev Ops</option>
+                    </select>
+                </div>
+
+                <a class="btn btn-primary recruit_submit js-recruit-submit"
+                   href="mailto:tech@cfpb.gov?subject=Interested in working in tech at CFPB&body=First name:%0D%0ALast name:%0D%0ADiscipline: %0D%0AResume:">
+                   Email us
+                </a>
+
+                <p class="u-disclaimer">
+                    <small><a href="../../privacy-act-statement/">View Privacy Act statement</a></small>
+                </p>
+            </form>
         </div>
     </section>
 </div>
