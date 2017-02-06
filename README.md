@@ -62,5 +62,5 @@ Interested in contributing to design discussions? Just check out the
 
 ## Open source licensing info
 1. [TERMS](TERMS.md)
-2. [LICENSE](LICENSE)
+2. [LICENSE](https://github.com/cfpb/source-code-policy/blob/gh-pages/LICENSE)
 3. [CFPB Source Code Policy](https://github.com/cfpb/source-code-policy/)
