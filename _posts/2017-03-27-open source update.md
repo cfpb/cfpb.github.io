@@ -1,3 +1,12 @@
+---
+published: true
+layout: post
+author: Catherine Farman
+title: "History and future of open source at CFPB"
+permalink: /articles/open-source-update/
+---
+
+
 At CFPB, we develop nearly all of our software publicly on GitHub 
 and release it under a 
 [Public Domain/CC0 license.](https://github.com/cfpb/source-code-policy/blob/gh-pages/TERMS.md) 
