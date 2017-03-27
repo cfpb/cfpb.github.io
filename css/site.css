@@ -317,7 +317,8 @@ figure {
 img,
 object,
 embed,
-video {
+video,
+iframe {
     /* Fluid images */
     max-width: 100%;
     _width: 100%;
@@ -379,15 +380,14 @@ del {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  padding: 0.57142857em 1em;
+  padding: 0.625em 0.9375em; /* 10/16, 15/16 */
   border: 0;
-  border-radius: 0.28571429em;
+  border-radius: 0.25em; /* 4/16 */
   margin: 0;
   vertical-align: middle;
   font-family: "AvenirNextLTW01-Medium", "Avenir Next W01", Arial, sans-serif;
   font-style: normal;
   font-weight: 500;
-  font-size: .875em;
   line-height: normal;
   text-decoration: none;
   cursor: pointer;
@@ -618,7 +618,6 @@ hr {
     margin-bottom: 0.79411764705882em; /* 27/34 */
     font-family: "Avenir Next W01", Arial, sans-serif;
     font-weight: 500;
-    line-height: 1;
 }
 .intro a,
 .content-header a {
@@ -634,13 +633,6 @@ hr {
     margin: 0;
     padding: 0;
     list-style: none;
-}
-.intro .work-with-us {
-    padding-bottom: 0;
-}
-
-.sidebar_list {
-
 }
 .sidebar_list .author {
     font-family: "Avenir Next W01", Arial, sans-serif;
@@ -688,8 +680,8 @@ hr {
 .featured-project_img__eregs {
     background: url(../img/feature_eregs_150x150.png) no-repeat;
 }
-.featured-project_img__collab {
-    background: url(../img/feature_collab_150x150.png) no-repeat;
+.featured-project_img__ccdb {
+    background: url(../img/feature_ccdb_150x150.png) no-repeat;
 }
 .featured-project_head {
     margin-bottom: .75em;
@@ -759,7 +751,7 @@ hr {
 }
 
 .entry_read-more-link {
-    margin-bottom: 2em;
+    margin-bottom: 2em
 }
 
 .repos {
@@ -784,6 +776,12 @@ hr {
 .more-repos li {
     margin: 0;
 }
+.work-at-cfpb {
+    margin-bottom: 3em;
+}
+.job-half {
+    margin-bottom: 1em;
+}
 .footer {
     padding: 2em 0;
     border-top: 2px solid #BABBBD;
@@ -791,7 +789,11 @@ hr {
     font-family: "Avenir Next W01", Arial, sans-serif;
 }
 .footer-links ul {
+    padding-left: 0;
     list-style: none;
+}
+.footer-links li:first-child {
+    margin-left: 0;
 }
 .footer-links_primary a {
     border-bottom-color: #101820;
@@ -826,9 +828,6 @@ hr {
     line-height: 1;
     font-weight: 500;
 }
-.footer p {
-
-}
 
 
 /* SINGLE ENTRY POSTS */
@@ -850,6 +849,11 @@ hr {
 .entry__single .entry_meta {
     margin-bottom: 2em;
 }
+.content-sidebar {
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: #DBEDD4;
+}
 #disqus_thread {
     padding-top: 1em;
     border-top: 1px solid #BABBBD;
@@ -859,6 +863,45 @@ hr {
     color: #75787B;
     font-size: 0.8125em;
     font-style: italic;
+}
+
+
+/* RECRUITMENT FORM */
+
+.recruit-form label,
+.recruit-form input {
+    display: block;
+}
+
+.recruit-form label {
+    font-family: "Avenir Next W01", Arial, sans-serif;
+    font-size: 0.9375em; /* 15/16 */
+}
+
+.recruit-form input {
+    width: 100%;
+}
+
+.recruit-form select {
+    padding: 5px 10px 5px 0;
+    font-family: "Avenir Next W01", Arial, sans-serif;
+}
+
+.recruit_chunk {
+    margin-bottom: 0.9375em; /* 15/16 */
+    /*display: inline-block;*/
+}
+
+.recruit-form select {
+    display: block;
+    margin-top: 0.3125em; /* 5/16 */
+}
+
+.recruit_submit {
+    display: block;
+    width: 100%;
+    margin-bottom: 0.9375em; /* 15/16 */
+    text-align: center;
 }
 
 
@@ -881,7 +924,7 @@ hr {
         margin: 1.5em 0 1em 0;
     }
     .sidebar_head {
-        margin-top: 2em;
+        margin-top: 2.5em; /* 45px / 18px */
     }
 }
 
@@ -891,12 +934,6 @@ hr {
         margin: 1em 0;
         float: right;
     }
-/*    .header h1 {
-        margin-top: 0.75em;
-        float: left;
-        font-size: 2.125em;
-    }*/
-
     .learn-more_item {
         float: left;
         margin-left: 2em;
@@ -909,6 +946,9 @@ hr {
     }
     .sidebar_head {
         margin-top: 0;
+    }
+    .recruit_submit {
+        width: 6.5625em; /* 105/16 */
     }
 }
 
@@ -943,9 +983,17 @@ hr {
     .view-all-repos {
         margin-left: 1em;
     }
-
     .pull-r {
-      display: none;
+        display: none;
+    }
+    .job-half {
+        display: inline-block;
+        width: 47%;
+        margin: 0 0 0 0;
+        vertical-align: top;
+    }
+    .job-half:nth-child(2) {
+        margin-left: 5%;
     }
 }
 
@@ -954,6 +1002,7 @@ hr {
     .intro,
     .featured-entries,
     .repos,
+    .jobs,
     .entry__single,
     .sidebar,
     .footer-links,
@@ -963,64 +1012,28 @@ hr {
         margin: 0 -0.26em 1em 0;
         vertical-align: top;
     }
-    .intro,
+    .intro {
+        width: 66%;
+    }
     .featured-entries,
     .repos,
     .entry__single {
         width: 73%;
     }
-
     .hero section {
         padding: 2em 0;
     }
-/*    .intro h1 {
-        font-size: 1.75em;
-    }*/
-
     .sidebar {
         width: 23%;
         margin-left: 4%;
     }
+    .hero .sidebar {
+        width: 30%;
+        margin-left: 3%;
+    }
     .sidebar_head {
-        line-height: 1.77777777777778; /* 32/18 - aligns baseline with article title */
+        margin-top: 0.8333333333em; /* 15/18 - aligns baseline with article title */
     }
-
-    .hero .sidebar_head {
-        line-height: 2.333333333; /* 42/18 */
-    }
-
-    /*.content-body {
-        display: table;
-        width: 100%;
-        margin: 0;
-    }
-    .entry__single,
-    .sidebar__single {
-        display: table-cell;
-        height: auto;
-        padding: 2em 2em 2em 5%;
-        border: none;
-        margin: 0;
-    }
-    .entry__single {
-        width: 75%;
-    }
-    .sidebar__single {
-        width: 25%;
-        padding: 2em 5% 2em 2em;
-        background: #F8F8F8;
-    }
-    .entry__single_wrap {
-        width: 100%;
-        max-width: 868px;
-        float: right;
-    }
-    .sidebar__single_wrap {
-        width: 100%;
-        max-width: 268px;
-        float: left;
-    }*/
-
     .content {
         overflow: hidden;
     }
@@ -1028,11 +1041,15 @@ hr {
         position: relative;
         margin: 0 auto;
     }
+    .job-half .recruit_chunk {
+        display: inline-block;
+    }
     .entry__single {
         width: 67%;
         padding: 2em 2em 2em 0;
     }
-    .entry__single p {
+    .entry__single p,
+    .entry__single li {
         max-width: 40em;
     }
     .sidebar__single {
@@ -1040,6 +1057,9 @@ hr {
         padding: 2em 0 2em 2em;
         margin-left: 0;
         background: #F8F8F8;
+    }
+    .recruit-form__sidebar {
+        margin-top: 3.75em; /* 60/16 */
     }
     .content-body:after {
         content: '';
@@ -1069,21 +1089,9 @@ hr {
 
 /* LANDSCAPE TABLET/NETBOOK/LAPTOP (1024px) */
 @media only screen and (min-width: 64em) {
-    /*.content {
-        overflow: hidden;
-    }*/
-    /*.wrap {
-        max-width: 960px;
-    }*/
-
     .hero {
         position: relative;
     }
-
-/*    .intro h1 {
-        font-size: 2.375em;
-    }*/
-
     .featured-project {
         width: 33.333333333%;
     }
@@ -1092,13 +1100,27 @@ hr {
         float: left;
         margin-left: 1em;
     }
-    .footer-links li:first-child {
-        margin-left: 0;
-    }
 
     .pull-r {
-      display: block;
-      float: right;
+        display: block;
+        float: right;
+        margin-left: 1em;
+    }
+
+    .content-sidebar {
+        width: 50%;
+        min-width: 180px;
+        margin-left: 15px;
+        float: right;
+    }
+
+    .job-half .recruit_chunk__name,
+    .job-half .recruit_chunk__email {
+        width: 46.5%;
+    }
+
+    .job-half .recruit_chunk__email {
+        margin-left: 5%;
     }
 }
 
@@ -1107,9 +1129,6 @@ hr {
     .wrap {
         max-width: 1200px;
     }
-/*    .intro h1 {
-        font-size: 2.625em;
-    }*/
     .repo {
         width: 31%;
         margin-left: 3.5%;
@@ -1126,7 +1145,6 @@ hr {
 @media only screen and (min-width: 87.5em) {
     /*body { font-size: 1.125em; }*/
 }
-
 
 /* PRINT */
 @media print {
