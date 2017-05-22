@@ -9,7 +9,7 @@ permalink: /articles/open-source-update/
 
 At CFPB, we develop nearly all of our software publicly on GitHub 
 and release it under a 
-[Public Domain/CC0 license.](https://github.com/cfpb/source-code-policy/blob/gh-pages/TERMS.md) 
+[Public Domain/CC0 license](https://github.com/cfpb/source-code-policy/blob/gh-pages/TERMS.md). 
 We adopted this policy in order for taxpayers to benefit from the products they pay for, 
 to provide a window into how our agency conducts business, 
 and to increase the quality of our source code through contributions 
@@ -18,18 +18,18 @@ from the wider development community.
 Since 2012, we have seen the benefits of an open source by default policy 
 in the following outcomes:
 
-- CFPB’s Github organization lists [182 public repositories](https://github.com/cfpb)
+- CFPB’s GitHub organization lists [182 public repositories](https://github.com/cfpb).
 - Projects like eRegulations have been forked and adopted by other government agencies, 
-including the [Bureau of Alcohol, Tobacco, Firearms and Explosives](https://atf-eregs.18f.gov/)
-- We hired a new class of Design and Development fellows in 2015 and 2016, 
-many of whom cited our open source policy and active Github presence 
+including the [Bureau of Alcohol, Tobacco, Firearms and Explosives](https://atf-eregs.18f.gov/).
+- We hired a new class of Technology and Innovation Fellows fellows in 2015 and 2016, 
+many of whom cited our open source policy and active GitHub presence 
 as a top reason for applying to and joining CFPB.
 - We don’t just code in the open, we now design in the open too, 
-- and [shared our icon library with the Noun Project](https://cfpb.github.io/articles/federal-icons-in-the-open/).
+and [shared our icon library with the Noun Project](https://cfpb.github.io/articles/federal-icons-in-the-open/).
 
 Open source software development has been critical at CFPB since we opened our doors. 
 In April 2012, just nine months after the Bureau opened, 
-we released our [Open Source Policy](http://www.consumerfinance.gov/blog/the-cfpbs-source-code-policy-open-and-shared/), 
+we released our [Source Code Policy](https://www.consumerfinance.gov/blog/the-cfpbs-source-code-policy-open-and-shared/), 
 based on the work of the [Department of Defense](http://dodcio.defense.gov/OpenSourceSoftwareFAQ.aspx#OSS_and_DoD_Policy), 
 along with our first two open source projects. 
 Just six days later, 
@@ -56,16 +56,16 @@ and the public at hackathon events where designers and developers come together
 to work on open source software:
 
 - CFPB staff have been present at National Day of Civic Hacking events 
-in [2013](http://www.consumerfinance.gov/blog/we-participated-in-the-national-day-of-civic-hacking/), 
-[2014](http://www.consumerfinance.gov/blog/we-participated-in-the-national-day-of-civic-hacking-again/),  
-and [2015](http://www.consumerfinance.gov/blog/we-participated-in-the-national-day-of-civic-hacking-2015/), 
-working with developers to create data visualizations using the [Consumer Complaint Database](http://www.consumerfinance.gov/complaintdatabase/) 
+in [2013](https://www.consumerfinance.gov/blog/we-participated-in-the-national-day-of-civic-hacking/), 
+[2014](https://www.consumerfinance.gov/blog/we-participated-in-the-national-day-of-civic-hacking-again/),  
+and [2015](https://www.consumerfinance.gov/blog/we-participated-in-the-national-day-of-civic-hacking-2015/), 
+working with developers to create data visualizations using the [Consumer Complaint Database](https://www.consumerfinance.gov/complaintdatabase/) 
 and [Home Mortgage Disclosure Act](http://www.consumerfinance.gov/hmda) data.
 - Software developers from 18F’s eRegs team attended the General Services Administration’s 
 [GovTechHack](https://18f.gsa.gov/2015/04/02/govtechhack-hacking-for-civic-improvement/) in 2015, 
 where they focused on improving the software’s local setup process. 
 They succeeded in decreasing the setup time for eRegs from 2 hours to 15 minutes.
-- CFPB Developer Catherine Farman gathered a team of designers and coders 
+- CFPB Developer Catherine Farman gathered a team of designers and developers 
 to contribute to the Owning a Home website at [LadyHacks](http://ladyhacks.org/press/recap-from-2015).
 
 These experiences led us to create internal guidelines for attending these events 
@@ -81,9 +81,9 @@ so we can incorporate their efforts into our own process.
 inspired by [18F’s data visualization workshop](https://openglobe.github.io/cfpb-dataviz/).
 - Increasing our community outreach by presenting our work at conferences and meetups.
 
-In March, the [White House released a draft federal open source software policy for public comment](https://www.whitehouse.gov/blog/2016/03/09/leveraging-american-ingenuity-through-reusable-and-open-source-software). 
-Members of the public gave feedback and suggested changes via Github.com. 
-To date the public has contributed 18 
+In March 2016, the [White House released a draft federal open source software policy for public comment](https://www.whitehouse.gov/blog/2016/03/09/leveraging-american-ingenuity-through-reusable-and-open-source-software). 
+Members of the public gave feedback and suggested changes via GitHub.com. 
+To date, the public has contributed 20 
 [merged pull requests](https://github.com/WhiteHouse/source-code-policy/pulls?q=is%3Apr+is%3Aclosed) 
 and over 200 [discussion threads](https://github.com/whitehouse/source-code-policy/issues/).
 
@@ -91,5 +91,3 @@ If you have thoughts about how we can or other federal agencies
 might continue to evolve our approach to open source software, 
 we’d encourage you to 
 [discuss the Federal Open Source Policy on GitHub.](https://github.com/whitehouse/source-code-policy/issues/)
-
-<iframe width="640" height="650" src="https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=1Hr66qNKhDf85BRFeyBzTQ9rN5Z84B_JP-_ZSqH2YIIw&font=Default&lang=en&initial_zoom=2&height=650"> </iframe>
