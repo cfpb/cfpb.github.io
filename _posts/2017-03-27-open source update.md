@@ -90,4 +90,4 @@ and over 200 [discussion threads](https://github.com/whitehouse/source-code-poli
 If you have thoughts about how we can or other federal agencies 
 might continue to evolve our approach to open source software, 
 we’d encourage you to 
-[discuss the Federal Open Source Policy on GitHub.](https://github.com/whitehouse/source-code-policy/issues/)
+[discuss the Federal Open Source Policy on GitHub](https://github.com/whitehouse/source-code-policy/issues/).
