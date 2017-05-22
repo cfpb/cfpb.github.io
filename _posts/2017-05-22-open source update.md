@@ -56,8 +56,7 @@ and the public at hackathon events where designers and developers come together
 to work on open source software:
 
 - CFPB staff have been present at National Day of Civic Hacking events 
-in [2013](https://www.consumerfinance.gov/blog/we-participated-in-the-national-day-of-civic-hacking/), 
-[2014](https://www.consumerfinance.gov/blog/we-participated-in-the-national-day-of-civic-hacking-again/),  
+in [2013](https://www.consumerfinance.gov/blog/we-participated-in-the-national-day-of-civic-hacking/), [2014](https://www.consumerfinance.gov/blog/we-participated-in-the-national-day-of-civic-hacking-again/), 
 and [2015](https://www.consumerfinance.gov/blog/we-participated-in-the-national-day-of-civic-hacking-2015/), 
 working with developers to create data visualizations using the [Consumer Complaint Database](https://www.consumerfinance.gov/complaintdatabase/) 
 and [Home Mortgage Disclosure Act](http://www.consumerfinance.gov/hmda) data.
