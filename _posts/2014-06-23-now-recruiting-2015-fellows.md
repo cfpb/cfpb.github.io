@@ -7,7 +7,6 @@ excerpt: |
   We’re excited to announce applications are now being accepted for the next round of [CFPB Technology & Innovation Fellows](http://www.consumerfinance.gov/jobs/technology-innovation-fellows/). The fellowship is a two year program for software developers, graphic and user experience (UX) designers, data specialists, and cybersecurity professionals interested in leveraging technology to help further our mission of making financial products and services work for consumers.
 
   [Read more at consumerfinance.gov <i class="icon-right"></i>](http://www.consumerfinance.gov/blog/now-recruiting-technology-innovation-fellows-for-2015/)
-  {: class="entry_read-more-link call-to-action__icon"}
 external-url: http://www.consumerfinance.gov/blog/now-recruiting-technology-innovation-fellows-for-2015/
 ---
 

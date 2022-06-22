@@ -47,7 +47,7 @@ title: Home
                             <a class="call-to-action"
                                href="http://www.consumerfinance.gov/blog/making-regulations-easier-to-use/">
                                 Learn more</a> |
-                            <a class="call-to-action" href="http://eregs.github.io/eregulations/">
+                            <a class="call-to-action" href="https://eregs.github.io/">
                                 Project homepage</a>
                         </p>
                     </li>
@@ -71,7 +71,7 @@ title: Home
                         <p class="featured-project_desc">View, sort, and analyze thousands of complaints. Download the data or build on it using our API.</p>
                         <div class="featured-project_links">
                             <a class="call-to-action" href="http://www.consumerfinance.gov/complaintdatabase/">Learn more</a> |
-                            <a class="call-to-action" href="http://www.consumerfinance.gov/complaintdatabase/technical-documentation/">API docs</a>
+                            <a class="call-to-action" href="http://cfpb.github.io/api/ccdb/">API docs</a>
                         </div>
                     </li>
                 </ul>
@@ -87,7 +87,7 @@ title: Home
                         {% if post.external-url %}
                             <a href="{{ post.external-url }}">
                         {% else %}
-                            <a href="{{ post.url | remove_first:'/'}}/">
+                            <a href="{{ post.url | remove_first:'/'}}">
                         {% endif %}
                                 {{ post.title }}
                             </a>
@@ -144,7 +144,7 @@ title: Home
                             {% if post.external-url %}
                                 <a href="{{ post.external-url }}">
                             {% else %}
-                                <a href="{{ post.url | remove_first:'/' }}/">
+                                <a href="{{ post.url | remove_first:'/' }}">
                             {% endif %}
                                     {{ post.title }}
                                 </a>
@@ -165,11 +165,10 @@ title: Home
                     {% endfor %}
                     </ul>
 
-                    <!-- Hide until we have published at least 4 articles -->
-                    <!-- <a class="more-articles_read-more-link call-to-action__icon"
+                    <a class="call-to-action"
                        href="articles/">
-                       Read more articles <i class="icon-right"></i>
-                    </a> -->
+                       View full archive
+                    </a>
                 </section>
             </section>
 
@@ -231,22 +230,29 @@ title: Home
                             Our mission demands smart, usable, and reliable technology.
                             Come serve consumers by helping us design and build it.
                         </p>
+                        {% comment %}
+                        <p>We're currently looking for: </p>
+                        <ul>
+                            <li>
+                                <a href="https://cfpb.github.io/jobs/graphic-design/">Graphic Designer</a>
+                            </li>
+                        </ul>
+                        {% endcomment %}
                         <p>
                             Learn more about the work we do at our page for the
                             <a href="http://www.consumerfinance.gov/jobs/technology-innovation-fellows/">Technology &amp; Innovation Fellowship</a>
                             <i class="icon-external-link"></i>.
                         </p>
-                        <p>
-                            Share your contact information and
-                            we'll contact you with career opportunities opportunities throughout the year.
-                        </p>
                     </div>
                     <div class="job-half">
                         <form class="recruit-form">
-
+                            <p>
+                            Share your contact information and
+                            we'll contact you with career opportunities throughout the year.
+                            </p>
                             <div class="recruit_chunk recruit_chunk__name">
                                 <label class="recruit_fullname" for="recruit-name">
-                                    Full Name
+                                    Full name
                                 </label>
                                 <input type="text" id="recruit-name" class="js-recruit-name" name="fullname">
                             </div>
@@ -263,7 +269,7 @@ title: Home
                                 </label>
                                 <select id="discipline" name="discipline" class="js-recruit-discipline">
                                     <option value="">Choose one</option>
-                                    <option value="Graphic Design">Graphic Design</option>
+                                    <option>Graphic Design</option>
                                     <option>Interaction Design</option>
                                     <option>User Experience</option>
                                     <option>Content Strategy</option>
@@ -275,29 +281,10 @@ title: Home
                                 </select>
                             </div>
 
-                            <a href="mailto:tech@cfpb.gov?subject=Interested in working in tech at CFPB&body=First name:%0D%0ALast name:%0D%0ADiscipline: %0D%0AResume:" class="btn btn-primary recruit_submit js-recruit-submit">Email Us</a>
+                            <a href="mailto:tech@cfpb.gov?subject=Interested in working in tech at CFPB&body=First name:%0D%0ALast name:%0D%0ADiscipline: %0D%0AResume:" class="btn btn-primary recruit_submit js-recruit-submit">Email us</a>
 
-                            <p class="u-disclaimer"><small>The information you send to <a href="mailto:tech@cfpb.gov?subject=Interested in working in tech at CFPB">tech@cfpb.gov</a> will permit the Consumer Financial Protection Bureau to send you updates about future job openings. <a href="#privacy">See More</a></small></p>
+                            <p class="u-disclaimer"><small>The information you send to <a href="mailto:tech@cfpb.gov?subject=Interested in working in tech at CFPB">tech@cfpb.gov</a> will permit the Consumer Financial Protection Bureau to send you updates about future job openings. <a href="privacy-act-statement/">View Privacy Act statement</a></small></p>
                         </form>
                     </div>
                 </section>
-                <div>
-                    <h4 id="privacy">Privacy Act Statement</h4>
-                    <p><strong>5 U.S.C. 552(a)(e)(3)</strong></p>
-                    <p>By providing your full name, email address and resume to 
-                        <a href="mailto:tech@cfpb.gov?subject=Interested in working in tech at CFPB">tech@cfpb.gov</a> you are providing the 
-                        Consumer Financial Protection Bureau (“CFPB”) personally identifiable information for the purpose of
-                        obtaining information on any current or future job openings, and for inclusion into
-                        a mailing list that will be used in future communications.</p>
-                    <p>Information collected will be treated in accordance with the System of Records Notice (“SORN”),
-                        [CFPB.009 Employee Administrative Records, 78 FR 67340](https://www.federalregister.gov/articles/2013/11/12/2013-27011/privacy-act-of-1974-as-amended). This information will not be disclosed as
-                        outlined in the Routine Uses for the SORN. Direct identifying information will only be used to facilitate
-                        the potential job openings, and to provide you with tailored updates from Human Resources, and will be
-                        kept private except as required by law.</p>
-                    <p>This collection of information is authorized by Pub. L. No. 111-203, Title X,
-                        Sections 1013 and 1022, codified at 12 U.S.C. §§ 5493 and 5512.</p>
-                    <p>Submission of your resume is voluntary. You are not required to submit or
-                        provide any identifying information; however, not doing so may result in the CFPB
-                        being unable to contact you about potential employment opportunities.</p>
-                </div>
             </section>

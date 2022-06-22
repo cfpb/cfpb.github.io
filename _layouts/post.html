@@ -1,17 +1,16 @@
 ---
 layout: default
-assetpath: ../../
 ---
 
 <div class="content-body wrap">
     <article class="entry entry__single">
         <div class="entry__single_wrap">
             <h1 class="entry_title">{{ page.title }}</h1>
-            
+
             {% if page.tagline %}
             <p class="entry_tagline">{{ page.tagline }}</p>
             {% endif %}
-            
+
             <div class="entry_meta">
                 {% if page.author %}
                 By <span class="author">{{ page.author }}</span> &ndash;
@@ -26,7 +25,8 @@ assetpath: ../../
 
             {{ content }}
 
-<!--             {% if page.tags %}
+        {% comment %}
+            {% if page.tags %}
                 <div class="tags cf">
                     <h4 class="tags_head">Tags:</h4>
                     <ul class="tag-list">
@@ -37,32 +37,8 @@ assetpath: ../../
                         {% endfor %}
                     </ul>
                 </div>
-            {% endif %} -->
-
-            <div id="disqus_thread"></div>
-            <script type="text/javascript">
-                /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-                var disqus_shortname = 'cfpbopentech'; // required: replace example with your forum shortname
-
-                /* * * DON'T EDIT BELOW THIS LINE * * */
-                (function() {
-                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-                    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-                })();
-            </script>
-            <noscript>
-                Please enable JavaScript to view the
-                <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-            </noscript>
-            <a href="http://disqus.com" class="dsq-brlink">
-                comments powered by <span class="logo-disqus">Disqus</span>
-            </a>
-
-            <p class="comment-policy">
-                CFPB Open Tech follows the
-                <a href="http://www.consumerfinance.gov/comment-policy">consumerfinance.gov comment policy</a>.
-            </p>
+            {% endif %}
+        {% endcomment %}
         </div>
     </article>
 
@@ -71,10 +47,10 @@ assetpath: ../../
             <h2 class="sidebar_head">More articles</h2>
 
             <ul class="sidebar_list nav-list">
-            {% for post in site.posts limit:10 %}
+            {% for post in site.posts limit:5 %}
                 <li class="sidebar_list_item">
                     <h3 class="sidebar_list_item_head">
-                        <a href="../../{{ post.url | remove_first:'/'}}/">
+                        <a href="../../{{ post.url | remove_first:'/'}}">
                             {{ post.title }}
                         </a>
                     </h3>
@@ -94,11 +70,56 @@ assetpath: ../../
             {% endfor %}
             </ul>
 
-            <!-- Hide until we have published at least 4 articles -->
-            <!-- <a class="more-articles_read-more-link call-to-action__icon"
-               href="../../articles/">
-               Read more articles <i class="icon-right"></i>
-            </a> -->
+            <a class="call-to-action"
+               href="../">
+               View full archive
+            </a>
+
+            <form class="recruit-form recruit-form__sidebar">
+                <h2 class="sidebar_head">Work with us</h2>
+                <p>
+                    Sign up to receive info on future job opportunities
+                </p>
+                <div class="recruit_chunk recruit_chunk__name">
+                    <label class="recruit_fullname" for="recruit-name">
+                        Full name
+                    </label>
+                    <input type="text" id="recruit-name" class="js-recruit-name" name="fullname">
+                </div>
+                <div class="recruit_chunk recruit_chunk__email">
+                    <label class="recruit_email" for="email">
+                        Email
+                    </label>
+                    <input type="email" id="email" class="js-recruit-email" name="email">
+                </div>
+
+                <div class="recruit_chunk recruit_chunk__discipline">
+                    <label class="recruit_discipline" for="discipline">
+                        Which of these best matches your skillset?
+                    </label>
+                    <select id="discipline" name="discipline" class="js-recruit-discipline">
+                        <option value="">Choose one</option>
+                        <option>Graphic Design</option>
+                        <option>Interaction Design</option>
+                        <option>User Experience</option>
+                        <option>Content Strategy</option>
+                        <option>Front-End Development</option>
+                        <option>Back-End Development</option>
+                        <option>Cyber-security</option>
+                        <option>Data Analysis</option>
+                        <option>Dev Ops</option>
+                    </select>
+                </div>
+
+                <a class="btn btn-primary recruit_submit js-recruit-submit"
+                   href="mailto:tech@cfpb.gov?subject=Interested in working in tech at CFPB&body=First name:%0D%0ALast name:%0D%0ADiscipline: %0D%0AResume:">
+                   Email us
+                </a>
+
+                <p class="u-disclaimer">
+                    <small><a href="../../privacy-act-statement/">View Privacy Act statement</a></small>
+                </p>
+            </form>
         </div>
     </section>
 </div>
