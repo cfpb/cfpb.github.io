@@ -3,18 +3,19 @@
 @import "icons.min.css";
 @import "afontgarde.css";
 
-
 /* Paul Irish's Universal border-box -- http://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
-*, *:before, *:after {
-    -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+*,
+*:before,
+*:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
 }
-
 
 body {
     padding: 0;
     margin: 0;
 }
-
 
 /* BASE TYPOGRAPHY */
 
@@ -22,7 +23,7 @@ body {
     color: #101820; /* CFPB Black */
     font-family: Georgia, "Times New Roman", serif;
     line-height: 1.375;
-    background-color: #FFF;
+    background-color: #fff;
 
     /* Improve default text rendering, handling of kerning pairs and ligatures */
     -webkit-font-smoothing: antialiased;
@@ -101,15 +102,14 @@ h6 {
     line-height: 1.83333333333333;
 }
 
-
 /* CODE */
 
 pre {
     padding: 0.625em 1em;
-    border: 1px solid #E3E4E5; /* Gray/20 */
-    border-radius: 0.250em;
+    border: 1px solid #e3e4e5; /* Gray/20 */
+    border-radius: 0.25em;
     margin-top: 1.375em;
-    background-color: #F1F2F2; /* Gray/10 */
+    background-color: #f1f2f2; /* Gray/10 */
     color: #101820; /* CFPB Black */
     /* Allow line wrapping of 'pre' */
     overflow-x: auto;
@@ -125,9 +125,9 @@ samp {
     margin-bottom: 1.375em;
     font-size: 1em;
     line-height: 1.375;
-    font-family: Source Code Pro, Consolas, Monaco, 'Andale Mono', monospace, serif;
+    font-family: Source Code Pro, Consolas, Monaco, "Andale Mono", monospace,
+        serif;
 }
-
 
 /* TABLES */
 
@@ -147,7 +147,6 @@ td {
     padding-right: 1.375em;
     border-bottom: 0 solid #333;
 }
-
 
 /* FORMS */
 
@@ -209,7 +208,6 @@ input::-moz-focus-inner {
     border: 0;
 }
 
-
 /* QUOTES */
 
 blockquote,
@@ -221,7 +219,7 @@ blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-    content: '';
+    content: "";
     content: none;
 }
 
@@ -233,14 +231,13 @@ cite {
 
 blockquote {
     padding-left: 1.5em;
-    border-left: 5px solid #BABBBD;
-    color: #75787B;
+    border-left: 5px solid #babbbd;
+    color: #75787b;
 }
 
 blockquote > p {
     padding: 0;
 }
-
 
 /* LISTS */
 
@@ -264,49 +261,47 @@ dt {
     list-style: none;
 }
 
-
 /* HYPERLINKS */
 
 a {
-    border-bottom: 1px dotted #0072CE;
-    color: #0072CE;
+    border-bottom: 1px dotted #0072ce;
+    color: #0072ce;
     text-decoration: none;
 }
 
 main p a:visited {
-    border-bottom: 1px solid #005E5D;
-    color: #005E5D;
+    border-bottom: 1px solid #005e5d;
+    color: #005e5d;
     text-decoration: none;
 }
 
 a:hover {
-    border-bottom: 1px solid #7FB8E6;
-    color: #7FB8E6;
+    border-bottom: 1px solid #7fb8e6;
+    color: #7fb8e6;
     text-decoration: none;
 }
 
 a:focus {
-    border-bottom: 1px solid #0072CE;
+    border-bottom: 1px solid #0072ce;
     outline: thin dotted;
-    color: #0072CE;
+    color: #0072ce;
     text-decoration: none;
 }
 
 a:active {
-    border-bottom: 1px solid #002D72;
-    color: #002D72;
+    border-bottom: 1px solid #002d72;
+    color: #002d72;
     text-decoration: none;
 }
 
 a.home {
-    color: #43484E;
+    color: #43484e;
     border: 0;
 }
 a.home:hover,
 a.home:focus {
     color: #101820;
 }
-
 
 /* MEDIA */
 
@@ -335,7 +330,6 @@ svg:not(:root) {
     overflow: hidden;
 }
 
-
 /* ABBREVIATION */
 
 abbr[title],
@@ -343,7 +337,6 @@ dfn[title] {
     border-bottom: 1px dotted #333;
     cursor: help;
 }
-
 
 /* MARKED/INSERTED/DELETED AND SELECTED TEXT */
 
@@ -364,63 +357,62 @@ del {
     text-decoration: line-through;
 }
 
-
 /* SELECTED TEXT */
 
 ::-moz-selection,
 ::selection {
-    background: #0072CE;
-    color: #FFF;
+    background: #0072ce;
+    color: #fff;
     text-shadow: none;
 }
 
 /* BUTTONS */
 .btn {
-  display: inline-block;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  padding: 0.625em 0.9375em; /* 10/16, 15/16 */
-  border: 0;
-  border-radius: 0.25em; /* 4/16 */
-  margin: 0;
-  vertical-align: middle;
-  font-family: "AvenirNextLTW01-Medium", "Avenir Next W01", Arial, sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-  text-decoration: none;
-  cursor: pointer;
-  -webkit-transition: background-color 0.1s;
-  transition: background-color 0.1s;
-  -webkit-appearance: none;
+    display: inline-block;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0.625em 0.9375em; /* 10/16, 15/16 */
+    border: 0;
+    border-radius: 0.25em; /* 4/16 */
+    margin: 0;
+    vertical-align: middle;
+    font-family: "AvenirNextLTW01-Medium", "Avenir Next W01", Arial, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-decoration: none;
+    cursor: pointer;
+    -webkit-transition: background-color 0.1s;
+    transition: background-color 0.1s;
+    -webkit-appearance: none;
 }
 
 .btn,
 .btn:link,
 .btn:visited {
-  background-color: #0072ce;
-  color: #fff;
+    background-color: #0072ce;
+    color: #fff;
 }
 .btn:hover,
 .btn.hover {
-  background-color: #328ed8;
-  border-bottom: none;
+    background-color: #328ed8;
+    border-bottom: none;
 }
 .btn:focus,
 .btn.focus {
-  background-color: #328ed8;
-  outline: 1px dotted #0072ce;
-  outline-offset: 1px;
+    background-color: #328ed8;
+    outline: 1px dotted #0072ce;
+    outline-offset: 1px;
 }
 .btn:active,
 .btn.active {
-  background-color: #33578e;;
+    background-color: #33578e;
 }
 
 .btn__super {
-  padding: .61111111em 1.61111111em;
-  font-size: 1.125em;
+    padding: 0.61111111em 1.61111111em;
+    font-size: 1.125em;
 }
 
 /* OTHERS */
@@ -465,7 +457,6 @@ hr {
     background: #babbbc;
 }
 
-
 /* MICRO CLEARFIX HACK */
 
 .cf:before,
@@ -484,7 +475,6 @@ hr {
     zoom: 1;
 }
 
-
 /* IMAGE REPLACEMENT */
 
 .ir {
@@ -501,7 +491,6 @@ hr {
     width: 0;
     height: 150%;
 }
-
 
 /* Hide from both screenreaders and browsers: h5bp.com/u */
 .hidden {
@@ -541,12 +530,11 @@ hr {
 /* Skip link */
 .skip > a {
     padding: 0.5em;
-    background-color: #0072CE;
-    color: #FFF;
+    background-color: #0072ce;
+    color: #fff;
     font-family: "Avenir Next W01", Arial, sans-serif;
     font-weight: bold;
 }
-
 
 /* DEFAULT MOBILE STYLE */
 
@@ -556,7 +544,7 @@ hr {
 }
 
 .header {
-    border-bottom: 4px solid #2CB34A;
+    border-bottom: 4px solid #2cb34a;
     overflow: auto;
 }
 
@@ -583,7 +571,7 @@ hr {
 }
 
 .hero {
-    background: #DBEDD4;
+    background: #dbedd4;
     font-family: "Avenir Next W01", Arial, sans-serif;
 }
 .hero section {
@@ -607,11 +595,11 @@ hr {
     border-bottom-width: 0;
 }
 .icon-external-link {
-    color: #0072CE;
+    color: #0072ce;
 }
 .call-to-action__icon > [class^="icon"],
 .sidebar_list_item_head > [class^="icon"] {
-    padding-left: .25em;
+    padding-left: 0.25em;
 }
 
 .intro h1 {
@@ -621,13 +609,13 @@ hr {
 }
 .intro a,
 .content-header a {
-    color: #002D72;
-    border-bottom-color: #002D72;
+    color: #002d72;
+    border-bottom-color: #002d72;
 }
 .intro a:hover,
 .content-header a:hover {
-    color: #0072CE;
-    border-bottom-color: #0072CE;
+    color: #0072ce;
+    border-bottom-color: #0072ce;
 }
 .intro .learn-more {
     margin: 0;
@@ -643,9 +631,9 @@ hr {
 }
 .sidebar_head {
     padding-bottom: 0.25em;
-    border-bottom: 1px solid #BABBBD;
+    border-bottom: 1px solid #babbbd;
     margin-bottom: 1.25em;
-    color: #75787B;
+    color: #75787b;
     font-family: "Avenir Next W01", Arial, sans-serif;
     font-size: 1.125em;
     line-height: 1.22222222222222;
@@ -661,7 +649,7 @@ hr {
 
 .featured-projects {
     padding: 1em 0;
-    background: #F8F8F8;
+    background: #f8f8f8;
 }
 .featured-project {
     margin: 2em 0;
@@ -670,7 +658,7 @@ hr {
 [class*="featured-project_img"] {
     width: 150px;
     height: 150px;
-    border: 1px solid #ADDC91;
+    border: 1px solid #addc91;
     border-radius: 100%;
     margin: 0 auto 2em;
 }
@@ -684,16 +672,16 @@ hr {
     background: url(../img/feature_ccdb_150x150.png) no-repeat;
 }
 .featured-project_head {
-    margin-bottom: .75em;
+    margin-bottom: 0.75em;
     font-family: "Avenir Next W01", Arial, sans-serif;
 }
 
 .section-head {
     padding: 0 0 0.5em;
-    border-bottom: 1px solid #D0D0CE;
+    border-bottom: 1px solid #d0d0ce;
     margin: 1.5em 0 1em;
     font-family: "Avenir Next W01", Arial, sans-serif;
-/*    font-size: 2.125em;*/
+    /*    font-size: 2.125em;*/
     line-height: 1;
     font-weight: 400;
 }
@@ -705,8 +693,9 @@ hr {
 }
 .entry_title {
     margin-bottom: 0.25em;
-/*    font-size: 1.625em;
-*/}
+    /*    font-size: 1.625em;
+*/
+}
 .entry_tagline {
     margin-bottom: 1em;
     font-family: "Avenir Next W01", Arial, sans-serif;
@@ -734,7 +723,7 @@ hr {
 .tag {
     display: inline-block;
     margin-left: 1em;
-    color: #FFB149; /* Gold/80 */
+    color: #ffb149; /* Gold/80 */
     font-family: "Avenir Next W01", Arial, sans-serif;
     font-size: 0.875em;
     line-height: 1.57142857142857; /* 22/14 */
@@ -746,12 +735,12 @@ hr {
 }
 .tag_link,
 .tag_link:hover {
-    color: #75787B;
-    border-bottom: 1px solid #FFB149;
+    color: #75787b;
+    border-bottom: 1px solid #ffb149;
 }
 
 .entry_read-more-link {
-    margin-bottom: 2em
+    margin-bottom: 2em;
 }
 
 .repos {
@@ -784,8 +773,8 @@ hr {
 }
 .footer {
     padding: 2em 0;
-    border-top: 2px solid #BABBBD;
-    background: #F1F2F2;
+    border-top: 2px solid #babbbd;
+    background: #f1f2f2;
     font-family: "Avenir Next W01", Arial, sans-serif;
 }
 .footer-links ul {
@@ -805,8 +794,8 @@ hr {
     font-weight: 500;
 }
 .footer-links_secondary a {
-    border-bottom-color: #75787B;
-    color: #75787B;
+    border-bottom-color: #75787b;
+    color: #75787b;
     font-family: "Avenir Next W01", Arial, sans-serif;
     font-weight: 400;
 }
@@ -829,16 +818,15 @@ hr {
     font-weight: 500;
 }
 
-
 /* SINGLE ENTRY POSTS */
 
 .entry__single {
     margin-top: 2em;
 }
-.entry__single h1.entry_title{
+.entry__single h1.entry_title {
     font-family: "Avenir Next W01", Arial, sans-serif;
     font-weight: 500;
-    margin-bottom: .125em;
+    margin-bottom: 0.125em;
 }
 .entry__single .entry_tagline {
     font-family: "Avenir Next W01", Arial, sans-serif;
@@ -852,19 +840,18 @@ hr {
 .content-sidebar {
     padding: 15px;
     margin-bottom: 15px;
-    background-color: #DBEDD4;
+    background-color: #dbedd4;
 }
 #disqus_thread {
     padding-top: 1em;
-    border-top: 1px solid #BABBBD;
+    border-top: 1px solid #babbbd;
     margin-top: 3em;
 }
 .comment-policy {
-    color: #75787B;
+    color: #75787b;
     font-size: 0.8125em;
     font-style: italic;
 }
-
 
 /* RECRUITMENT FORM */
 
@@ -904,8 +891,6 @@ hr {
     text-align: center;
 }
 
-
-
 /* MEDIA QUERIES */
 
 /* MOBILE PORTRAIT (320px) */
@@ -916,7 +901,7 @@ hr {
         margin: 1em 0 0 0;
     }
     .header h1 {
-        margin-bottom: .5em;
+        margin-bottom: 0.5em;
     }
     .entry__single h2 {
         font-size: 1.375em;
@@ -1002,7 +987,6 @@ hr {
     .intro,
     .featured-entries,
     .repos,
-    .jobs,
     .entry__single,
     .sidebar,
     .footer-links,
@@ -1011,6 +995,9 @@ hr {
         padding: 0;
         margin: 0 -0.26em 1em 0;
         vertical-align: top;
+    }
+    .jobs {
+        width: 100%;
     }
     .intro {
         width: 66%;
@@ -1056,13 +1043,13 @@ hr {
         width: 33%;
         padding: 2em 0 2em 2em;
         margin-left: 0;
-        background: #F8F8F8;
+        background: #f8f8f8;
     }
     .recruit-form__sidebar {
         margin-top: 3.75em; /* 60/16 */
     }
     .content-body:after {
-        content: '';
+        content: "";
         display: block;
         width: 9999px;
         height: 100%;
@@ -1070,7 +1057,7 @@ hr {
         top: 0;
         left: 67%;
         z-index: -1;
-        background: #F8F8F8;
+        background: #f8f8f8;
     }
     .entry__single .entry_title {
         font-size: 2.125em;
@@ -1136,7 +1123,7 @@ hr {
     .repo:nth-of-type(even) {
         margin-left: 3.5%;
     }
-    .repo:nth-of-type(3n+1) {
+    .repo:nth-of-type(3n + 1) {
         margin-left: 0;
     }
 }
@@ -1148,16 +1135,55 @@ hr {
 
 /* PRINT */
 @media print {
-  * {background: transparent !important; color: black !important; text-shadow: none !important; filter:none !important; -ms-filter: none !important} /* Black prints faster */
-  a, a:visited {color: #444 !important; text-decoration: underline}
-  a[href]:after {content: " (" attr(href) ")"}
-  abbr[title]:after {content: " (" attr(title) ")"}
-  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after {content: ""}  /* Don't print links for images, javascript or internal links */
-  pre, blockquote {border: 1px solid #999; page-break-inside: avoid; }
-  thead {display: table-header-group; } /* Repeat header row at top of each printed page */
-  tr, img {page-break-inside: avoid; }
-  img {max-width: 100% !important; }
-  @page {margin: 0.5cm}
-  p, h2, h3 {orphans: 3; widows: 3}
-  h2, h3{page-break-after: avoid}
+    * {
+        background: transparent !important;
+        color: black !important;
+        text-shadow: none !important;
+        filter: none !important;
+        -ms-filter: none !important;
+    } /* Black prints faster */
+    a,
+    a:visited {
+        color: #444 !important;
+        text-decoration: underline;
+    }
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    } /* Don't print links for images, javascript or internal links */
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+    thead {
+        display: table-header-group;
+    } /* Repeat header row at top of each printed page */
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+    img {
+        max-width: 100% !important;
+    }
+    @page {
+        margin: 0.5cm;
+    }
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
 }
