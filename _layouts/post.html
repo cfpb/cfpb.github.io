@@ -12,33 +12,27 @@ layout: default
             {% endif %}
 
             <div class="entry_meta">
-                {% if page.author %}
-                By <span class="author">{{ page.author }}</span> &ndash;
-                {% endif %}
-
-                {% if page.date %}
+                {% if page.author %} By
+                <span class="author">{{ page.author }}</span>
+                &ndash; {% endif %} {% if page.date %}
                 <time datetime="{{ page.date | date: '%b %d, %Y' }}">
                     {{ page.date | date: '%b %d, %Y' }}
                 </time>
                 {% endif %}
             </div>
 
-            {{ content }}
-
-        {% comment %}
-            {% if page.tags %}
-                <div class="tags cf">
-                    <h4 class="tags_head">Tags:</h4>
-                    <ul class="tag-list">
-                        {% for tag in page.tags %}
-                        <li class="tag">
-                            <a class="tag_link">{{ tag }}</a>
-                        </li>
-                        {% endfor %}
-                    </ul>
-                </div>
-            {% endif %}
-        {% endcomment %}
+            {{ content }} {% comment %} {% if page.tags %}
+            <div class="tags cf">
+                <h4 class="tags_head">Tags:</h4>
+                <ul class="tag-list">
+                    {% for tag in page.tags %}
+                    <li class="tag">
+                        <a class="tag_link">{{ tag }}</a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            {% endif %} {% endcomment %}
         </div>
     </article>
 
@@ -47,7 +41,7 @@ layout: default
             <h2 class="sidebar_head">More articles</h2>
 
             <ul class="sidebar_list nav-list">
-            {% for post in site.posts limit:5 %}
+                {% for post in site.posts limit:5 %}
                 <li class="sidebar_list_item">
                     <h3 class="sidebar_list_item_head">
                         <a href="../../{{ post.url | remove_first:'/'}}">
@@ -56,70 +50,31 @@ layout: default
                     </h3>
 
                     <div class="sidebar_list_item_meta entry_meta">
-                        {% if post.author %}
-                        By <span class="author">{{ post.author }}</span> &ndash;
-                        {% endif %}
-
-                        {% if post.date %}
+                        {% if post.author %} By
+                        <span class="author">{{ post.author }}</span>
+                        &ndash; {% endif %} {% if post.date %}
                         <time datetime="{{ post.date | date: '%b %d, %Y' }}">
                             {{ post.date | date: '%b %d, %Y' }}
                         </time>
                         {% endif %}
                     </div>
                 </li>
-            {% endfor %}
+                {% endfor %}
             </ul>
 
-            <a class="call-to-action"
-               href="../">
-               View full archive
-            </a>
+            <a class="call-to-action" href="../">View full archive</a>
 
-            <form class="recruit-form recruit-form__sidebar">
-                <h2 class="sidebar_head">Work with us</h2>
+            <section class="recruit-form recruit-form__sidebar">
+                <h2 class="sidebar_head">Want to make a difference?</h2>
                 <p>
-                    Sign up to receive info on future job opportunities
+                    Join the CFPB and help us build a better financial future.
+                    Get in touch and we'll give you a heads up about relevant
+                    opportunities as they become available.
                 </p>
-                <div class="recruit_chunk recruit_chunk__name">
-                    <label class="recruit_fullname" for="recruit-name">
-                        Full name
-                    </label>
-                    <input type="text" id="recruit-name" class="js-recruit-name" name="fullname">
-                </div>
-                <div class="recruit_chunk recruit_chunk__email">
-                    <label class="recruit_email" for="email">
-                        Email
-                    </label>
-                    <input type="email" id="email" class="js-recruit-email" name="email">
-                </div>
-
-                <div class="recruit_chunk recruit_chunk__discipline">
-                    <label class="recruit_discipline" for="discipline">
-                        Which of these best matches your skillset?
-                    </label>
-                    <select id="discipline" name="discipline" class="js-recruit-discipline">
-                        <option value="">Choose one</option>
-                        <option>Graphic Design</option>
-                        <option>Interaction Design</option>
-                        <option>User Experience</option>
-                        <option>Content Strategy</option>
-                        <option>Front-End Development</option>
-                        <option>Back-End Development</option>
-                        <option>Cyber-security</option>
-                        <option>Data Analysis</option>
-                        <option>Dev Ops</option>
-                    </select>
-                </div>
-
-                <a class="btn btn-primary recruit_submit js-recruit-submit"
-                   href="mailto:tech@cfpb.gov?subject=Interested in working in tech at CFPB&body=First name:%0D%0ALast name:%0D%0ADiscipline: %0D%0AResume:">
-                   Email us
+                <a href="{{ site.mailing_list_url }}" class="btn btn-primary">
+                    Work with us
                 </a>
-
-                <p class="u-disclaimer">
-                    <small><a href="../../privacy-act-statement/">View Privacy Act statement</a></small>
-                </p>
-            </form>
+            </section>
         </div>
     </section>
 </div>

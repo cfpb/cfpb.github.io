@@ -29,7 +29,7 @@ title: Home
                     <section class="sidebar">
                         <h2 class="sidebar_head">Want to make a difference?</h2>
                         <p>Join the CFPB and help us build a better financial future. Get in touch and we'll give you a heads up about relevant opportunities as they become available.</p>
-                        <a href="#job-signup" class="btn btn-primary">Work with us</a>
+                        <a href="{{ site.mailing_list_url }}"class="btn btn-primary">Work with us</a>
                     </section>
                 </div>
             </section> <!-- /.hero -->
@@ -230,6 +230,9 @@ title: Home
                             Our mission demands smart, usable, and reliable technology.
                             Come serve consumers by helping us design and build it.
                         </p>
+                        <p>
+                            <a href="{{ site.mailing_list_url }}">Join our mailing list</a> to be notified when we post new jobs.
+                        </p>
                         {% comment %}
                         <p>We're currently looking for: </p>
                         <ul>
@@ -243,48 +246,6 @@ title: Home
                             <a href="http://www.consumerfinance.gov/jobs/technology-innovation-fellows/">Technology &amp; Innovation Fellowship</a>
                             <i class="icon-external-link"></i>.
                         </p>
-                    </div>
-                    <div class="job-half">
-                        <form class="recruit-form">
-                            <p>
-                            Share your contact information and
-                            we'll contact you with career opportunities throughout the year.
-                            </p>
-                            <div class="recruit_chunk recruit_chunk__name">
-                                <label class="recruit_fullname" for="recruit-name">
-                                    Full name
-                                </label>
-                                <input type="text" id="recruit-name" class="js-recruit-name" name="fullname">
-                            </div>
-                            <div class="recruit_chunk recruit_chunk__email">
-                                <label class="recruit_email" for="email">
-                                    Email
-                                </label>
-                                <input type="email" id="email" class="js-recruit-email" name="email">
-                            </div>
-
-                            <div class="recruit_chunk recruit_chunk__discipline">
-                                <label class="recruit_discipline" for="discipline">
-                                    Select a discipline that best matches your skillset
-                                </label>
-                                <select id="discipline" name="discipline" class="js-recruit-discipline">
-                                    <option value="">Choose one</option>
-                                    <option>Graphic Design</option>
-                                    <option>Interaction Design</option>
-                                    <option>User Experience</option>
-                                    <option>Content Strategy</option>
-                                    <option>Front-End Development</option>
-                                    <option>Back-End Development</option>
-                                    <option>Cyber-security</option>
-                                    <option>Data Analysis</option>
-                                    <option>Dev Ops</option>
-                                </select>
-                            </div>
-
-                            <a href="mailto:tech@cfpb.gov?subject=Interested in working in tech at CFPB&body=First name:%0D%0ALast name:%0D%0ADiscipline: %0D%0AResume:" class="btn btn-primary recruit_submit js-recruit-submit">Email us</a>
-
-                            <p class="u-disclaimer"><small>The information you send to <a href="mailto:tech@cfpb.gov?subject=Interested in working in tech at CFPB">tech@cfpb.gov</a> will permit the Consumer Financial Protection Bureau to send you updates about future job openings. <a href="privacy-act-statement/">View Privacy Act statement</a></small></p>
-                        </form>
                     </div>
                 </section>
             </section>

@@ -1,8 +1,10 @@
-exclude:     [CONTRIBUTING.md, Gemfile, Gemfile.lock, LICENSE, README.md, TERMS.md]
-permalink:   /articles/:title/
+exclude: [CONTRIBUTING.md, Gemfile, Gemfile.lock, LICENSE, README.md, TERMS.md]
+permalink: /articles/:title/
 highlighter: rouge
-markdown:    kramdown
+markdown: kramdown
 
 title: CFPB Open Tech
 url: "https://cfpb.github.io/"
 description: "Learn about the technology work the Consumer Financial Protection Bureau undertakes to support its mission."
+
+mailing_list_url: "https://public.govdelivery.com/accounts/USCFPB/subscriber/new?topic_id=USCFPB_142"
