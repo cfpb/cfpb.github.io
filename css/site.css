@@ -583,7 +583,7 @@ hr {
     line-height: 1.5;
 }
 
-[class*="call-to-action"], .more-repos_view-all-link {
+[class*="call-to-action"] {
     font-family: "Avenir Next W01", Arial, sans-serif;
     font-weight: 400;
 }
