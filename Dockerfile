@@ -10,5 +10,3 @@ RUN bundle install
 
 RUN bundle add webrick
 
-EXPOSE 4000
-

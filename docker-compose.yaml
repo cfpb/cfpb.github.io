@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+  web:
+    build: .
+    container_name: cfpb-io-container
+    command: bundle exec jekyll serve --watch
+    ports:
+      - "4000:4000"
