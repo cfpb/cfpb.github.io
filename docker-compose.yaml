@@ -4,6 +4,6 @@ services:
   web:
     build: .
     container_name: cfpb-io-container
-    command: bundle exec jekyll serve --watch
+    command: bundle exec jekyll serve --host 0.0.0.0
     ports:
       - "4000:4000"
