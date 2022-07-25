@@ -7,7 +7,7 @@ A site for the CFPB to share and discuss its technology work with the world.
 Content editors and developers probably want to set up cfpb.github.io on
 their local machine so they can preview updates without pushing to GitHub.
 
-Before you get started, make sure you have an up-to-date version of [Docker](https://www.docker.com/get-started/) installed on your machine and that is it is running.
+Before you get started, make sure you have an up-to-date version of [Docker](https://www.docker.com/get-started/) installed on your machine and that it is running.
 
 [Fork and clone the repo](https://help.github.com/articles/fork-a-repo/)
 to your local machine.
