@@ -7,6 +7,3 @@ WORKDIR /usr/src/app
 COPY . . 
 
 RUN bundle install
-
-RUN bundle add webrick
-

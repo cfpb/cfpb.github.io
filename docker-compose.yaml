@@ -5,5 +5,7 @@ services:
     build: .
     container_name: cfpb-io-container
     command: bundle exec jekyll serve --host 0.0.0.0
+    volumes:
+      - .:/usr/src/app
     ports:
       - "4000:4000"
