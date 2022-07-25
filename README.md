@@ -12,7 +12,10 @@ Before you get started, make sure you have an up-to-date version of [Docker](htt
 [Fork and clone the repo](https://help.github.com/articles/fork-a-repo/)
 to your local machine.
 
-From the project directory, run `docker-compose up`. 
+Using terminal, in the project directory, run:
+```sh
+docker-compose up
+``` 
 
 Open it up in your browser: [http://localhost:4000/](http://localhost:4000/)
 
