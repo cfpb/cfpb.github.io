@@ -2,44 +2,22 @@
 
 A site for the CFPB to share and discuss its technology work with the world.
 
-## Running it locally
+## Running it locally with Docker
 
 Content editors and developers probably want to set up cfpb.github.io on
 their local machine so they can preview updates without pushing to GitHub.
 
-Before you get started make sure you have an up-to-date version of Ruby and Bundler.
-We use [Homebrew](http://brew.sh/):
-
-```sh
-brew install ruby
-gem install bundler
-```
-
-As the site is intended to be deployed on GitHub Pages, installing the
-GitHub Pages gem is the best way to install Jekyll and related dependencies.
-Run the following command to install it:
-
-```sh
-bundle install
-```
-
-**Note:** As of 6/23/16, you may need to run this command before running
-`bundle install` to handle a bug in one of the dependencies:
-
-```sh
-bundle config build.nokogiri --use-system-libraries
-```
+Before you get started, make sure you have an up-to-date version of [Docker](https://www.docker.com/get-started/) installed on your machine and that it is running.
 
 [Fork and clone the repo](https://help.github.com/articles/fork-a-repo/)
 to your local machine.
 
-From the project directory, run Jekyll:
-
+Using terminal, in the project directory, run:
 ```sh
-bundle exec jekyll serve --watch
-```
+docker-compose up
+``` 
 
-Open it up in your browser: <http://localhost:4000/>
+Open it up in your browser: [http://localhost:4000/](http://localhost:4000/)
 
 
 ## Working with the front end
