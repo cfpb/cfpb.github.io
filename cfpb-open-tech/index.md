@@ -1,6 +1,6 @@
 ---
-layout: post
 published: true
+layout: page
 title: Introducing CFPB Open Tech
 tagline: 
 excerpt:
