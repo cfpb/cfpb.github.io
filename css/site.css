@@ -21,7 +21,7 @@ body {
 
 body {
     color: #101820; /* CFPB Black */
-    font-family: Avenir Next,Arial,sans-serif;
+    font-family: 'Avenir Next', Arial, sans-serif;
     line-height: 1.375;
     background-color: #fff;
 
@@ -62,7 +62,6 @@ h6 {
 h1,
 h2,
 h3 {
-    font-family: "Avenir Next W01", Arial, sans-serif;
     font-weight: normal;
 }
 
@@ -80,7 +79,6 @@ h3 {
 }
 
 h4 {
-    font-family: "Avenir Next W01", Arial, sans-serif;
     font-size: 1.125em;
     line-height: 1.22222222222222;
     font-weight: 500;
@@ -88,7 +86,6 @@ h4 {
 
 h5,
 h6 {
-    font-family: "Avenir Next W01", Arial, sans-serif;
     letter-spacing: 1px;
     text-transform: uppercase;
 }
@@ -377,7 +374,6 @@ del {
     border-radius: 0.25em; /* 4/16 */
     margin: 0;
     vertical-align: middle;
-    font-family: "AvenirNextLTW01-Medium", "Avenir Next W01", Arial, sans-serif;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
@@ -532,7 +528,6 @@ hr {
     padding: 0.5em;
     background-color: #0072ce;
     color: #fff;
-    font-family: "Avenir Next W01", Arial, sans-serif;
     font-weight: bold;
 }
 
@@ -555,14 +550,12 @@ hr {
 
 .header h1 {
     margin: 1em 0 0 0;
-    font-family: "Avenir Next W01", Arial, sans-serif;
     font-size: 1.625em;
     font-weight: 500;
     display: inline-block;
 }
 
 .header h1 span {
-    font-family: "Avenir Next W01", Arial, sans-serif;
     font-weight: bold;
 }
 
@@ -572,7 +565,6 @@ hr {
 
 .hero {
     background: #dbedd4;
-    font-family: "Avenir Next W01", Arial, sans-serif;
 }
 .hero section {
     padding: 1.5em 0;
@@ -584,7 +576,6 @@ hr {
 }
 
 [class*="call-to-action"], .more-repos_view-all-link {
-    font-family: "Avenir Next W01", Arial, sans-serif;
     font-weight: 400;
 }
 .call-to-action__icon,
@@ -604,7 +595,6 @@ hr {
 
 .intro h1 {
     margin-bottom: 0.79411764705882em; /* 27/34 */
-    font-family: "Avenir Next W01", Arial, sans-serif;
     font-weight: 500;
 }
 .intro a,
@@ -623,7 +613,6 @@ hr {
     list-style: none;
 }
 .sidebar_list .author {
-    font-family: "Avenir Next W01", Arial, sans-serif;
     font-weight: 400;
 }
 .sidebar_list_item {
@@ -634,7 +623,6 @@ hr {
     border-bottom: 1px solid #babbbd;
     margin-bottom: 1.25em;
     color: #75787b;
-    font-family: "Avenir Next W01", Arial, sans-serif;
     font-size: 1.125em;
     line-height: 1.22222222222222;
     font-weight: 500;
@@ -642,7 +630,6 @@ hr {
 }
 .sidebar_list_item_head {
     margin-bottom: 0.5em;
-    font-family: "Avenir Next W01", Arial, sans-serif;
     font-size: 1em;
     font-weight: 400;
 }
@@ -677,14 +664,12 @@ hr {
 }
 .featured-project_head {
     margin-bottom: 0.75em;
-    font-family: "Avenir Next W01", Arial, sans-serif;
 }
 
 .section-head {
     padding: 0 0 0.5em;
     border-bottom: 1px solid #d0d0ce;
     margin: 1.5em 0 1em;
-    font-family: "Avenir Next W01", Arial, sans-serif;
     /*    font-size: 2.125em;*/
     line-height: 1;
     font-weight: 400;
@@ -692,7 +677,6 @@ hr {
 
 .entry_title,
 .repo_name {
-    font-family: "Avenir Next W01", Arial, sans-serif;
     font-weight: 400;
 }
 .entry_title {
@@ -702,7 +686,6 @@ hr {
 }
 .entry_tagline {
     margin-bottom: 1em;
-    font-family: "Avenir Next W01", Arial, sans-serif;
     font-size: 1.125em;
     line-height: 1.22222222222222;
 }
@@ -710,12 +693,10 @@ hr {
     margin-bottom: 0;
 }
 .entry_meta {
-    font-family: "Avenir Next W01", Arial, sans-serif;
     font-weight: 400;
 }
 .entry_meta time {
     color: #919395; /* Gray/80 */
-    font-family: "Avenir Next W01", Arial, sans-serif;
     font-weight: bold;
     text-transform: uppercase;
 }
@@ -728,7 +709,6 @@ hr {
     display: inline-block;
     margin-left: 1em;
     color: #ffb149; /* Gold/80 */
-    font-family: "Avenir Next W01", Arial, sans-serif;
     font-size: 0.875em;
     line-height: 1.57142857142857; /* 22/14 */
     font-weight: bold;
@@ -779,7 +759,6 @@ hr {
     padding: 2em 0;
     border-top: 2px solid #babbbd;
     background: #f1f2f2;
-    font-family: "Avenir Next W01", Arial, sans-serif;
 }
 .footer-links ul {
     padding-left: 0;
@@ -792,7 +771,6 @@ hr {
     border-bottom-color: #101820;
     margin-bottom: 1em;
     color: #101820;
-    font-family: "Avenir Next W01", Arial, sans-serif;
     font-size: 1.125em;
     line-height: 1;
     font-weight: 500;
@@ -800,7 +778,6 @@ hr {
 .footer-links_secondary a {
     border-bottom-color: #75787b;
     color: #75787b;
-    font-family: "Avenir Next W01", Arial, sans-serif;
     font-weight: 400;
 }
 .footer-links_social li {
@@ -816,7 +793,6 @@ hr {
 }
 .footer h4 {
     margin-bottom: 1em;
-    font-family: "Avenir Next W01", Arial, sans-serif;
     font-size: 1.125em;
     line-height: 1;
     font-weight: 500;
@@ -828,12 +804,10 @@ hr {
     margin-top: 2em;
 }
 .entry__single h1.entry_title {
-    font-family: "Avenir Next W01", Arial, sans-serif;
     font-weight: 500;
     margin-bottom: 0.125em;
 }
 .entry__single .entry_tagline {
-    font-family: "Avenir Next W01", Arial, sans-serif;
     font-size: 1.625em;
     line-height: 1.23076923076923;
     font-weight: normal;
@@ -865,7 +839,6 @@ hr {
 }
 
 .recruit-form label {
-    font-family: "Avenir Next W01", Arial, sans-serif;
     font-size: 0.9375em; /* 15/16 */
 }
 
@@ -875,7 +848,6 @@ hr {
 
 .recruit-form select {
     padding: 5px 10px 5px 0;
-    font-family: "Avenir Next W01", Arial, sans-serif;
 }
 
 .recruit_chunk {
