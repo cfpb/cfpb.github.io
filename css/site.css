@@ -21,7 +21,7 @@ body {
 
 body {
     color: #101820; /* CFPB Black */
-    font-family: Georgia, "Times New Roman", serif;
+    font-family: Avenir Next,Arial,sans-serif;
     line-height: 1.375;
     background-color: #fff;
 
@@ -650,6 +650,7 @@ hr {
 .featured-projects {
     padding: 1em 0;
     background: #f8f8f8;
+    text-align: center;
 }
 .featured-project {
     margin: 2em 0;
@@ -670,6 +671,9 @@ hr {
 }
 .featured-project_img__ccdb {
     background: url(../img/feature_ccdb_150x150.png) no-repeat;
+}
+.featured-project_img__ds {
+    background: url(../img/feature_ds_150x150.png) no-repeat;
 }
 .featured-project_head {
     margin-bottom: 0.75em;
@@ -943,12 +947,12 @@ hr {
         margin: 2em 5%;
     }
     .featured-projects {
-        padding: 2em 0;
+        padding: 2em 0 0 0;
     }
     .featured-project {
         display: inline-block;
         width: 50%;
-        padding: 0 1em;
+        padding: 0 1em 2em;
         margin: 0 -0.26em 0 0;
         vertical-align: top;
     }
