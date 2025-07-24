@@ -14,7 +14,7 @@ to your local machine.
 
 Using terminal, in the project directory, run:
 ```sh
-docker-compose up
+docker compose up
 ``` 
 
 Open it up in your browser: [http://localhost:4000/](http://localhost:4000/)
